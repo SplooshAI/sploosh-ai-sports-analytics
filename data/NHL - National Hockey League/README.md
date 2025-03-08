@@ -80,3 +80,5 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #61: Vancouver Canucks vs Seattle Kraken - Seattle wins 6-3](./2024-25/regular-season/20250301-VAN-vs-SEA-2024020960.json)
 - [GAME #62: Minnesota Wild vs Seattle Kraken - Seattle loses 4-3](./2024-25/regular-season/20250304-MIN-vs-SEA-2024020982.json)
 - [GAME #63: Seattle Kraken vs Nashville Predators - Seattle loses 5-3](./2024-25/regular-season/20250306-SEA-vs-NSH-2024020993.json)
+-- NHL Trade Deadline --
+- [GAME #64: Seattle Kraken vs Philadelphia Flyers - Seattle wins 4-1](./2024-25/regular-season/20250308-SEA-vs-PHI-2024021004.json)
