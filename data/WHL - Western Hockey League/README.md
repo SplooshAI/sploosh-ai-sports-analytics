@@ -76,3 +76,4 @@ Play By Play:
 - [GAME #58: 2025.03.01 Seattle wins 6-3 against Spokane](./2024-25/20250301-SEA-vs-SPO-1021850-pxpverbose.json)
 - [GAME #59: 2025.03.02 Seattle loses 2-1 against Tri-Cities](./2024-25/20250302-TC-vs-SEA-1021856-pxpverbose.json)
 - [GAME #60: 2025.03.04 Seattle loses 3-2 against Kamloops](./2024-25/20250304-KAM-vs-SEA-1021861-pxpverbose.json)
+- [GAME #61: 2025.03.07 Seattle wins 7-2 against Portland](./2024-25/20250307-SEA-vs-POR-1021871-pxpverbose.json)
