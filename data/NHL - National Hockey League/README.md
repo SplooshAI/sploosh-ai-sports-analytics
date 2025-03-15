@@ -84,3 +84,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #64: Seattle Kraken vs Philadelphia Flyers - Seattle wins 4-1](./2024-25/regular-season/20250308-SEA-vs-PHI-2024021004.json)
 - [GAME #65: Seattle Kraken vs Washington Capitals - Seattle loses 4-2](./2024-25/regular-season/20250309-SEA-vs-WSH-2024021014.json)
 - [GAME #66: Montreal Canadiens vs Seattle Kraken - Seattle wins 5-4 in OT](./2024-25/regular-season/20250312-MTL-vs-SEA-2024021039.json)
+- [GAME #67: Utah Hockey Club vs Seattle Kraken - Seattle wins 4-2](./2024-25/regular-season/20250314-UTA-vs-SEA-2024021054.json)
