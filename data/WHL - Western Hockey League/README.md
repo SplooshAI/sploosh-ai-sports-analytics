@@ -81,3 +81,4 @@ Play By Play:
 - [GAME #63: 2025.03.11 POSTPONED - Seattle vs Tri-Cities](./2024-25/20250311-SEA-vs-TC-1021891-pxpverbose.json)
 - [GAME #64: 2025.03.14 Seattle wins 6-3 vs Tri-Cities](./2024-25/20250314-TC-vs-SEA-1021904-pxpverbose.json)
 - [GAME #65: 2025.03.15 Seattle loses 6-1 against Portland](./2024-25/20250315-SEA-vs-POR-1021912-pxpverbose.json)
+- [GAME #66: 2025.03.16 Seattle wins 5-1 against Tri-Cities](./2024-25/20250316-SEA-vs-TC-1021921-pxpverbose.json)
