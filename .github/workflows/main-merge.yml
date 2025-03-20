@@ -1,0 +1,163 @@
+name: Main Branch Merge
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    outputs:
+      pr_number: ${{ steps.get_pr.outputs.pr_number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Configure Git for GitHub Actions
+        if: ${{ github.actor != 'nektos/act' }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Dependencies
+        run: npm ci || npm install
+          
+      - name: Determine Version Bump Type
+        id: bump-type
+        run: |
+          PR_TITLE="${{ github.event.head_commit.message }}"
+          echo "PR Title: $PR_TITLE"
+          
+          if [[ "$PR_TITLE" =~ feat!: || "$PR_TITLE" =~ fix!: || "$PR_TITLE" =~ refactor!: ]]; then
+            echo "bump_type=major" >> $GITHUB_OUTPUT
+          elif [[ "$PR_TITLE" =~ feat: ]]; then
+            echo "bump_type=minor" >> $GITHUB_OUTPUT
+          else
+            echo "bump_type=patch" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "Determined bump type: $(cat $GITHUB_OUTPUT | grep bump_type | cut -d'=' -f2)"
+          
+      - name: Create Version Bump Branch
+        id: create-branch
+        run: |
+          BRANCH_NAME="version-bump-$(date +%s)"
+          echo "Creating branch: $BRANCH_NAME"
+          git checkout -b "$BRANCH_NAME"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          
+          # Update version in package.json
+          npm version ${{ steps.bump-type.outputs.bump_type }} --no-git-tag-version
+          
+          # Stage and commit changes
+          git add package.json
+          git commit -m "chore: bump version [skip ci]"
+          git push origin "$BRANCH_NAME"
+          
+      - name: Create or Update Pull Request
+        id: create-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_TITLE="chore: version bump [skip ci]"
+          PR_BODY="Automated version bump triggered by merge to main branch"
+          
+          # Create labels if they don't exist (with --force to update)
+          gh label create automated --color "#0E8A16" --description "Automated changes" --force
+          gh label create version-bump --color "#1D76DB" --description "Version bump changes" --force
+          
+          # Debug output
+          echo "Creating PR from branch: ${{ steps.create-branch.outputs.branch_name }}"
+          
+          # Create PR and capture PR number using grep
+          PR_URL=$(gh pr create \
+            --title "$PR_TITLE" \
+            --body "$PR_BODY" \
+            --base main \
+            --head "${{ steps.create-branch.outputs.branch_name }}" \
+            --label "automated" \
+            --label "version-bump")
+            
+          # Extract PR number from URL
+          PR_NUMBER=$(echo "$PR_URL" | grep -o '[0-9]*$')
+          
+          echo "Created PR #$PR_NUMBER: $PR_URL"
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+      
+      - name: Get PR Number
+        id: get_pr
+        run: |
+          echo "pr_number=${{ steps.create-pr.outputs.pr_number }}" >> $GITHUB_OUTPUT
+
+  merge-pr:
+    needs: version-bump
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: read
+      statuses: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Wait for checks and merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Waiting for checks to complete on PR #${{ needs.version-bump.outputs.pr_number }}"
+          
+          # Wait for checks to complete (timeout after 10 minutes)
+          timeout=600
+          while [ $timeout -gt 0 ]; do
+            # Get check status using correct fields
+            STATUSES=$(gh pr view ${{ needs.version-bump.outputs.pr_number }} --json statusCheckRollup --jq '.statusCheckRollup.[].state')
+            echo "Current check statuses:"
+            echo "$STATUSES"
+            
+            if echo "$STATUSES" | grep -q "PENDING"; then
+              echo "Checks still running... ($timeout seconds remaining)"
+              sleep 10
+              timeout=$((timeout - 10))
+              continue
+            fi
+            
+            if echo "$STATUSES" | grep -q "FAILURE"; then
+              echo "Some checks failed!"
+              exit 1
+            fi
+            
+            echo "All checks passed!"
+            
+            # Get the branch name before merging
+            BRANCH_NAME=$(gh pr view ${{ needs.version-bump.outputs.pr_number }} --json headRefName --jq '.headRefName')
+            
+            # Merge the PR
+            gh pr merge ${{ needs.version-bump.outputs.pr_number }} --merge --delete-branch
+            
+            # Double-check branch deletion and force delete if necessary
+            if git ls-remote --heads origin "$BRANCH_NAME" | grep -q "$BRANCH_NAME"; then
+              echo "Branch still exists, forcing deletion..."
+              git push origin --delete "$BRANCH_NAME" --force
+            fi
+            
+            echo "Successfully merged PR and cleaned up branch: $BRANCH_NAME"
+            exit 0
+          done
+          
+          echo "Timeout waiting for checks!"
+          exit 1

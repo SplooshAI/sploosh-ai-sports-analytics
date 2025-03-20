@@ -3,13 +3,21 @@
   "version": "0.0.0",
   "description": "This project explores working with a variety of APIs for sports data analysis and visualization.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "download:kraken": "npm run download:nhl:kraken",
     "download:nhl:kraken": "./src/download_nhl.sh kraken",
     "download:nhl:kraken:date": "./src/download_nhl.sh kraken 2025-03-19",
     "download:tbirds": "npm run download:whl:tbirds",
     "download:whl:tbirds": "./src/download_whl.sh",
-    "download:whl:tbirds:date": "./src/download_whl.sh thunderbirds 2025-02-15"
+    "download:whl:tbirds:date": "./src/download_whl.sh thunderbirds 2025-02-15",
+    "test": "npm run test:workflows",
+    "test:workflows": "chmod +x .github/test-workflows.sh && .github/test-workflows.sh",
+    "test:workflows:semantic": "act pull_request -e .github/test-data/pr-events/minor.json -W .github/workflows/semantic-pr-check.yml",
+    "test:workflows:semantic:major": "act pull_request -e .github/test-data/pr-events/major.json -W .github/workflows/semantic-pr-check.yml",
+    "test:workflows:semantic:minor": "act pull_request -e .github/test-data/pr-events/minor.json -W .github/workflows/semantic-pr-check.yml",
+    "test:workflows:semantic:patch": "act pull_request -e .github/test-data/pr-events/patch.json -W .github/workflows/semantic-pr-check.yml",
+    "test:workflows:semantic:invalid": "act pull_request -e .github/test-data/pr-events/invalid.json -W .github/workflows/semantic-pr-check.yml",
+    "test:workflows:version": "act workflow_dispatch -W .github/workflows/version-bump.yml --container-architecture linux/amd64",
+    "test:workflows:merge": "act push -e .github/test-data/pr-events/merge.json -W .github/workflows/main-merge.yml --container-architecture linux/amd64"
   },
   "repository": {
     "type": "git",
