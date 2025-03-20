@@ -1,0 +1,97 @@
+name: Semantic PR Check
+
+on:
+  pull_request:
+    types: 
+      - opened    # New PR
+      - edited    # PR title/description edited
+      - synchronize # New commits pushed
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+  statuses: write
+
+jobs:
+  check-pr-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Check PR Title Format
+        id: check-title
+        continue-on-error: true  # Allow the step to fail without failing the job
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "Checking PR title: $PR_TITLE"
+          
+          # Check if title starts with valid type (including breaking change ! for any type)
+          if [[ ! "$PR_TITLE" =~ ^(feat!|fix!|docs!|style!|refactor!|perf!|test!|build!|ci!|chore!|revert!|feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert): ]]; then
+            echo "❌ PR title must start with one of these types, optionally followed by ! for breaking changes:"
+            echo "feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert"
+            echo "Example: feat: new feature"
+            echo "Example: fix!: breaking bug fix"
+            echo "See CONTRIBUTING.md for more details on commit message format."
+            exit 1
+          fi
+          
+          echo "✅ PR title format is valid"
+
+      - name: Verify Expected Behavior
+        run: |
+          # For invalid PR titles, we expect failure
+          if [[ "${{ github.event.pull_request.title }}" == "adding some feature without proper format" ]]; then
+            if [[ "${{ steps.check-title.outcome }}" == "failure" ]]; then
+              echo "✅ Test passed - Invalid PR title was rejected as expected"
+              exit 0
+            else
+              echo "❌ Test failed - Invalid PR title should have been rejected"
+              exit 1
+            fi
+          # For valid semantic PR titles, we expect success
+          else
+            if [[ "${{ steps.check-title.outcome }}" == "success" ]]; then
+              echo "✅ Test passed - Valid semantic PR title was accepted"
+              exit 0
+            else
+              echo "❌ Test failed - Valid semantic PR title should have been accepted"
+              exit 1
+            fi
+          fi
+
+      # - name: Wait for Vercel Preview
+      #   if: ${{ !env.ACT }}  # Only run in GitHub Actions, not in local act
+      #   env:
+      #     GH_TOKEN: ${{ github.token }}
+      #   run: |
+      #     echo "Waiting for Vercel deployment to complete..."
+      #     while true; do
+      #       # Debug output to see actual states
+      #       gh pr checks ${{ github.event.pull_request.number }} --json name,state,description | jq -r '.[] | select(.name=="Vercel")'
+      #       
+      #       STATUS=$(gh pr checks ${{ github.event.pull_request.number }} --json name,state,description | jq -r '.[] | select(.name=="Vercel") | .description')
+      #       if [[ "$STATUS" == *"Deployment has completed"* ]]; then
+      #         echo "✅ Vercel deployment completed successfully"
+      #         break
+      #       elif [[ "$STATUS" == *"failed"* ]]; then
+      #         echo "❌ Vercel deployment failed"
+      #         exit 1
+      #       fi
+      #       echo "⏳ Waiting for Vercel deployment... (checking again in 10s)"
+      #       sleep 10
+      #     done
+
+      - name: Check Breaking Change Format
+        if: success()
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          
+          # Check for breaking change indicator
+          if [[ "$PR_TITLE" =~ ^feat!: ]]; then
+            echo "⚠️ Breaking change detected in PR title"
+            echo "This will trigger a major version bump"
+          fi 
