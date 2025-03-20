@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "download:kraken": "npm run download:nhl:kraken",
     "download:nhl:kraken": "./src/download_nhl.sh kraken",
-    "download:nhl:kraken:date": "./src/download_nhl.sh kraken 2025-03-12",
+    "download:nhl:kraken:date": "./src/download_nhl.sh kraken 2025-03-19",
     "download:tbirds": "npm run download:whl:tbirds",
     "download:whl:tbirds": "./src/download_whl.sh",
     "download:whl:tbirds:date": "./src/download_whl.sh thunderbirds 2025-02-15"
