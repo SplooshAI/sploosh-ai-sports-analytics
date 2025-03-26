@@ -89,3 +89,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #69: Seattle Kraken vs Chicago Blackhawks - Seattle wins 6-2](./2024-25/regular-season/20250318-SEA-vs-CHI-2024021084.json)
 - [GAME #70: Seattle Kraken vs Minnesota Wild - Seattle loses 4-0](./2024-25/regular-season/20250319-SEA-vs-MIN-2024021088.json)
 - [GAME #71: Seattle Kraken vs Edmonton Oilers - Seattle loses 5-4](./2024-25/regular-season/20250322-SEA-vs-EDM-2024021116.json)
+- [GAME #72: Seattle Kraken vs Calgary Flames - Seattle loses 4-3 in OT](./2024-25/regular-season/20250325-SEA-vs-CGY-2024021137.json)
