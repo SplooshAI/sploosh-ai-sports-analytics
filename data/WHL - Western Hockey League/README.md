@@ -84,3 +84,7 @@ Play By Play:
 - [GAME #67: 2025.03.21 Seattle wins 7-6 against Spokane in SO](./2024-25/20250321-SEA-vs-SPO-1021936-pxpverbose.json)
 - [GAME #68: 2025.03.22 Seattle wins 5-4 against Portland](./2024-25/20250322-POR-vs-SEA-1021943-pxpverbose.json)
 - [GAME #63: 2025.03.11/2025.03.23 Seattle wins 3-2 against Tri-Cities (completion of postponed game)](./2024-25/20250323-SEA-vs-TC-1021891-pxpverbose.json)
+
+### 2024-25 Playoffs
+
+- [ROUND 1 GAME #1: 2025.03.28 Seattle wins 3-2 against Everett Silvertips](./2024-25/playoffs/20250328-SEA-vs-EVT-1021961-pxpverbose.json)
