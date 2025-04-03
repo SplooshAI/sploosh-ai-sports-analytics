@@ -93,3 +93,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #73: Edmonton Oilers vs Seattle Kraken - Seattle wins 6-1](./2024-25/regular-season/20250327-EDM-vs-SEA-2024021151.json)
 - [GAME #74: Dallas Stars vs Seattle Kraken - Seattle loses 5-1](./2024-25/regular-season/20250329-DAL-vs-SEA-2024021169.json)
 - [GAME #75: Dallas Stars vs Seattle Kraken - Seattle loses 3-1](./2024-25/regular-season/20250331-DAL-vs-SEA-2024021181.json)
+- [GAME #76: Seattle Kraken vs Vancouver Canucks - Seattle wins 5-0](./2024-25/regular-season/20250402-SEA-vs-VAN-2024021196.json)
