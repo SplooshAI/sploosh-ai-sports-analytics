@@ -93,3 +93,4 @@ Play By Play:
 - [ROUND 1 GAME #2: 2025.03.29 Seattle loses 3-2 against Everett Silvertips in OT](./2024-25/playoffs/20250329-SEA-vs-EVT-1021962-pxpverbose.json)
 - [ROUND 1 GAME #3: 2025.04.01 Seattle wins 6-3 against Everett Silvertips](./2024-25/playoffs/20250401-EVT-vs-SEA-1021969-pxpverbose.json)
 - [ROUND 1 GAME #4: 2025.04.04 Seattle loses 6-2 against Everett Silvertips](./2024-25/playoffs/20250404-EVT-vs-SEA-1021970-pxpverbose.json)
+- [ROUND 1 GAME #5: 2025.04.05 Seattle loses 7-4 against Everett Silvertips](./2024-25/playoffs/20250405-SEA-vs-EVT-1021971-pxpverbose.json)
