@@ -99,3 +99,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #79: Seattle Kraken vs Utah Hockey Club - Seattle loses 7-1](./2024-25/regular-season/20250408-SEA-vs-UTA-2024021243.json)
 - [GAME #80: Seattle Kraken vs Vegas Golden Knights - Seattle loses 2-1](./2024-25/regular-season/20250410-SEA-vs-VGK-2024021258.json)
 - [GAME #81: St. Louis Blues vs Seattle Kraken - Seattle wins 4-3 in SO](./2024-25/regular-season/20250412-STL-vs-SEA-2024021275.json)
+- [GAME #82: Los Angeles Kings vs Seattle Kraken - Seattle loses 6-5](./2024-25/regular-season/20250415-LAK-vs-SEA-2024021300.json)
