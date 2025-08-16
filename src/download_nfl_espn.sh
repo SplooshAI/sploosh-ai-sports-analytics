@@ -32,7 +32,8 @@ usage() {
 # Fetch and validate JSON data from ESPN API
 fetch_espn_data() {
     local game_id=$1
-    local data=$(curl -s "${API_BASE_URL}${game_id}")
+    local data
+    data=$(curl -s "${API_BASE_URL}${game_id}")
     
     if ! echo "$data" | jq -e . >/dev/null 2>&1; then
         echo "Error: Failed to get valid data for game ID ${game_id}"
@@ -51,7 +52,8 @@ download_nfl_game() {
     local week=$5
     
     # Get current date in YYYYMMDD format
-    local date=$(date +%Y%m%d)
+    local date
+    date=$(date +%Y%m%d)
     
     # Create directory if it doesn't exist
     mkdir -p "$DATA_BASE_DIR"
@@ -72,9 +74,7 @@ download_nfl_game() {
     local filepath="${DATA_BASE_DIR}/${filename}"
 
     echo "Downloading game data to ${filepath}..."
-    fetch_espn_data "${game_id}" | python3 -m json.tool > "$filepath"
-    
-    if [ $? -eq 0 ]; then
+    if fetch_espn_data "${game_id}" | python3 -m json.tool > "$filepath"; then
         echo "Successfully downloaded game data to ${filepath}"
     else
         echo "Error: Failed to download game data"
