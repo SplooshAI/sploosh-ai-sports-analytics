@@ -55,10 +55,39 @@ download_nfl_game() {
     local date
     date=$(date +%Y%m%d)
     
-    # Create directory if it doesn't exist
-    mkdir -p "$DATA_BASE_DIR"
+    # Determine the NFL season based on current date
+    # NFL seasons span two years (e.g., 2025-26)
+    local year
+    local month
+    year=$(date +%Y)
+    month=$(date +%m)
+    
+    # Determine the season directory in YYYY-YY format
+    local season_dir
+    if [ "$month" -ge 1 ] && [ "$month" -le 7 ]; then
+        # For January-July, use previous year as start
+        local prev_year=$((year-1))
+        local curr_year_short=$((year % 100))
+        # Ensure two-digit format for the second year
+        if [ "$curr_year_short" -lt 10 ]; then
+            curr_year_short="0${curr_year_short}"
+        fi
+        season_dir="${prev_year}-${curr_year_short}"
+    else
+        # For August-December, use current year as start
+        local next_year_short=$((year + 1))
+        next_year_short=$((next_year_short % 100))
+        # Ensure two-digit format for the second year
+        if [ "$next_year_short" -lt 10 ]; then
+            next_year_short="0${next_year_short}"
+        fi
+        season_dir="${year}-${next_year_short}"
+    fi
+    
+    # Create season directory if it doesn't exist
+    mkdir -p "${DATA_BASE_DIR}/${season_dir}"
 
-    # Create filename based on game type
+    # Create filename based on game type - away team first, then home team
     local filename
     if [ "$game_type" == "preseason" ]; then
         filename="${date}-${away_team}-vs-${home_team}-${game_id}-preseason-week-${week}.json"
@@ -69,9 +98,10 @@ download_nfl_game() {
     else
         echo "Error: Invalid game type. Must be 'preseason', 'regular', or 'playoffs'."
         usage
+        exit 1
     fi
     
-    local filepath="${DATA_BASE_DIR}/${filename}"
+    local filepath="${DATA_BASE_DIR}/${season_dir}/${filename}"
 
     echo "Downloading game data to ${filepath}..."
     if fetch_espn_data "${game_id}" | python3 -m json.tool > "$filepath"; then
