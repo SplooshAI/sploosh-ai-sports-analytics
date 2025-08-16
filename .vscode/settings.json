@@ -1,4 +1,12 @@
 {
+  "json.schemaDownload.enable": false,
+  "json.validate.enable": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["package.json"],
+      "url": "https://json.schemastore.org/package.json"
+    }
+  ],
   "cSpell.words": [
     "Aatu",
     "Abols",
