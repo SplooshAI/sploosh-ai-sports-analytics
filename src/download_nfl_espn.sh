@@ -26,7 +26,7 @@ usage() {
     echo "  HOME: Home team abbreviation (e.g., KC)"
     echo "  GAME_TYPE: Game type (preseason, regular, playoffs)"
     echo "  WEEK: Week number or playoff round name"
-    exit 1
+    # Don't exit here, let the caller decide what to do
 }
 
 # Fetch and validate JSON data from ESPN API
@@ -94,6 +94,7 @@ main() {
     if [ $# -lt 5 ]; then
         echo "Error: Not enough arguments"
         usage
+        exit 1
     fi
 
     local game_id=$1
@@ -106,6 +107,7 @@ main() {
     if [[ "$game_type" != "preseason" && "$game_type" != "regular" && "$game_type" != "playoffs" ]]; then
         echo "Error: Game type must be 'preseason', 'regular', or 'playoffs'"
         usage
+        exit 1
     fi
 
     echo "Downloading NFL game data for ${away_team} vs ${home_team} (${game_type})..."
