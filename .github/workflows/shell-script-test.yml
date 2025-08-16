@@ -61,6 +61,10 @@ jobs:
         run: |
           ./src/download_whl_playoff_game.sh --help || echo "Help command returned non-zero exit code: $?"
 
+      - name: Test NFL ESPN download script (help mode)
+        run: |
+          ./src/download_nfl_espn.sh --help || echo "Help command returned non-zero exit code: $?"
+
       - name: Debug information
         if: ${{ github.event.inputs.debug == 'true' }}
         run: |

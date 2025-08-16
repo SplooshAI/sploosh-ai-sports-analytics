@@ -84,6 +84,12 @@ download_nfl_game() {
 
 # Main execution
 main() {
+    # Check for help flag
+    if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+        usage
+        exit 0
+    fi
+
     # Check if we have enough arguments
     if [ $# -lt 5 ]; then
         echo "Error: Not enough arguments"
