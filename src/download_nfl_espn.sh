@@ -51,16 +51,47 @@ download_nfl_game() {
     local game_type=$4
     local week=$5
     
-    # Get current date in YYYYMMDD format
-    local date
-    date=$(date +%Y%m%d)
+    # Get game data first to extract the game date
+    local game_data
+    game_data=$(fetch_espn_data "${game_id}")
     
-    # Determine the NFL season based on current date
+    # Extract game date and time from the API response
+    local game_datetime
+    game_datetime=$(echo "$game_data" | jq -r '.gamepackageJSON.header.competitions[0].date')
+    
+    if [ -z "$game_datetime" ] || [ "$game_datetime" = "null" ]; then
+        echo "Error: Could not extract game date from API response. Using current date as fallback."
+        game_date=$(date +%Y%m%d)
+    else
+        # ESPN provides dates in UTC format (e.g., 2025-08-08T02:00Z)
+        # For NFL games in North America, we need to convert to local date
+        # UTC 02:00 on August 8th is actually the evening of August 7th in US time zones
+        
+        # Extract date part and time part
+        local utc_date=$(echo "$game_datetime" | cut -d'T' -f1)
+        local utc_time=$(echo "$game_datetime" | cut -d'T' -f2 | cut -d'Z' -f1)
+        local utc_hour=$(echo "$utc_time" | cut -d':' -f1)
+        
+        # If the UTC time is after 8:00 PM (20:00), it's the same day in US
+        # If it's before 8:00 PM, it's the previous day in US Pacific Time
+        if [ "$utc_hour" -lt 20 ]; then
+            # For games that are before 8:00 PM UTC, use the previous day for US dates
+            game_date=$(date -j -f "%Y-%m-%d" "$utc_date" -v-1d +"%Y%m%d")
+        else
+            # Otherwise use the UTC date as is
+            game_date=$(echo "$utc_date" | tr -d '-')
+        fi
+    fi
+    
+    # Use game date for filename
+    local date=$game_date
+    
+    # Determine the NFL season based on game date
     # NFL seasons span two years (e.g., 2025-26)
     local year
     local month
-    year=$(date +%Y)
-    month=$(date +%m)
+    year=${game_date:0:4}
+    month=${game_date:4:2}
     
     # Determine the season directory in YYYY-YY format
     local season_dir
