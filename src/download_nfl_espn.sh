@@ -13,6 +13,9 @@
 #
 # Example for playoffs:
 # ./src/download_nfl_espn.sh 401548345 SEA KC playoffs "wild-card"
+#
+# Example for Super Bowl:
+# ./src/download_nfl_espn.sh 401548400 SEA KC playoffs "super-bowl-lx"
 
 # Constants
 readonly API_BASE_URL="https://cdn.espn.com/core/nfl/playbyplay?xhr=1&gameId="
@@ -97,6 +100,7 @@ download_nfl_game() {
     local season_dir
     if [ "$month" -ge 1 ] && [ "$month" -le 7 ]; then
         # For January-July, use previous year as start
+        # Super Bowl is in February, so it belongs to the previous season
         local prev_year=$((year-1))
         local curr_year_short=$((year % 100))
         # Ensure two-digit format for the second year
@@ -125,7 +129,14 @@ download_nfl_game() {
     elif [ "$game_type" == "regular" ]; then
         filename="${date}-${away_team}-vs-${home_team}-${game_id}-week-${week}.json"
     elif [ "$game_type" == "playoffs" ]; then
-        filename="${date}-${away_team}-vs-${home_team}-${game_id}-playoffs-${week}.json"
+        # Check if it's a Super Bowl game
+        if [[ "$week" == super-bowl* ]]; then
+            # For Super Bowl, use the format with Roman numerals (e.g., super-bowl-lx)
+            filename="${date}-${away_team}-vs-${home_team}-${game_id}-${week}.json"
+        else
+            # For other playoff games (wild-card, divisional, conference)
+            filename="${date}-${away_team}-vs-${home_team}-${game_id}-playoffs-${week}.json"
+        fi
     else
         echo "Error: Invalid game type. Must be 'preseason', 'regular', or 'playoffs'."
         usage

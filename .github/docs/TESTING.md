@@ -1,5 +1,39 @@
 # Testing and Development Setup
 
+## Testing NFL ESPN Data Download Script
+
+We have a test script to verify the functionality of the `download_nfl_espn.sh` script, particularly focusing on date handling and file naming conventions.
+
+### Running the Test Script
+
+```sh
+# Make the test script executable
+chmod +x src/test_download_nfl_espn.sh
+
+# Run the test script
+./src/test_download_nfl_espn.sh
+```
+
+The test script verifies:
+
+1. **Date Handling**
+   - Correct conversion of UTC game dates to local dates
+   - Proper handling of evening games (same day)
+   - Proper handling of night games (previous day in local time)
+   - Fallback to current date when game date is missing
+
+2. **File Naming**
+   - Correct naming format for preseason games
+   - Correct naming format for regular season games
+   - Correct naming format for playoff games
+
+3. **Season Directory Determination**
+   - Correct season directory for games in different months
+
+### Expected Test Results
+
+All tests should pass with green checkmarks. If any test fails, it will show a red X with details about what was expected versus what was received.
+
 ## Testing GitHub Actions Locally
 
 We recommend using [act](https://github.com/nektos/act) to test GitHub Actions workflows locally before pushing changes if you are developing on a Mac.
@@ -63,7 +97,7 @@ The following test scripts are available from the root of the repository:
    - Simulates PR merge and version bump process
    - Note: Git operations will fail locally (expected)
 
-#### Expected Test Results
+#### GitHub Actions Test Results
 
 1. Semantic PR Check Tests:
    - All tests should pass except "invalid" test
