@@ -101,13 +101,43 @@ extract_game_date() {
 # Function to generate filename based on game parameters
 generate_filename() {
     local date=$1
-    local away=$2
-    local home=$3
+    local away_team=$2
+    local home_team=$3
     local game_id=$4
     local game_type=$5
     local week=$6
     
-    # Determine the NFL season based on game date
+    local filename="${date}-${away_team}-vs-${home_team}-${game_id}"
+    
+    case "$game_type" in
+        "preseason")
+            filename="${filename}-preseason-week-$week.json"
+            ;;
+        "regular")
+            filename="${filename}-week-$week.json"
+            ;;
+        "playoffs")
+            # Check if it's a Super Bowl game
+            if [[ "$week" == super-bowl* ]]; then
+                # For Super Bowl, use the format with Roman numerals (e.g., super-bowl-lviii)
+                filename="${filename}-${week}.json"
+            else
+                # For other playoff games (wild-card, divisional, conference)
+                filename="${filename}-playoffs-$week.json"
+            fi
+            ;;
+        *)
+            echo "Error: Invalid game type. Must be 'preseason', 'regular', or 'playoffs'."
+            return 1
+            ;;
+    esac
+    
+    echo "$filename"
+}
+
+# Function to determine season directory based on game date
+determine_season_directory() {
+    local date=$1
     local year
     local month
     year=${date:0:4}
@@ -123,25 +153,7 @@ generate_filename() {
         season_dir="$((year - 1))-$((year - 2000))"
     fi
     
-    # Build the filename based on game type
-    local filename="data/NFL - National Football League/espn/$season_dir/$date-$away-vs-$home-$game_id"
-    
-    case "$game_type" in
-        "preseason")
-            filename="${filename}-preseason-week-$week.json"
-            ;;
-        "regular")
-            filename="${filename}-week-$week.json"
-            ;;
-        "playoffs")
-            filename="${filename}-playoffs-$week.json"
-            ;;
-        *)
-            filename="${filename}.json"
-            ;;
-    esac
-    
-    echo "$filename"
+    echo "$season_dir"
 }
 
 # Override the save_json_to_file function to not actually write files
@@ -208,8 +220,103 @@ test_download_game() {
     local game_date
     game_date=$(extract_game_date "$game_data")
     
+    # Determine season directory
+    local season_dir=$(determine_season_directory "$game_date")
+    
     # Generate filename
-    generate_filename "$game_date" "$away" "$home" "$game_id" "$game_type" "$week"
+    local filename=$(generate_filename "$game_date" "$away" "$home" "$game_id" "$game_type" "$week")
+    
+    # Return the full path including season directory
+    echo "data/NFL - National Football League/espn/${season_dir}/${filename}"
+}
+
+# Test Super Bowl specific handling
+test_super_bowl_handling() {
+    echo "Testing Super Bowl specific handling..."
+    
+    # Create mock Super Bowl JSON data
+    local mock_json='{"gameInfo":{"date":"2024-02-11T23:30Z"},"header":{"competitions":[{"competitors":[{"team":{"abbreviation":"KC"}},{"team":{"abbreviation":"SF"}}]}]}}'
+    
+    # Extract game date from mock data
+    local game_date=$(echo "$mock_json" | extract_game_date)
+    local expected_date="20240211"
+    assert_equals "$game_date" "$expected_date" "Super Bowl game date extraction"
+    
+    # Generate filename for Super Bowl
+    local filename=$(generate_filename "$game_date" "KC" "SF" "401548348" "playoffs" "super-bowl-lviii")
+    local expected_filename="20240211-KC-vs-SF-401548348-super-bowl-lviii.json"
+    assert_equals "$filename" "$expected_filename" "Super Bowl filename generation"
+    
+    # Determine season directory for Super Bowl (February game)
+    local season_dir=$(determine_season_directory "$game_date")
+    local expected_season="2023-24"
+    assert_equals "$season_dir" "$expected_season" "Super Bowl season directory"
+    
+    echo "✅ All Super Bowl handling tests passed!"
+}
+
+# Test generate_filename function
+test_generate_filename() {
+    echo "Testing generate_filename function..."
+    
+    # Test preseason game
+    local result=$(generate_filename "20230812" "SEA" "MIN" "401547695" "preseason" "1")
+    local expected="20230812-SEA-vs-MIN-401547695-preseason-week-1.json"
+    assert_equals "$result" "$expected" "Preseason filename"
+    
+    # Test regular season game
+    result=$(generate_filename "20231001" "SEA" "NYG" "401547457" "regular" "4")
+    expected="20231001-SEA-vs-NYG-401547457-week-4.json"
+    assert_equals "$result" "$expected" "Regular season filename"
+    
+    # Test playoff game - Wild Card
+    result=$(generate_filename "20240113" "CLE" "HOU" "401548345" "playoffs" "wild-card")
+    expected="20240113-CLE-vs-HOU-401548345-playoffs-wild-card.json"
+    assert_equals "$result" "$expected" "Wild Card playoff filename"
+    
+    # Test playoff game - Divisional
+    result=$(generate_filename "20240120" "GB" "SF" "401548346" "playoffs" "divisional")
+    expected="20240120-GB-vs-SF-401548346-playoffs-divisional.json"
+    assert_equals "$result" "$expected" "Divisional playoff filename"
+    
+    # Test playoff game - Conference Championship
+    result=$(generate_filename "20240128" "KC" "BAL" "401548347" "playoffs" "conference")
+    expected="20240128-KC-vs-BAL-401548347-playoffs-conference.json"
+    assert_equals "$result" "$expected" "Conference Championship filename"
+    
+    # Test Super Bowl game
+    result=$(generate_filename "20240211" "KC" "SF" "401548348" "playoffs" "super-bowl-lviii")
+    expected="20240211-KC-vs-SF-401548348-super-bowl-lviii.json"
+    assert_equals "$result" "$expected" "Super Bowl filename"
+    
+    echo "✅ All generate_filename tests passed!"
+}
+
+# Test determine_season_directory function
+test_determine_season_directory() {
+    echo "Testing determine_season_directory function..."
+    
+    # Test August game (start of season)
+    local result=$(determine_season_directory "20230812")
+    local expected="2023-24"
+    assert_equals "$result" "$expected" "August game season directory"
+    
+    # Test January game (end of season)
+    result=$(determine_season_directory "20240107")
+    expected="2023-24"
+    assert_equals "$result" "$expected" "January game season directory"
+    
+    # Test February game (Super Bowl - should be part of previous season)
+    result=$(determine_season_directory "20240211")
+    expected="2023-24"
+    assert_equals "$result" "$expected" "February Super Bowl game season directory"
+    
+    # Test March game (offseason - should be part of previous season)
+    result=$(determine_season_directory "20240315")
+    expected="2023-24"
+    assert_equals "$result" "$expected" "March offseason game season directory"
+    
+    echo "✅ All determine_season_directory tests passed!"
 }
 
 # Run tests
@@ -283,12 +390,10 @@ run_tests() {
     # Create a custom January test
     local jan_game='{"gamepackageJSON":{"header":{"competitions":[{"date":"2026-01-15T20:00Z"}]}}}'
     local game_date=$(extract_game_date "$jan_game")
-    local result=$(generate_filename "$game_date" "SEA" "GB" "test_jan_game" "playoffs" "divisional")
+    local season_dir=$(determine_season_directory "$game_date")
     local expected_pattern="2025-26"
-    local actual_season=$(echo "$result" | grep -o "2025-26")
     
-    assert_equals "$expected_pattern" "$actual_season" "January game should use 2025-26 season directory" || ((failures++))
-    echo
+    assert_equals "$expected_pattern" "$season_dir" "January game should use 2025-26 season directory"
     
     # Summary
     echo -e "${YELLOW}Test Summary:${NC}"
