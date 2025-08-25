@@ -1,5 +1,24 @@
 #!/bin/bash
 
+# Function to clean up Docker containers created by act
+cleanup_docker_containers() {
+  echo "\n🧹 Cleaning up Docker containers..."
+  
+  # Find and remove any containers created by act
+  orphaned_containers=$(docker ps -a --filter "name=act-*" -q)
+  
+  if [ -n "$orphaned_containers" ]; then
+    echo "Found orphaned containers. Removing..."
+    docker rm -f $orphaned_containers 2>/dev/null || true
+    echo "✅ Containers removed successfully"
+  else
+    echo "No orphaned containers found"
+  fi
+}
+
+# Set up trap to clean up containers on script exit (normal or abnormal)
+trap cleanup_docker_containers EXIT INT TERM
+
 echo "🧪 Testing GitHub Actions workflows..."
 echo ""
 
