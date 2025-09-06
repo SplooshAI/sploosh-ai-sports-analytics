@@ -142,5 +142,5 @@ Play By Play:
 
 ### 2025-26 Preseason
 
-- [PRESEASON GAME: 2025.09.02 Seattle loses 8-0 against EVT](./2025-2026/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
-- [PRESEASON GAME: 2025.09.05 Seattle loses 9-3 against SPO](./2025-2026/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
+- [PRESEASON GAME: 2025.09.02 Seattle loses 8-0 against EVT](./2025-26/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
+- [PRESEASON GAME: 2025.09.05 Seattle loses 9-3 against SPO](./2025-26/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
