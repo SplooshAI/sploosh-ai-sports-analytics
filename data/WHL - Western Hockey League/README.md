@@ -4,13 +4,57 @@ This directory contains example data files to explore [WHL](https://chl.ca/whl/)
 
 ## Western Hockey League (WHL)
 
-Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-home-<WHL_GAME_ID>-<tab>.json` from the WHL API.
+Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-home-<WHL_GAME_ID>-<game_type>-<tab>.json` from the WHL API.
 
 For the first regular season game of the 2024-25 season for the Seattle Thunderbirds (WHL game ID `1021522`):
 
 Game Summary - <https://cluster.leaguestat.com/feed/index.php?feed=gc&game_id=1021522&key=41b145a848f4bd67&client_code=whl&lang_code=en&fmt=json&tab=gamesummary>
 
 Play By Play - <https://cluster.leaguestat.com/feed/index.php?feed=gc&game_id=1021522&key=41b145a848f4bd67&client_code=whl&lang_code=en&fmt=json&tab=pxpverbose>
+
+## Downloading WHL Game Data
+
+We use a unified script for downloading all types of WHL game data (preseason, regular season, and playoffs). The script automatically detects the game type and saves the data in the appropriate directory.
+
+### Usage
+
+You can use the following npm scripts to download WHL game data:
+
+```bash
+# Download today's game (auto-detects game type)
+npm run download:whl:game
+
+# Download game for a specific date
+npm run download:whl:game:date
+
+# Download preseason game for a specific date
+npm run download:whl:game:preseason
+
+# Download regular season game for a specific date
+npm run download:whl:game:regular
+
+# Download playoff game for a specific date
+npm run download:whl:game:playoff
+
+# Download games for multiple dates
+npm run download:whl:game:multiple
+```
+
+Or you can use the script directly:
+
+```bash
+# Download today's game (auto-detects game type)
+./src/download_whl_game.sh
+
+# Download game for a specific date
+./src/download_whl_game.sh 2025-09-05
+
+# Download game for a specific date with game type
+./src/download_whl_game.sh 2025-09-05 preseason
+
+# Download games for multiple dates
+./src/download_whl_game.sh 2025-09-02 2025-09-05
+```
 
 ### Seattle Thunderbirds 2024-25
 
@@ -95,3 +139,8 @@ Play By Play:
 - [ROUND 1 GAME #4: 2025.04.04 Seattle loses 6-2 against Everett Silvertips](./2024-25/playoffs/20250404-EVT-vs-SEA-1021970-pxpverbose.json)
 - [ROUND 1 GAME #5: 2025.04.05 Seattle loses 7-4 against Everett Silvertips](./2024-25/playoffs/20250405-SEA-vs-EVT-1021971-pxpverbose.json)
 - [ROUND 1 GAME #6: 2025.04.07 Seattle loses 1-0 against Everett Silvertips in OT2](./2024-25/playoffs/20250407-EVT-vs-SEA-1021972-pxpverbose.json)
+
+### 2025-26 Preseason
+
+- [PRESEASON GAME: 2025.09.02 Seattle loses 8-0 against EVT](./2025-2026/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
+- [PRESEASON GAME: 2025.09.05 Seattle loses 9-3 against SPO](./2025-2026/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
