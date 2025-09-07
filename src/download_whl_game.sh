@@ -65,8 +65,8 @@ determine_season() {
     local month=${date:5:2}
     
     # WHL season typically runs from September to April
-    # If month is between September and December, season is YEAR-YY
-    # If month is between January and August, season is YEAR-1-YY
+    # If month is between September and December, season is YEAR-YY (e.g., 2025-26)
+    # If month is between January and August, season is PREV_YEAR-YY (e.g., 2024-25 for 2025)
     if [ "$month" -ge 9 ] && [ "$month" -le 12 ]; then
         local next_year=$((year + 1))
         local next_year_short=${next_year: -2}
