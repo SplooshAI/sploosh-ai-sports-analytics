@@ -140,7 +140,9 @@ Play By Play:
 - [ROUND 1 GAME #5: 2025.04.05 Seattle loses 7-4 against Everett Silvertips](./2024-25/playoffs/20250405-SEA-vs-EVT-1021971-pxpverbose.json)
 - [ROUND 1 GAME #6: 2025.04.07 Seattle loses 1-0 against Everett Silvertips in OT2](./2024-25/playoffs/20250407-EVT-vs-SEA-1021972-pxpverbose.json)
 
+
 ### 2025-26 Preseason
 
 - [PRESEASON GAME: 2025.09.02 Seattle loses 8-0 against EVT](./2025-26/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
 - [PRESEASON GAME: 2025.09.05 Seattle loses 9-3 against SPO](./2025-26/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
+- [PRESEASON GAME: 2025.09.06 Seattle wins 7-4 against EVT](./2025-26/20250906-SEA-vs-EVT-1022086-pxpverbose.json)

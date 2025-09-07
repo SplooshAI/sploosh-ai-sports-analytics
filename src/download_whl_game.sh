@@ -65,12 +65,16 @@ determine_season() {
     local month=${date:5:2}
     
     # WHL season typically runs from September to April
-    # If month is between September and December, season is YEAR-YEAR+1
-    # If month is between January and August, season is YEAR-1-YEAR
+    # If month is between September and December, season is YEAR-YY
+    # If month is between January and August, season is YEAR-1-YY
     if [ "$month" -ge 9 ] && [ "$month" -le 12 ]; then
-        echo "${year}-$((year + 1))"
+        local next_year=$((year + 1))
+        local next_year_short=${next_year: -2}
+        echo "${year}-${next_year_short}"
     else
-        echo "$((year - 1))-${year}"
+        local prev_year=$((year - 1))
+        local year_short=${year: -2}
+        echo "${prev_year}-${year_short}"
     fi
 }
 
