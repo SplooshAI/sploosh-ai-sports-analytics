@@ -62,27 +62,21 @@ download_nfl_game() {
     local game_datetime
     game_datetime=$(echo "$game_data" | jq -r '.gamepackageJSON.header.competitions[0].date')
     
+    echo "Extracting game date from API response: $game_datetime"
+    
     if [ -z "$game_datetime" ] || [ "$game_datetime" = "null" ]; then
         echo "Error: Could not extract game date from API response. Using current date as fallback."
         game_date=$(date +%Y%m%d)
     else
-        # ESPN provides dates in UTC format (e.g., 2025-08-08T02:00Z)
-        # For NFL games in North America, we need to convert to local date
-        # UTC 02:00 on August 8th is actually the evening of August 7th in US time zones
-        
-        # Extract date part and time part
-        local utc_date=$(echo "$game_datetime" | cut -d'T' -f1)
-        local utc_time=$(echo "$game_datetime" | cut -d'T' -f2 | cut -d'Z' -f1)
-        local utc_hour=$(echo "$utc_time" | cut -d':' -f1)
-        
-        # If the UTC time is after 8:00 PM (20:00), it's the same day in US
-        # If it's before 8:00 PM, it's the previous day in US Pacific Time
-        if [ "$utc_hour" -lt 20 ]; then
-            # For games that are before 8:00 PM UTC, use the previous day for US dates
-            game_date=$(date -j -f "%Y-%m-%d" "$utc_date" -v-1d +"%Y%m%d")
-        else
-            # Otherwise use the UTC date as is
+        # ESPN provides dates in UTC format (e.g., 2025-09-14T17:00Z)
+        # Extract just the date part (2025-09-14) and remove hyphens
+        if [[ "$game_datetime" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+            local utc_date=${BASH_REMATCH[1]}
             game_date=$(echo "$utc_date" | tr -d '-')
+            echo "Successfully extracted date: $game_date from $utc_date"
+        else
+            echo "Error: Could not parse date from $game_datetime. Using current date."
+            game_date=$(date +%Y%m%d)
         fi
     fi
     
@@ -91,10 +85,10 @@ download_nfl_game() {
     
     # Determine the NFL season based on game date
     # NFL seasons span two years (e.g., 2025-26)
-    local year
-    local month
-    year=${game_date:0:4}
-    month=${game_date:4:2}
+    local year=${game_date:0:4}
+    local month=${game_date:4:2}
+    
+    echo "Using date: $game_date (Year: $year, Month: $month) for file naming"
     
     # Determine the season directory in YYYY-YY format
     local season_dir
