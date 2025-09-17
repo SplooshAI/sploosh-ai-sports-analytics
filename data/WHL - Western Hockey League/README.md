@@ -142,9 +142,11 @@ Play By Play:
 
 ### 2025-26 Preseason
 
-- [PRESEASON GAME #1: 2025.09.02 Seattle loses 8-0 against EVT](./2025-26/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
-- [PRESEASON GAME #2: 2025.09.05 Seattle loses 9-3 against SPO](./2025-26/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
-- [PRESEASON GAME #3: 2025.09.06 Seattle wins 7-4 against EVT](./2025-26/20250906-SEA-vs-EVT-1022086-pxpverbose.json)
-- [PRESEASON GAME #4: 2025.09.07 Seattle loses 5-4 against POR](./2025-26/20250907-SEA-vs-POR-1022096-pxpverbose.json)
+- [PRESEASON GAME #1: 2025.09.02 Seattle loses 8-0 against EVT](./2025-26/preseason/20250902-EVT-vs-SEA-1022070-pxpverbose.json)
+- [PRESEASON GAME #2: 2025.09.05 Seattle loses 9-3 against SPO](./2025-26/preseason/20250905-SPO-vs-SEA-1022082-pxpverbose.json)
+- [PRESEASON GAME #3: 2025.09.06 Seattle wins 7-4 against EVT](./2025-26/preseason/20250906-SEA-vs-EVT-1022086-pxpverbose.json)
+- [PRESEASON GAME #4: 2025.09.07 Seattle loses 5-4 against POR](./2025-26/preseason/20250907-SEA-vs-POR-1022096-pxpverbose.json)
 - [PRESEASON GAME #5: 2025.09.12 Seattle loses 4-0 against SPO at Toyota Arena - Kennewick, WA](./2025-26/preseason/20250912-SPO-vs-SEA-1022111-preseason-pxpverbose.json)
 - [PRESEASON GAME #6: 2025.09.13 Seattle loses 4-3 against PEN at Toyota Arena - Kennewick, WA](./2025-26/preseason/20250913-PEN-vs-SEA-1022119-preseason-pxpverbose.json)
+
+**[View complete 2025-26 Preseason Analysis and Regular Season Preview](./2025-26/preseason/ANALYSIS.md)**
