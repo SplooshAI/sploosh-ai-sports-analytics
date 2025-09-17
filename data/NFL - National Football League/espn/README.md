@@ -31,3 +31,9 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
     - [Week 16 - MIN vs SEA](./2024-25/20241222-MIN-vs-SEA-401671795-week-16.json)
     - [Week 17 - SEA vs CHI](./2024-25/20241226-SEA-vs-CHI-401671876-week-17.json)
     - [Week 18 - SEA vs LAR](./2024-25/20250105-SEA-vs-LAR-401671830-week-18.json)
+
+### 2025-26 Season
+
+- Regular Season
+  - [Week 1 - SF vs SEA](./2025-26/20250907-SF-vs-SEA-401772831-week-1.json)
+  - [Week 2 - SEA vs PIT](./2025-26/20250914-SEA-vs-PIT-401772836-week-2.json)
