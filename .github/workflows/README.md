@@ -1,19 +1,23 @@
 # GitHub Actions Workflows
 
-This directory contains GitHub Actions workflows for automating various tasks in the Sploosh AI Sports Analytics project.
+This directory contains GitHub Actions workflows for automating various tasks
+in the Sploosh AI Sports Analytics project.
 
 ## Available Workflows
 
 ### 1. Semantic PR Check (`semantic-pr-check.yml`)
 
-Validates that pull request titles follow the [Conventional Commits](https://www.conventionalcommits.org/) format.
+Validates that pull request titles follow the
+[Conventional Commits](https://www.conventionalcommits.org/) format.
 
 **Triggers:**
+
 - Pull request opened
 - Pull request title edited
 - New commits pushed to PR
 
 **Features:**
+
 - Enforces semantic versioning format in PR titles
 - Provides helpful error messages for invalid formats
 - Detects breaking changes with `!` notation
@@ -23,10 +27,12 @@ Validates that pull request titles follow the [Conventional Commits](https://www
 Handles version bumping after merges to the main branch.
 
 **Triggers:**
+
 - Push to main branch
 - Manual workflow dispatch
 
 **Features:**
+
 - Automatically determines version bump type based on commit message
 - Creates a new branch for version bump
 - Updates version in package.json
@@ -38,11 +44,13 @@ Handles version bumping after merges to the main branch.
 Tests shell scripts in the `src` directory.
 
 **Triggers:**
+
 - Push to main branch (when shell scripts change)
 - Pull request to main branch (when shell scripts change)
 - Manual workflow dispatch
 
 **Features:**
+
 - Runs ShellCheck on all shell scripts
 - Tests scripts in help mode
 - Provides debug information when needed
@@ -52,10 +60,12 @@ Tests shell scripts in the `src` directory.
 Cleans up old container images from GitHub Container Registry.
 
 **Triggers:**
+
 - Monthly schedule (first day of month)
 - Manual workflow dispatch
 
 **Features:**
+
 - Configurable retention policy
 - Dry run mode for testing
 - Detailed reporting in GitHub Actions summary
