@@ -34,6 +34,11 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
 
 ### 2025-26 Season
 
+- Preseason
+  - [Week 1 - LV vs SEA (23-23 Tie)](./2025-26/preseason/20250807-LV-vs-SEA-401774568-preseason-week-1.json)
+  - [Week 2 - KC vs SEA (16-33 SEA Win)](./2025-26/preseason/20250815-KC-vs-SEA-401774591-preseason-week-2.json)
+  - [Week 3 - SEA vs GB (7-20 GB Win)](./2025-26/preseason/20250823-SEA-vs-GB-401773011-preseason-week-3.json)
+
 - Regular Season
-  - [Week 1 - SF vs SEA](./2025-26/20250907-SF-vs-SEA-401772831-week-1.json)
-  - [Week 2 - SEA vs PIT](./2025-26/20250914-SEA-vs-PIT-401772836-week-2.json)
+  - [Week 1 - SF vs SEA (17-13 SF Win)](./2025-26/20250907-SF-vs-SEA-401772831-week-1.json)
+  - [Week 2 - SEA vs PIT (31-17 SEA Win)](./2025-26/20250914-SEA-vs-PIT-401772836-week-2.json)
