@@ -100,3 +100,7 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #80: Seattle Kraken vs Vegas Golden Knights - Seattle loses 2-1](./2024-25/regular-season/20250410-SEA-vs-VGK-2024021258.json)
 - [GAME #81: St. Louis Blues vs Seattle Kraken - Seattle wins 4-3 in SO](./2024-25/regular-season/20250412-STL-vs-SEA-2024021275.json)
 - [GAME #82: Los Angeles Kings vs Seattle Kraken - Seattle loses 6-5](./2024-25/regular-season/20250415-LAK-vs-SEA-2024021300.json)
+
+### 2025-26 Preseason
+
+- [PRESEASON GAME #1: Vancouver Canucks vs Seattle Kraken - Seattle wins 5-3](./2025-26/preseason/20250921-VAN-vs-SEA-2025010011.json)
