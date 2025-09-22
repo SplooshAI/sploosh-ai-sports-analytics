@@ -150,3 +150,7 @@ Play By Play:
 - [PRESEASON GAME #6: 2025.09.13 Seattle loses 4-3 against PEN at Toyota Arena - Kennewick, WA](./2025-26/preseason/20250913-PEN-vs-SEA-1022119-preseason-pxpverbose.json)
 
 **[View complete 2025-26 Preseason Analysis and Regular Season Preview](./2025-26/preseason/ANALYSIS.md)**
+
+### 2025-26 Regular Season
+
+- [GAME #01: 2025-09-20 Seattle wins 6-3 against TC](./2025-26/20250920-TC-vs-SEA-1022142-pxpverbose.json)
