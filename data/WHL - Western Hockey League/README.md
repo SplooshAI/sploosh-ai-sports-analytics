@@ -153,6 +153,6 @@ Play By Play:
 
 ### 2025-26 Regular Season
 
-- [GAME #01: 2025-09-20 Seattle wins 6-3 against TC](./2025-26/20250920-TC-vs-SEA-1022142-pxpverbose.json)
-- [GAME #02: 2025-09-26 Seattle loses 4-3 against KAM](./2025-26/20250926-SEA-vs-KAM-1022144-pxpverbose.json)
+- [GAME #01: 2025.09.20 Seattle wins 6-3 against TC](./2025-26/20250920-TC-vs-SEA-1022142-pxpverbose.json)
+- [GAME #02: 2025.09.26 Seattle loses 4-3 against KAM](./2025-26/20250926-SEA-vs-KAM-1022144-pxpverbose.json)
 - [GAME #03: 2025.09.27 Seattle loses 6-0 against KAM](./2025-26/20250927-SEA-vs-KAM-1022152-pxpverbose.json)
