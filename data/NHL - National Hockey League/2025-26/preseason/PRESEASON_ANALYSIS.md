@@ -1,6 +1,7 @@
 # Seattle Kraken 2025-26 Preseason Analysis
 
 ## Final Preseason Game: October 1st, 2025
+
 ### Edmonton Oilers vs Seattle Kraken - **Seattle Wins 4-2**
 
 ---
@@ -24,15 +25,18 @@ The Seattle Kraken closed out their 2025-26 preseason with a convincing **4-2 vi
 ## Scoring Summary
 
 ### First Period (SEA leads 3-1)
+
 - **6:47** - SEA Goal (Slap shot) - **1-0 SEA**
 - **12:03** - SEA Goal (Backhand) - **2-0 SEA**
 - **14:58** - SEA Goal (Slap shot) - **3-0 SEA**
 - **17:35** - EDM Goal (Wrist shot) - **3-1 SEA**
 
 ### Second Period (EDM cuts lead)
+
 - **0:28** - EDM Goal (Tip-in) - **3-2 SEA**
 
 ### Third Period (SEA seals victory)
+
 - **2:26** - SEA Goal (Wrist shot) - **4-2 SEA** *(Insurance goal)*
 
 ---
@@ -41,17 +45,20 @@ The Seattle Kraken closed out their 2025-26 preseason with a convincing **4-2 vi
 
 ### Period-by-Period Breakdown
 
-**First Period: Dominant Start**
+#### First Period: Dominant Start
+
 - Seattle jumped out to a commanding 3-0 lead with three goals in the first 15 minutes
 - The Kraken capitalized on early opportunities with clinical finishing
 - Edmonton pulled one back late in the period to make it 3-1
 
-**Second Period: Oilers Push Back**
+#### Second Period: Oilers Push Back
+
 - Edmonton scored just 28 seconds into the period to cut the lead to 3-2
 - The Oilers dominated possession and shots but couldn't find the equalizer
 - Seattle's goaltending stood tall under sustained pressure
 
-**Third Period: Defensive Excellence**
+#### Third Period: Defensive Excellence
+
 - Seattle scored an insurance goal at 2:26 to restore the two-goal cushion
 - The Kraken locked down defensively for the remainder of the game
 - Edmonton couldn't solve Seattle's goaltender despite continued pressure
@@ -120,17 +127,20 @@ The Seattle Kraken closed out their 2025-26 preseason with a convincing **4-2 vi
 ### Preseason Statistics Summary
 
 **Offensive Performance:**
+
 - **Total Goals For:** 17 goals in 6 games (2.83 goals/game)
 - **Total Goals Against:** 16 goals in 6 games (2.67 goals/game)
 - **Goal Differential:** +1
 
 **Shots & Efficiency:**
+
 - **Total Shots For:** 147 shots (24.5 shots/game)
 - **Total Shots Against:** 177 shots (29.5 shots/game)
 - **Shot Differential:** -30 shots (-5 shots/game)
 - **Average Shooting %:** 11.6% (above NHL average)
 
 **Home vs Away:**
+
 - **Home Record:** 2-0-1 (5 points in 3 games)
 - **Away Record:** 1-2-0 (2 points in 3 games)
 - Home ice advantage was evident with better results at Climate Pledge Arena
@@ -222,7 +232,7 @@ The regular season will reveal whether the preseason trends are sustainable or i
 
 ### Preseason Goals by Period
 
-```
+```text
 Period 1: SEA 7 | OPP 5  (+2)
 Period 2: SEA 4 | OPP 6  (-2)
 Period 3: SEA 5 | OPP 4  (+1)
@@ -231,7 +241,7 @@ OT/SO:    SEA 1 | OPP 1  (Even)
 
 ### Shot Differential by Game
 
-```
+```text
 Game 1 (vs VAN):  SEA 24 | VAN 25  (-1)
 Game 2 (@ CGY):   SEA 20 | CGY 34  (-14)
 Game 3 (@ EDM):   SEA 19 | EDM 25  (-6)
@@ -255,7 +265,7 @@ The Seattle Kraken's 2025-26 preseason concluded with a statement victory over t
 
 The team enters the regular season with confidence in their goaltending and finishing ability, but questions remain about possession, faceoffs, and road performance. The coaching staff has valuable data to work with as they prepare for the season opener.
 
-**Final Preseason Grade: B+**
+### Final Preseason Grade: B+
 
 The Kraken showed they can compete and win games, but consistency and possession improvements are needed to be a playoff contender in the competitive Pacific Division.
 
