@@ -8,6 +8,17 @@ This endpoint is publicly-available and can be accessed by obtaining the game ID
 
 Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-home-<MLB_GAME_ID>.json` from the MLB API.
 
+### 2025 Postseason
+
+#### ALDS Game 1 - October 4th, 2025: Detroit Tigers @ Seattle Mariners
+
+- **Final Score:** Tigers 3, Mariners 2 (11 innings)
+- Game URL: [https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/04/813058](https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/04/813058)
+- GET [https://ws.statsapi.mlb.com/api/v1.1/game/813058/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813058/feed/live?language=en)
+  - [./2025/20251004-DET-v-SEA-813058-alds-game1.json](./2025/20251004-DET-v-SEA-813058-alds-game1.json)
+
+### 2024 Regular Season
+
 Example scoreboard URL for the 2024.08.24 game between SF and SEA is [https://www.mlb.com/gameday/giants-vs-mariners/2024/08/24/745218/final/wrap](https://www.mlb.com/gameday/giants-vs-mariners/2024/08/24/745218/final/wrap):
 
 - GET [https://ws.statsapi.mlb.com/api/v1.1/game/745218/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/745218/feed/live?language=en)
