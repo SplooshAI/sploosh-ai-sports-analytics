@@ -12,7 +12,71 @@ Please review the overview of sample data locally available within this project 
 
 ## Download data from supported sources
 
-### EXAMPLE: Download NHL Game Data
+### Download MLB Game Data
+
+The project includes scripts for downloading MLB game data from the MLB Stats API.
+
+Make sure that `src/download_mlb.sh` is executable:
+
+```bash
+chmod +x src/download_mlb.sh
+```
+
+Available npm scripts:
+
+- `npm run download:mariners` - Downloads the latest Mariners game data (ALDS Game 1 example)
+- `npm run download:mlb:mariners` - Same as above
+- `npm run download:mlb:regular` - Example for downloading regular season game data
+- `npm run download:mlb:postseason` - Example for downloading postseason game data
+
+To download data for a specific game, use the shell script directly:
+
+```bash
+# Regular season game
+./src/download_mlb.sh GAMEID AWAY HOME regular
+
+# Postseason game with description
+./src/download_mlb.sh GAMEID AWAY HOME postseason "alds-game1"
+
+# Examples:
+./src/download_mlb.sh 745218 SF SEA regular
+./src/download_mlb.sh 813058 DET SEA postseason "alds-game1"
+```
+
+### Download NFL Game Data
+
+The project includes scripts for downloading NFL game data from ESPN.
+
+Make sure that `src/download_nfl_espn.sh` is executable:
+
+```bash
+chmod +x src/download_nfl_espn.sh
+```
+
+Available npm scripts:
+
+- `npm run download:nfl:espn` - Base script for downloading NFL game data
+- `npm run download:nfl:espn:date` - Example for downloading specific game data
+
+To download data for a specific game, use the shell script directly:
+
+```bash
+# Preseason game
+./src/download_nfl_espn.sh GAMEID AWAY HOME preseason WEEK
+
+# Regular season game
+./src/download_nfl_espn.sh GAMEID AWAY HOME regular WEEK
+
+# Playoff game
+./src/download_nfl_espn.sh GAMEID AWAY HOME playoffs "round-name"
+
+# Examples:
+./src/download_nfl_espn.sh 401547716 SEA GB preseason 3
+./src/download_nfl_espn.sh 401547800 SEA KC regular 3
+./src/download_nfl_espn.sh 401548345 SEA KC playoffs "wild-card"
+```
+
+### Download NHL Game Data
 
 Please note that functionality exists to download Seattle Kraken NHL data as of this writing (Monday, January 6th, 2025).
 
