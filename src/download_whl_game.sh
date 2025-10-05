@@ -224,7 +224,7 @@ download_whl_game() {
     elif [ "$game_type" = "playoff" ]; then
         output_dir="${DATA_BASE_DIR}/${season}/playoffs"
     else
-        output_dir="${DATA_BASE_DIR}/${season}"
+        output_dir="${DATA_BASE_DIR}/${season}/regular-season"
     fi
     
     # Create output directory if it doesn't exist
@@ -313,7 +313,7 @@ download_whl_game() {
     elif [ "$game_type" = "playoff" ]; then
         log_message "- [PLAYOFF GAME: ${date} ${result} against ${opponent}](${season}/playoffs/${pxp_filename})"
     else
-        log_message "- [REGULAR SEASON GAME: ${date} ${result} against ${opponent}](${season}/${pxp_filename})"
+        log_message "- [REGULAR SEASON GAME: ${date} ${result} against ${opponent}](${season}/regular-season/${pxp_filename})"
     fi
     
     return 0
