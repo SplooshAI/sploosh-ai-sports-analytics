@@ -85,12 +85,12 @@ download_mlb_game() {
     # Create filename based on game type - away team first, then home team
     local filename
     if [ "$game_type" == "regular" ]; then
-        filename="${date}-${away_team}-v-${home_team}-${game_id}.json"
+        filename="${date}-${away_team}-vs-${home_team}-${game_id}.json"
     elif [ "$game_type" == "postseason" ]; then
         if [ -n "$description" ]; then
-            filename="${date}-${away_team}-v-${home_team}-${game_id}-${description}.json"
+            filename="${date}-${away_team}-vs-${home_team}-${game_id}-${description}.json"
         else
-            filename="${date}-${away_team}-v-${home_team}-${game_id}-postseason.json"
+            filename="${date}-${away_team}-vs-${home_team}-${game_id}-postseason.json"
         fi
     else
         echo "Error: Invalid game type. Must be 'regular' or 'postseason'."
