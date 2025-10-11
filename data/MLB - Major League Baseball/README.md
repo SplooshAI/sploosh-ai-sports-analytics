@@ -12,7 +12,7 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
 
 #### ALDS Game 1 - October 4th, 2025: Detroit Tigers @ Seattle Mariners
 
-- **Final Score:** Tigers 3, Mariners 2 (11 innings)
+- **Final Score:** Tigers 3, Mariners 2 (11 innings - extra innings)
 - Game URL: [https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/04/813058](https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/04/813058)
 - GET [https://ws.statsapi.mlb.com/api/v1.1/game/813058/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813058/feed/live?language=en)
   - [./2025/20251004-DET-vs-SEA-813058-alds-game1.json](./2025/20251004-DET-vs-SEA-813058-alds-game1.json)
@@ -37,6 +37,13 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
 - Game URL: [https://www.mlb.com/gameday/mariners-vs-tigers/2025/10/08/813055](https://www.mlb.com/gameday/mariners-vs-tigers/2025/10/08/813055)
 - GET [https://ws.statsapi.mlb.com/api/v1.1/game/813055/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813055/feed/live?language=en)
   - [./2025/20251008-SEA-vs-DET-813055-alds-game4.json](./2025/20251008-SEA-vs-DET-813055-alds-game4.json)
+
+#### ALDS Game 5 - October 10th, 2025: Detroit Tigers @ Seattle Mariners
+
+- **Final Score:** Mariners 3, Tigers 2 (15 innings - extra innings)
+- Game URL: [https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/10/813054](https://www.mlb.com/gameday/tigers-vs-mariners/2025/10/10/813054)
+- GET [https://ws.statsapi.mlb.com/api/v1.1/game/813054/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813054/feed/live?language=en)
+  - [./2025/20251010-DET-vs-SEA-813054-alds-game5.json](./2025/20251010-DET-vs-SEA-813054-alds-game5.json)
 
 ### 2024 Regular Season
 
