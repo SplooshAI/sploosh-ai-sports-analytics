@@ -109,3 +109,8 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [PRESEASON GAME #4: Seattle Kraken vs Vancouver Canucks - Seattle loses 4-2](./2025-26/preseason/20250926-SEA-vs-VAN-2025010043.json)
 - [PRESEASON GAME #5: Calgary Flames vs Seattle Kraken - Seattle loses 2-1 in SO](./2025-26/preseason/20250929-CGY-vs-SEA-2025010060.json)
 - [PRESEASON GAME #6: Edmonton Oilers vs Seattle Kraken - Seattle wins 4-2](./2025-26/preseason/20251001-EDM-vs-SEA-2025010075.json)
+
+### 2025-26 Regular Season
+
+- [GAME #01: Anaheim Ducks vs Seattle Kraken - Seattle wins 3-1](./2025-26/regular-season/20251009-ANA-vs-SEA-2025020021.json)
+- [GAME #02: Vegas Golden Knights vs Seattle Kraken - Seattle wins 2-1 in OT](./2025-26/regular-season/20251011-VGK-vs-SEA-2025020037.json)
