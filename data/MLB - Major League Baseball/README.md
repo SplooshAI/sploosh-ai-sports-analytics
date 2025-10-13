@@ -45,6 +45,13 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
 - GET [https://ws.statsapi.mlb.com/api/v1.1/game/813054/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813054/feed/live?language=en)
   - [./2025/20251010-DET-vs-SEA-813054-alds-game5.json](./2025/20251010-DET-vs-SEA-813054-alds-game5.json)
 
+#### ALCS Game 1 - October 12th, 2025: Seattle Mariners @ Toronto Blue Jays
+
+- **Final Score:** Mariners 3, Blue Jays 1
+- Game URL: [https://www.mlb.com/gameday/mariners-vs-blue-jays/2025/10/12/813040](https://www.mlb.com/gameday/mariners-vs-blue-jays/2025/10/12/813040)
+- GET [https://ws.statsapi.mlb.com/api/v1.1/game/813040/feed/live?language=en](https://ws.statsapi.mlb.com/api/v1.1/game/813040/feed/live?language=en)
+  - [./2025/20251012-SEA-vs-TOR-813040-alcs-game1.json](./2025/20251012-SEA-vs-TOR-813040-alcs-game1.json)
+
 ### 2024 Regular Season
 
 Example scoreboard URL for the 2024.08.24 game between SF and SEA is [https://www.mlb.com/gameday/giants-vs-mariners/2024/08/24/745218/final/wrap](https://www.mlb.com/gameday/giants-vs-mariners/2024/08/24/745218/final/wrap):
