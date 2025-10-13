@@ -160,3 +160,4 @@ Play By Play:
 - [GAME #05: 2025.10.04 Seattle loses 10-4 against PEN](./2025-26/regular-season/20251004-SEA-vs-PEN-1022176-pxpverbose.json)
 - [GAME #06: 2025.10.10 Seattle wins 3-1 against KEL](./2025-26/regular-season/20251010-SEA-vs-KEL-1022193-pxpverbose.json)
 - [GAME #07: 2025.10.11 Seattle loses 2-1 against SPO](./2025-26/regular-season/20251011-SPO-vs-SEA-1022207-pxpverbose.json)
+- [GAME #08: 2025.10.12 Seattle loses 7-3 against WEN](./2025-26/regular-season/20251012-SEA-vs-WEN-1022211-pxpverbose.json)
