@@ -116,3 +116,5 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #02: Vegas Golden Knights vs Seattle Kraken - Seattle wins 2-1 in OT](./2025-26/regular-season/20251011-VGK-vs-SEA-2025020037.json)
 - [GAME #03: Seattle Kraken vs Montreal Canadiens - Seattle loses 5-4 in OT](./2025-26/regular-season/20251014-SEA-vs-MTL-2025020050.json)
 - [GAME #04: Seattle Kraken vs Ottawa Senators - Seattle loses 4-3 in SO](./2025-26/regular-season/20251016-SEA-vs-OTT-2025020063.json)
+- [GAME #05: Seattle Kraken vs Toronto Maple Leafs - Seattle wins 4-3 in OT](./2025-26/regular-season/20251018-SEA-vs-TOR-2025020079.json)
+
