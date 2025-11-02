@@ -166,3 +166,4 @@ Play By Play:
 - [GAME #11: 2025.10.24 Seattle loses 6-3 against PG](./2025-26/regular-season/20251024-SEA-vs-PG-1022254-pxpverbose.json)
 - [GAME #12: 2025.10.25 Seattle wins 4-3 against PG](./2025-26/regular-season/20251025-SEA-vs-PG-1022264-pxpverbose.json)
 - [GAME #13: 2025.10.31 Seattle wins 5-1 against SAS](./2025-26/regular-season/20251031-SAS-vs-SEA-1022283-pxpverbose.json)
+- [GAME #14: 2025.11.01 Seattle loses 4-3 against PG in OT](./2025-26/regular-season/20251101-PG-vs-SEA-1022290-pxpverbose.json)
