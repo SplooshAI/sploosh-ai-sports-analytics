@@ -2,6 +2,23 @@
   "name": "sploosh-ai-sports-analytics",
   "version": "0.71.0",
   "description": "This project explores working with a variety of APIs for sports data analysis and visualization.",
+  "private": true,
+  "keywords": [
+    "sports",
+    "analytics",
+    "data-analysis",
+    "nhl",
+    "nfl",
+    "mlb",
+    "mls",
+    "whl",
+    "sports-data",
+    "api",
+    "data-visualization",
+    "seattle-kraken",
+    "seattle-seahawks",
+    "seattle-mariners"
+  ],
   "scripts": {
     "download:kraken": "npm run download:nhl:kraken",
     "download:mariners": "npm run download:mlb:mariners",
@@ -37,5 +54,9 @@
   "bugs": {
     "url": "https://github.com/SplooshAI/sploosh-ai-sports-analytics/issues"
   },
-  "homepage": "https://github.com/SplooshAI/sploosh-ai-sports-analytics#readme"
+  "homepage": "https://github.com/SplooshAI/sploosh-ai-sports-analytics#readme",
+  "engines": {
+    "node": ">=24.11.0",
+    "npm": ">=11.0.0"
+  }
 }
