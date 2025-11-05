@@ -123,3 +123,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #09: Edmonton Oilers @ Seattle Kraken - Seattle wins 3-2](./2025-26/regular-season/20251025-EDM-vs-SEA-2025020139.json)
 - [GAME #10: Montreal Canadiens @ Seattle Kraken - Seattle loses 4-3 in OT](./2025-26/regular-season/20251028-MTL-vs-SEA-2025020164.json)
 - [GAME #11: New York Rangers @ Seattle Kraken - Seattle loses 3-2 in OT](./2025-26/regular-season/20251101-NYR-vs-SEA-2025020193.json)
+- [GAME #12: Chicago Blackhawks @ Seattle Kraken - Seattle wins 3-1](./2025-26/regular-season/20251103-CHI-vs-SEA-2025020202.json)
