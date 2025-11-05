@@ -2,6 +2,15 @@
 
 This project explores working with a variety of APIs for sports data analysis and visualization.
 
+## Prerequisites
+
+- **Node.js**: v24.11.0 or higher (LTS)
+  - The project uses Node.js 24 LTS, which is supported through April 2028
+  - See the [Node.js v22 to v24 migration guide](https://nodejs.org/en/blog/migrations/v22-to-v24) for upgrade details
+  - For detailed upgrade instructions, see [docs/UPGRADE_NODE_24.md](docs/UPGRADE_NODE_24.md)
+  - Use [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions: `nvm install 24`
+  - The project includes `.nvmrc` and `.node-version` files for automatic version switching
+
 ## Getting started
 
 ### Let's look at some sample data
