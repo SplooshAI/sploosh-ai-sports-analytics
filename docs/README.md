@@ -14,4 +14,3 @@ This directory contains project documentation and guides.
 - [GitHub Workflows](../.github/workflows/README.md) - CI/CD documentation
 - [Testing Guide](../.github/docs/TESTING.md) - Testing documentation
 - [Repository Setup](../.github/docs/SETUP.md) - Maintainer setup guide
-
