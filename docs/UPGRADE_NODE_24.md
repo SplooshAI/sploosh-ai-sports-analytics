@@ -8,7 +8,7 @@ This document outlines the upgrade from Node.js v22 to Node.js v24 LTS for the s
 
 ### Node.js v24 LTS Information
 
-- **Release Date**: November 4th, 2025
+- **Release Date**: October 28th, 2025
 - **LTS Support Until**: April 2028
 - **Current Version**: v24.11.0
 
