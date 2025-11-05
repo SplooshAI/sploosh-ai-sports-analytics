@@ -38,7 +38,7 @@ Go to Settings → Branches and add a rule for the `main` branch:
 The repository uses GitHub's native commit verification. All commits, including those from GitHub Actions, must be signed.
 
 1. For manual commits:
-   - Contributors should follow the GPG setup guide in [CONTRIBUTING.md](../../CONTRIBUTING.md)
+   - Contributors should follow the GPG setup guide in [CONTRIBUTING.md](../../docs/CONTRIBUTING.md)
 
 2. For automated commits:
    - GitHub Actions bot is configured to sign commits automatically
@@ -47,5 +47,5 @@ The repository uses GitHub's native commit verification. All commits, including 
 
 For more details on commit signing and workflow testing, see:
 
-- [Contributing Guidelines](../../CONTRIBUTING.md)
+- [Contributing Guidelines](../../docs/CONTRIBUTING.md)
 - [Testing Documentation](./TESTING.md)

@@ -215,6 +215,6 @@ The following test scripts are available:
 
 For detailed guidelines, see:
 
-- [Contributing Guidelines](./CONTRIBUTING.md)
+- [Contributing Guidelines](./docs/CONTRIBUTING.md)
 - [Testing Documentation](./.github/docs/TESTING.md)
 - [Repository Setup](./.github/docs/SETUP.md) (for maintainers)
