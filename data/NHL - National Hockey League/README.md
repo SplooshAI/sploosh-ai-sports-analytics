@@ -127,3 +127,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #13: San Jose Sharks @ Seattle Kraken - Seattle loses 6-1](./2025-26/regular-season/20251105-SJS-vs-SEA-2025020217.json)
 - [GAME #14: Seattle Kraken @ St. Louis Blues - Seattle wins 4-3 in OT](./2025-26/regular-season/20251108-SEA-vs-STL-2025020239.json)
 - [GAME #15: Seattle Kraken @ Dallas Stars - Seattle loses 2-1](./2025-26/regular-season/20251109-SEA-vs-DAL-2025020248.json)
+- [GAME #16: Columbus Blue Jackets @ Seattle Kraken - Seattle loses 2-1 in SO](./2025-26/regular-season/20251111-CBJ-vs-SEA-2025020264.json)
