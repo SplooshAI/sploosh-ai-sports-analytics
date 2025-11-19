@@ -285,9 +285,67 @@ test_game_state_display() {
     fi
 }
 
-# Test 9: Unknown option handling
+# Test 9: Timezone conversion (UTC to local)
+test_timezone_conversion() {
+    print_header "Test 9: Timezone Conversion"
+    
+    # Test that API returns UTC times
+    local test_date="2025-11-19"
+    local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${test_date}")
+    
+    if [ -n "$json_data" ]; then
+        # Check that API returns times in UTC format (ending with Z)
+        local utc_time=$(echo "$json_data" | jq -r '.games[0].startTimeUTC' 2>/dev/null)
+        if echo "$utc_time" | grep -qE 'Z$'; then
+            print_result "API returns UTC timestamps" "PASS" ""
+        else
+            print_result "API returns UTC timestamps" "FAIL" "Timestamp doesn't end with Z: $utc_time"
+        fi
+        
+        # Verify the script converts UTC to local time for scheduled games
+        if "$NHL_SCRIPT" "$test_date" --no-copy > /tmp/nhl_test_timezone.txt 2>&1; then
+            local clean_output=$(head -20 /tmp/nhl_test_timezone.txt | perl -pe 's/\e\[[0-9;]*m//g')
+            
+            # Check that output shows local timezone (PST/PDT) not UTC
+            if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM) [A-Z]{3,4}"; then
+                print_result "Times converted to local timezone" "PASS" ""
+            else
+                print_result "Times converted to local timezone" "FAIL" "No local timezone found in output"
+            fi
+            
+            # Verify times are NOT showing as midnight (the bug we fixed)
+            # For Nov 19, 2025 games, none should show 12:00 AM or 12:30 AM
+            if echo "$clean_output" | grep -qE "Scheduled.*(12:00 AM|12:30 AM)"; then
+                print_result "Times not showing as midnight" "FAIL" "Found midnight times (UTC not converted)"
+            else
+                print_result "Times not showing as midnight" "PASS" ""
+            fi
+            
+            # Verify times are in afternoon/evening (4:00 PM - 7:00 PM for Nov 19 games)
+            if echo "$clean_output" | grep -qE "Scheduled.*0?[4-7]:[0-9]{2} PM"; then
+                print_result "Times showing correct afternoon/evening hours" "PASS" ""
+            else
+                print_result "Times showing correct afternoon/evening hours" "FAIL" "Expected PM times not found"
+            fi
+            
+            rm -f /tmp/nhl_test_timezone.txt
+        else
+            print_result "Times converted to local timezone" "FAIL" "Script failed"
+            print_result "Times not showing as midnight" "FAIL" "Script failed"
+            print_result "Times showing correct afternoon/evening hours" "FAIL" "Script failed"
+            rm -f /tmp/nhl_test_timezone.txt
+        fi
+    else
+        print_result "API returns UTC timestamps" "FAIL" "Could not fetch API data"
+        print_result "Times converted to local timezone" "FAIL" "Could not fetch API data"
+        print_result "Times not showing as midnight" "FAIL" "Could not fetch API data"
+        print_result "Times showing correct afternoon/evening hours" "FAIL" "Could not fetch API data"
+    fi
+}
+
+# Test 10: Unknown option handling
 test_unknown_option() {
-    print_header "Test 9: Unknown Option Handling"
+    print_header "Test 10: Unknown Option Handling"
     
     local output
     if output=$("$NHL_SCRIPT" --invalid-option 2>&1); then
@@ -301,9 +359,9 @@ test_unknown_option() {
     fi
 }
 
-# Test 10: Multiple flags combination
+# Test 11: Multiple flags combination
 test_multiple_flags() {
-    print_header "Test 10: Multiple Flags Combination"
+    print_header "Test 11: Multiple Flags Combination"
     
     local output
     if output=$("$NHL_SCRIPT" "2025-11-18" --no-copy --raw 2>&1); then
@@ -346,6 +404,7 @@ main() {
     test_raw_flag
     test_default_date
     test_game_state_display
+    test_timezone_conversion
     test_unknown_option
     test_multiple_flags
     

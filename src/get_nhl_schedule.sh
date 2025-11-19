@@ -143,9 +143,15 @@ display_game_summary() {
         local score_display
         
         if [ "$status" = "FUT" ] || [ "$status" = "PRE" ]; then
-            # Format time for scheduled games
-            local game_time=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$start_time" "+%I:%M %p %Z" 2>/dev/null || echo "$start_time")
-            score_display="${CYAN}${game_time}${RESET}"
+            # Format time for scheduled games - convert from UTC to local time
+            # First parse as UTC to get epoch seconds, then format in local timezone
+            local epoch_time=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%SZ" "$start_time" "+%s" 2>/dev/null)
+            if [ -n "$epoch_time" ]; then
+                local game_time=$(date -r "$epoch_time" "+%I:%M %p %Z" 2>/dev/null)
+                score_display="${CYAN}${game_time}${RESET}"
+            else
+                score_display="${CYAN}${start_time}${RESET}"
+            fi
         else
             # Show score for completed/live games
             score_display="${BOLD}${away_score} - ${home_score}${RESET}"
