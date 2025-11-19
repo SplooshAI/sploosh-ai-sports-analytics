@@ -72,7 +72,7 @@ test_help_flag() {
     
     local output
     if output=$("$NHL_SCRIPT" --help 2>&1); then
-        if echo "$output" | grep -q "NHL Scores Fetcher"; then
+        if echo "$output" | grep -q "NHL Schedule Fetcher"; then
             print_result "Help flag displays usage" "PASS" ""
         else
             print_result "Help flag displays usage" "FAIL" "Help output doesn't contain expected text"

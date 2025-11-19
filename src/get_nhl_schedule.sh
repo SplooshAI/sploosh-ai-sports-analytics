@@ -39,9 +39,9 @@ print_header() {
 # Function to show usage
 usage() {
     cat << EOF
-${BOLD}NHL Scores Fetcher${RESET} 🏒
+${BOLD}NHL Schedule Fetcher${RESET} 🏒
 
-Fetch NHL game scores and copy them to your clipboard.
+Fetch NHL game schedules and results, copy them to your clipboard.
 
 ${BOLD}USAGE:${RESET}
     $0 [DATE] [OPTIONS]
