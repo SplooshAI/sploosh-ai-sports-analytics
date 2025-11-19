@@ -207,9 +207,87 @@ test_default_date() {
     fi
 }
 
-# Test 8: Unknown option handling
+# Test 8: Game state display (Final/OT, Final/SO, scheduled, etc.)
+test_game_state_display() {
+    print_header "Test 8: Game State Display"
+    
+    # Test with a date that has completed games (including OT)
+    if "$NHL_SCRIPT" "2025-11-18" --no-copy > /tmp/nhl_test_game_state.txt 2>&1; then
+        # Get just the first 20 lines and remove ANSI color codes
+        local clean_output=$(head -20 /tmp/nhl_test_game_state.txt | perl -pe 's/\e\[[0-9;]*m//g')
+        
+        # Check for Final/OT designation (Nov 18 had OT games)
+        if echo "$clean_output" | grep -qE "Final/OT"; then
+            print_result "Final/OT status displayed" "PASS" ""
+        else
+            print_result "Final/OT status displayed" "FAIL" "No Final/OT status found (expected for Nov 18th games)"
+        fi
+        
+        # Check for regular Final status
+        if echo "$clean_output" | grep -qE "Final[^/]"; then
+            print_result "Final status displayed" "PASS" ""
+        else
+            print_result "Final status displayed" "FAIL" "No Final status found"
+        fi
+        
+        rm -f /tmp/nhl_test_game_state.txt
+    else
+        print_result "Final/OT status displayed" "FAIL" "Script failed"
+        print_result "Final status displayed" "FAIL" "Script failed"
+        rm -f /tmp/nhl_test_game_state.txt
+    fi
+    
+    # Test for shootout games by checking the raw JSON data
+    # We'll use the API directly to verify SO game detection works
+    local test_date="2025-11-18"
+    local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${test_date}")
+    
+    if [ -n "$json_data" ]; then
+        # Check if any game has SO (shootout) in periodType
+        local has_so=$(echo "$json_data" | jq -r '.games[] | select(.periodDescriptor.periodType == "SO") | .id' | head -1)
+        
+        if [ -n "$has_so" ]; then
+            # If there's a shootout game, verify our script displays Final/SO
+            if "$NHL_SCRIPT" "$test_date" --no-copy > /tmp/nhl_test_so.txt 2>&1; then
+                local clean_output=$(head -20 /tmp/nhl_test_so.txt | perl -pe 's/\e\[[0-9;]*m//g')
+                if echo "$clean_output" | grep -qE "Final/SO"; then
+                    print_result "Final/SO status displayed (when SO games exist)" "PASS" ""
+                else
+                    print_result "Final/SO status displayed (when SO games exist)" "FAIL" "SO game found but Final/SO not displayed"
+                fi
+                rm -f /tmp/nhl_test_so.txt
+            else
+                print_result "Final/SO status displayed (when SO games exist)" "FAIL" "Script failed"
+                rm -f /tmp/nhl_test_so.txt
+            fi
+        else
+            print_result "Final/SO status displayed (when SO games exist)" "PASS" "No SO games on test date (expected)"
+        fi
+    else
+        print_result "Final/SO status displayed (when SO games exist)" "FAIL" "Could not fetch API data"
+    fi
+    
+    # Test with future games (scheduled)
+    if "$NHL_SCRIPT" "2025-11-19" --no-copy > /tmp/nhl_test_scheduled.txt 2>&1; then
+        local clean_output=$(head -20 /tmp/nhl_test_scheduled.txt | perl -pe 's/\e\[[0-9;]*m//g')
+        
+        # Check for Scheduled status
+        if echo "$clean_output" | grep -qE "Scheduled"; then
+            print_result "Scheduled status displayed" "PASS" ""
+        else
+            print_result "Scheduled status displayed" "FAIL" "No Scheduled status found"
+        fi
+        
+        rm -f /tmp/nhl_test_scheduled.txt
+    else
+        print_result "Scheduled status displayed" "FAIL" "Script failed"
+        rm -f /tmp/nhl_test_scheduled.txt
+    fi
+}
+
+# Test 9: Unknown option handling
 test_unknown_option() {
-    print_header "Test 8: Unknown Option Handling"
+    print_header "Test 9: Unknown Option Handling"
     
     local output
     if output=$("$NHL_SCRIPT" --invalid-option 2>&1); then
@@ -223,9 +301,9 @@ test_unknown_option() {
     fi
 }
 
-# Test 9: Multiple flags combination
+# Test 10: Multiple flags combination
 test_multiple_flags() {
-    print_header "Test 9: Multiple Flags Combination"
+    print_header "Test 10: Multiple Flags Combination"
     
     local output
     if output=$("$NHL_SCRIPT" "2025-11-18" --no-copy --raw 2>&1); then
@@ -267,6 +345,7 @@ main() {
     test_no_copy_flag
     test_raw_flag
     test_default_date
+    test_game_state_display
     test_unknown_option
     test_multiple_flags
     

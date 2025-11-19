@@ -73,17 +73,47 @@ validate_date() {
     fi
 }
 
-# Function to format game status
+# Function to format game status with period/time info
 format_game_status() {
     local status=$1
+    local period=$2
+    local period_type=$3
+    local time_remaining=$4
+    local in_intermission=$5
+    
     case "$status" in
         "FINAL"|"OFF")
-            echo "🏁 Final"
+            if [ "$period_type" = "OT" ]; then
+                echo "🏁 Final/OT"
+            elif [ "$period_type" = "SO" ]; then
+                echo "🏁 Final/SO"
+            else
+                echo "🏁 Final"
+            fi
             ;;
         "LIVE"|"CRIT")
-            echo "🔴 Live"
+            if [ "$in_intermission" = "true" ]; then
+                echo "🔴 Intermission"
+            else
+                local period_display=""
+                case "$period_type" in
+                    "REG")
+                        period_display="${period}"
+                        ;;
+                    "OT")
+                        period_display="OT"
+                        ;;
+                    "SO")
+                        period_display="SO"
+                        ;;
+                    *)
+                        period_display="P${period}"
+                        ;;
+                esac
+                echo "🔴 ${period_display} - ${time_remaining}"
+            fi
             ;;
-        "FUT")
+        "FUT"|"PRE")
             echo "⏰ Scheduled"
             ;;
         *)
@@ -105,14 +135,14 @@ display_game_summary() {
     print_color "${GREEN}" "🏒 Found ${BOLD}${game_count}${RESET}${GREEN} game(s)"
     echo ""
     
-    # Parse and display each game
+    # Parse and display each game with period/clock info
     echo "$json_data" | jq -r '.games[] | 
-        "\(.awayTeam.abbrev)|\(.awayTeam.score // "0")|\(.homeTeam.abbrev)|\(.homeTeam.score // "0")|\(.gameState)|\(.startTimeUTC)"' | 
-    while IFS='|' read -r away_team away_score home_team home_score status start_time; do
-        local status_icon=$(format_game_status "$status")
+        "\(.awayTeam.abbrev)|\(.awayTeam.score // "0")|\(.homeTeam.abbrev)|\(.homeTeam.score // "0")|\(.gameState)|\(.startTimeUTC)|\(.period // 0)|\(.periodDescriptor.periodType // "")|\(.clock.timeRemaining // "")|\(.clock.inIntermission // false)"' | 
+    while IFS='|' read -r away_team away_score home_team home_score status start_time period period_type time_remaining in_intermission; do
+        local status_icon=$(format_game_status "$status" "$period" "$period_type" "$time_remaining" "$in_intermission")
         local score_display
         
-        if [ "$status" = "FUT" ]; then
+        if [ "$status" = "FUT" ] || [ "$status" = "PRE" ]; then
             # Format time for scheduled games
             local game_time=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$start_time" "+%I:%M %p %Z" 2>/dev/null || echo "$start_time")
             score_display="${CYAN}${game_time}${RESET}"
