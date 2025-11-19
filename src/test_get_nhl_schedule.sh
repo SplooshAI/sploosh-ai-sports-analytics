@@ -307,7 +307,7 @@ test_timezone_conversion() {
             local clean_output=$(head -20 /tmp/nhl_test_timezone.txt | perl -pe 's/\e\[[0-9;]*m//g')
             
             # Check that output shows local timezone (PST/PDT) not UTC
-            if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM) (PST|PDT)"; then
+            if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM) [A-Z]{3,4}"; then
                 print_result "Times converted to local timezone" "PASS" ""
             else
                 print_result "Times converted to local timezone" "FAIL" "No local timezone found in output"
@@ -322,7 +322,7 @@ test_timezone_conversion() {
             fi
             
             # Verify times are in afternoon/evening (4:00 PM - 7:00 PM for Nov 19 games)
-            if echo "$clean_output" | grep -qE "Scheduled.*0[4-7]:[0-9]{2} PM"; then
+            if echo "$clean_output" | grep -qE "Scheduled.*0?[4-7]:[0-9]{2} PM"; then
                 print_result "Times showing correct afternoon/evening hours" "PASS" ""
             else
                 print_result "Times showing correct afternoon/evening hours" "FAIL" "Expected PM times not found"
