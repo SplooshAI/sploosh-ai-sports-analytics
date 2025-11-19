@@ -34,6 +34,8 @@
     "download:whl:game": "./src/download_whl_game.sh",
     "download:whl:game:date": "./src/download_whl_game.sh 2025-09-05",
     "download:whl:game:multiple": "./src/download_whl_game.sh 2025-09-02 2025-09-05",
+    "scores:nhl": "./src/get_nhl_scores.sh",
+    "scores:nhl:date": "./src/get_nhl_scores.sh",
     "test": "time (npm run test:workflows && npm run test:nfl:espn)",
     "test:nfl:espn": "chmod +x ./src/test_download_nfl_espn.sh && ./src/test_download_nfl_espn.sh",
     "test:workflows": "chmod +x .github/test-workflows.sh && .github/test-workflows.sh",

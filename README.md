@@ -107,6 +107,47 @@ To download data for a specific date, you can modify the date in `package.json` 
 ./src/download_nhl.sh kraken YYYY-MM-DD
 ```
 
+### Get NHL Scores
+
+The project includes a convenient script for fetching NHL game scores and copying them to your clipboard.
+
+Make sure that `src/get_nhl_scores.sh` is executable:
+
+```bash
+chmod +x src/get_nhl_scores.sh
+```
+
+Available npm scripts:
+
+- `npm run scores:nhl` - Fetches today's NHL scores and copies to clipboard
+- `npm run scores:nhl:date` - Base script for fetching scores for a specific date
+
+To fetch scores for a specific date or use additional options:
+
+```bash
+# Get today's scores (copies to clipboard)
+./src/get_nhl_scores.sh
+
+# Get scores for a specific date
+./src/get_nhl_scores.sh 2025-11-19
+
+# Display without copying to clipboard
+./src/get_nhl_scores.sh --no-copy
+
+# Get raw JSON output
+./src/get_nhl_scores.sh 2025-11-19 --raw
+
+# Show help
+./src/get_nhl_scores.sh --help
+```
+
+The script provides:
+
+- 🎨 Color-coded, formatted output with game status indicators
+- 📋 Automatic clipboard copying (works with macOS, Linux)
+- 🏒 Game summaries showing teams, scores, and times
+- ⚙️ Flexible options for different use cases
+
 ### EXAMPLE: Download WHL Game Data
 
 Please note that functionality exists to download Seattle Kraken NHL data as of this writing (Monday, January 6th, 2025).
