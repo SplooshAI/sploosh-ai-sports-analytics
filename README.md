@@ -107,9 +107,9 @@ To download data for a specific date, you can modify the date in `package.json` 
 ./src/download_nhl.sh kraken YYYY-MM-DD
 ```
 
-### Get NHL Scores
+### Get NHL Schedule/Results
 
-The project includes a convenient script for fetching NHL game scores and copying them to your clipboard.
+The project includes a convenient script for fetching NHL game schedules and results, copying them to your clipboard.
 
 Make sure that `src/get_nhl_scores.sh` is executable:
 
@@ -117,12 +117,11 @@ Make sure that `src/get_nhl_scores.sh` is executable:
 chmod +x src/get_nhl_scores.sh
 ```
 
-Available npm scripts:
+Available npm script:
 
-- `npm run scores:nhl` - Fetches today's NHL scores and copies to clipboard
-- `npm run scores:nhl:date` - Base script for fetching scores for a specific date
+- `npm run nhl:schedule` - Fetches today's NHL schedule/results and copies to clipboard
 
-To fetch scores for a specific date or use additional options:
+To fetch schedule for a specific date or use additional options:
 
 ```bash
 # Get today's scores (copies to clipboard)
