@@ -107,6 +107,46 @@ To download data for a specific date, you can modify the date in `package.json` 
 ./src/download_nhl.sh kraken YYYY-MM-DD
 ```
 
+### Get NHL Schedule/Results
+
+The project includes a convenient script for fetching NHL game schedules and results, copying them to your clipboard.
+
+Make sure that `src/get_nhl_schedule.sh` is executable:
+
+```bash
+chmod +x src/get_nhl_schedule.sh
+```
+
+Available npm script:
+
+- `npm run nhl:schedule` - Fetches today's NHL schedule/results and copies to clipboard
+
+To fetch schedule for a specific date or use additional options:
+
+```bash
+# Get today's schedule/results (copies to clipboard)
+./src/get_nhl_schedule.sh
+
+# Get schedule/results for a specific date
+./src/get_nhl_schedule.sh 2025-11-19
+
+# Display without copying to clipboard
+./src/get_nhl_schedule.sh --no-copy
+
+# Get raw JSON output
+./src/get_nhl_schedule.sh 2025-11-19 --raw
+
+# Show help
+./src/get_nhl_schedule.sh --help
+```
+
+The script provides:
+
+- 🎨 Color-coded, formatted output with game status indicators
+- 📋 Automatic clipboard copying (works with macOS, Linux)
+- 🏒 Game summaries showing teams, scores, and times
+- ⚙️ Flexible options for different use cases
+
 ### EXAMPLE: Download WHL Game Data
 
 Please note that functionality exists to download Seattle Kraken NHL data as of this writing (Monday, January 6th, 2025).
@@ -155,7 +195,7 @@ The following test scripts are available:
 
 1. `npm run test`
    - Primary test command
-   - Runs all workflow tests via test:workflows
+   - Runs all tests: workflows, NFL ESPN script, and NHL schedule script
    - Recommended for general testing
 
 2. `npm run test:workflows`
@@ -163,34 +203,42 @@ The following test scripts are available:
    - Tests PR title validation and version bumping
    - Provides detailed feedback
 
-3. `npm run test:workflows:semantic`
+3. `npm run test:nfl:espn`
+   - Tests NFL ESPN data download script functionality
+   - Validates date handling and file naming conventions
+
+4. `npm run test:nhl:schedule`
+   - Tests NHL schedule/results fetching script
+   - Validates API connectivity, JSON parsing, and output formatting
+
+5. `npm run test:workflows:semantic`
    - Tests PR title validation only (using minor version example)
    - Validates against conventional commit format
 
-4. `npm run test:workflows:semantic:major`
+6. `npm run test:workflows:semantic:major`
    - Tests PR title validation with breaking change
    - Validates major version bump detection
 
-5. `npm run test:workflows:semantic:minor`
+7. `npm run test:workflows:semantic:minor`
    - Tests PR title validation with new feature
    - Validates minor version bump detection
 
-6. `npm run test:workflows:semantic:patch`
+8. `npm run test:workflows:semantic:patch`
    - Tests PR title validation with bug fix
    - Validates patch version bump detection
 
-7. `npm run test:workflows:semantic:invalid`
+9. `npm run test:workflows:semantic:invalid`
    - Tests PR title validation with invalid format
    - Verifies rejection of non-compliant PR titles
 
-8. `npm run test:workflows:version`
-   - Tests version bump workflow
-   - Note: Git operations will fail locally (expected)
+10. `npm run test:workflows:version`
+    - Tests version bump workflow
+    - Note: Git operations will fail locally (expected)
 
-9. `npm run test:workflows:merge`
-   - Tests main branch merge workflow
-   - Simulates PR merge and version bump process
-   - Note: Git operations will fail locally (expected)
+11. `npm run test:workflows:merge`
+    - Tests main branch merge workflow
+    - Simulates PR merge and version bump process
+    - Note: Git operations will fail locally (expected)
 
 #### Expected Test Results
 
