@@ -157,6 +157,7 @@ display_game_summary() {
     while IFS='|' read -r away_team away_score home_team home_score status start_time period period_type time_remaining in_intermission; do
         local status_icon=$(format_game_status "$status" "$period" "$period_type" "$time_remaining" "$in_intermission")
         local score_display
+        local matchup_display
         
         if [ "$status" = "FUT" ] || [ "$status" = "PRE" ]; then
             # Format time for scheduled games - convert from UTC to local time
@@ -168,12 +169,15 @@ display_game_summary() {
             else
                 score_display="${CYAN}${start_time}${RESET}"
             fi
+            matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
         else
             # Show score for completed/live games
             score_display="${BOLD}${away_score} - ${home_score}${RESET}"
+            matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
         fi
         
-        echo -e "  ${status_icon}  ${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}  ${score_display}"
+        # Use printf for consistent spacing: status (25 chars), matchup (13 chars), score
+        printf "  %-25b  %-13b  %b\n" "${status_icon}" "${matchup_display}" "${score_display}"
     done
 }
 
