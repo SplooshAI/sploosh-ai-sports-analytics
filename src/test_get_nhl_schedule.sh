@@ -453,11 +453,18 @@ test_intermission_display() {
                         print_result "Intermission shows pause icon (⏸️)" "FAIL" "Should show pause icon for intermission"
                     fi
                     
-                    # Check for INT indicator
-                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) INT - [0-9]{1,2}:[0-9]{2}"; then
+                    # Check for INT indicator (time is now in separate column, no dash)
+                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) INT"; then
                         print_result "Intermission shows INT indicator" "PASS" ""
                     else
-                        print_result "Intermission shows INT indicator" "FAIL" "Should show '${period}st/nd/rd INT - TIME'"
+                        print_result "Intermission shows INT indicator" "FAIL" "Should show '${period}st/nd/rd INT'"
+                    fi
+                    
+                    # Check that time appears between period and matchup
+                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) INT.*[0-9]{1,2}:[0-9]{2}.*${away_team} @ ${home_team}"; then
+                        print_result "Intermission time between period and matchup" "PASS" ""
+                    else
+                        print_result "Intermission time between period and matchup" "FAIL" "Time should appear between period and matchup"
                     fi
                 else
                     # Check for appropriate icon based on period type
@@ -486,17 +493,26 @@ test_intermission_display() {
                     
                     print_result "Intermission shows pause icon (⏸️)" "PASS" "No intermission (test skipped)"
                     print_result "Intermission shows INT indicator" "PASS" "No intermission (test skipped)"
+                    print_result "Intermission time between period and matchup" "PASS" "No intermission (test skipped)"
                 fi
                 
-                # Check for ordinal suffixes in period display
+                # Check for ordinal suffixes in period display (time is now in separate column, no dash)
                 if [ "$period_type" = "REG" ]; then
-                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) - [0-9]{1,2}:[0-9]{2}"; then
+                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th)"; then
                         print_result "Period shows ordinal suffix" "PASS" ""
                     else
-                        print_result "Period shows ordinal suffix" "FAIL" "Should show '${period}st/nd/rd - TIME'"
+                        print_result "Period shows ordinal suffix" "FAIL" "Should show '${period}st/nd/rd'"
+                    fi
+                    
+                    # Check that time appears between period and matchup for active games
+                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th).*[0-9]{1,2}:[0-9]{2}.*${away_team} @ ${home_team}"; then
+                        print_result "Active game time between period and matchup" "PASS" ""
+                    else
+                        print_result "Active game time between period and matchup" "FAIL" "Time should appear between period and matchup"
                     fi
                 else
                     print_result "Period shows ordinal suffix" "PASS" "Game in OT/SO (test skipped)"
+                    print_result "Active game time between period and matchup" "PASS" "Game in OT/SO (test skipped)"
                 fi
                 
                 rm -f /tmp/nhl_test_live_format.txt
@@ -505,7 +521,9 @@ test_intermission_display() {
                 print_result "Active play shows play icon (▶️)" "FAIL" "Script failed"
                 print_result "Intermission shows pause icon (⏸️)" "FAIL" "Script failed"
                 print_result "Intermission shows INT indicator" "FAIL" "Script failed"
+                print_result "Intermission time between period and matchup" "FAIL" "Script failed"
                 print_result "Period shows ordinal suffix" "FAIL" "Script failed"
+                print_result "Active game time between period and matchup" "FAIL" "Script failed"
                 rm -f /tmp/nhl_test_live_format.txt
             fi
         else
@@ -513,7 +531,9 @@ test_intermission_display() {
             print_result "Active play shows play icon (▶️)" "PASS" "No live games (test skipped)"
             print_result "Intermission shows pause icon (⏸️)" "PASS" "No live games (test skipped)"
             print_result "Intermission shows INT indicator" "PASS" "No live games (test skipped)"
+            print_result "Intermission time between period and matchup" "PASS" "No live games (test skipped)"
             print_result "Period shows ordinal suffix" "PASS" "No live games (test skipped)"
+            print_result "Active game time between period and matchup" "PASS" "No live games (test skipped)"
         fi
         
         # Check scheduled games format
@@ -530,13 +550,41 @@ test_intermission_display() {
                     print_result "Scheduled games show status, matchup, time" "FAIL" "Should show 'Scheduled  TEAM @ TEAM  TIME'"
                 fi
                 
+                # Check that scheduled game start times align with active game scores
+                # Extract positions of start times and scores
+                local scheduled_line=$(echo "$clean_output" | grep -E "Scheduled.*[A-Z]{3} @ [A-Z]{3}" | head -1)
+                local active_line=$(echo "$clean_output" | grep -E "(▶|⏸|🔥|🎯).*[A-Z]{3} @ [A-Z]{3}.*[0-9]+ - [0-9]+" | head -1)
+                
+                if [ -n "$scheduled_line" ] && [ -n "$active_line" ]; then
+                    # Get position of time in scheduled line (after matchup)
+                    local sched_time_pos=$(echo "$scheduled_line" | grep -o "^.*[A-Z]{3} @ [A-Z]{3}" | awk '{print length}')
+                    # Get position of score in active line (after matchup)
+                    local active_score_pos=$(echo "$active_line" | grep -o "^.*[A-Z]{3} @ [A-Z]{3}" | awk '{print length}')
+                    
+                    # They should be at roughly the same position (within 2 chars)
+                    local pos_diff=$((sched_time_pos - active_score_pos))
+                    if [ "$pos_diff" -lt 0 ]; then
+                        pos_diff=$((-pos_diff))
+                    fi
+                    
+                    if [ "$pos_diff" -le 2 ]; then
+                        print_result "Scheduled start times align with active game scores" "PASS" ""
+                    else
+                        print_result "Scheduled start times align with active game scores" "FAIL" "Start times should align with scores (diff: $pos_diff chars)"
+                    fi
+                else
+                    print_result "Scheduled start times align with active game scores" "PASS" "Cannot compare (missing data)"
+                fi
+                
                 rm -f /tmp/nhl_test_scheduled_format.txt
             else
                 print_result "Scheduled games show status, matchup, time" "FAIL" "Script failed"
+                print_result "Scheduled start times align with active game scores" "FAIL" "Script failed"
                 rm -f /tmp/nhl_test_scheduled_format.txt
             fi
         else
             print_result "Scheduled games show status, matchup, time" "PASS" "No scheduled games (test skipped)"
+            print_result "Scheduled start times align with active game scores" "PASS" "No scheduled games (test skipped)"
         fi
         
         # Test column alignment consistency
@@ -582,8 +630,11 @@ test_intermission_display() {
         print_result "Active play shows play icon (▶️)" "FAIL" "Could not fetch API data"
         print_result "Intermission shows pause icon (⏸️)" "FAIL" "Could not fetch API data"
         print_result "Intermission shows INT indicator" "FAIL" "Could not fetch API data"
+        print_result "Intermission time between period and matchup" "FAIL" "Could not fetch API data"
         print_result "Period shows ordinal suffix" "FAIL" "Could not fetch API data"
+        print_result "Active game time between period and matchup" "FAIL" "Could not fetch API data"
         print_result "Scheduled games show status, matchup, time" "FAIL" "Could not fetch API data"
+        print_result "Scheduled start times align with active game scores" "FAIL" "Could not fetch API data"
         print_result "Team matchups are consistently aligned" "FAIL" "Could not fetch API data"
         print_result "@ symbol aligned (within 4 chars for emoji rendering)" "FAIL" "Could not fetch API data"
     fi
