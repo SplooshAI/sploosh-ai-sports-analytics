@@ -121,12 +121,12 @@ format_game_status() {
                     "OT")
                         # Overtime - use fire icon for intensity
                         icon="🔥 "
-                        period_display="OT   "
+                        period_display="OT"
                         ;;
                     "SO")
                         # Shootout - use target icon
                         icon="🎯 "
-                        period_display="SO   "
+                        period_display="SO"
                         ;;
                     *)
                         icon="▶️  "
@@ -190,8 +190,13 @@ display_game_summary() {
                 local status_period="${status_full%|*}"
                 local status_time="${status_full#*|}"
                 local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
-                # Format: period (18 chars), time (10 chars), matchup (13 chars), score (7 chars)
-                printf "  %-18s%-10s%-13s%b\n" "${status_period}" "${status_time}" "${matchup_plain}" "${score_display}"
+                # Adjust column width for OT/SO emojis which render wider
+                local period_width=18
+                if [[ "$status_period" == *"🔥"* ]] || [[ "$status_period" == *"🎯"* ]]; then
+                    period_width=15
+                fi
+                # Format: period (16-18 chars), time (10 chars), matchup (13 chars), score (7 chars)
+                printf "  %-${period_width}s%-10s%-13s%b\n" "${status_period}" "${status_time}" "${matchup_plain}" "${score_display}"
             else
                 # Completed game without time
                 local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
