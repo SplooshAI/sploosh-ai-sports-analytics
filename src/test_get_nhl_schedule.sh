@@ -377,6 +377,80 @@ test_multiple_flags() {
     fi
 }
 
+# Test 12: Intermission and period display improvements
+test_intermission_display() {
+    print_header "Test 12: Intermission and Period Display Improvements"
+    
+    # Check if there are any live games today
+    local today=$(date +%Y-%m-%d)
+    local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${today}")
+    
+    if [ -n "$json_data" ]; then
+        # Check if any game is in intermission
+        local intermission_game=$(echo "$json_data" | jq -r '.games[] | select(.clock.inIntermission == true) | .id' | head -1)
+        
+        if [ -n "$intermission_game" ]; then
+            # Get the period number and time remaining for the intermission game
+            local period=$(echo "$json_data" | jq -r ".games[] | select(.id == $intermission_game) | .period")
+            local time_remaining=$(echo "$json_data" | jq -r ".games[] | select(.id == $intermission_game) | .clock.timeRemaining")
+            
+            # Run the script and check output
+            if "$NHL_SCRIPT" "$today" --no-copy > /tmp/nhl_test_intermission.txt 2>&1; then
+                local clean_output=$(perl -pe 's/\e\[[0-9;]*m//g' /tmp/nhl_test_intermission.txt)
+                
+                # Check that intermission shows period info with time (e.g., "1st INT - 09:37")
+                if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) INT - [0-9]{1,2}:[0-9]{2}"; then
+                    print_result "Intermission shows period and time remaining" "PASS" ""
+                else
+                    print_result "Intermission shows period and time remaining" "FAIL" "Should show '${period}st/nd/rd INT - ${time_remaining}'"
+                fi
+                
+                rm -f /tmp/nhl_test_intermission.txt
+            else
+                print_result "Intermission shows period and time remaining" "FAIL" "Script failed"
+                rm -f /tmp/nhl_test_intermission.txt
+            fi
+        else
+            print_result "Intermission shows period and time remaining" "PASS" "No games in intermission (test skipped)"
+        fi
+        
+        # Check if any game is live (not in intermission)
+        local live_game=$(echo "$json_data" | jq -r '.games[] | select(.gameState == "LIVE" or .gameState == "CRIT") | select(.clock.inIntermission == false) | .id' | head -1)
+        
+        if [ -n "$live_game" ]; then
+            # Get the period info for the live game
+            local period=$(echo "$json_data" | jq -r ".games[] | select(.id == $live_game) | .period")
+            local period_type=$(echo "$json_data" | jq -r ".games[] | select(.id == $live_game) | .periodDescriptor.periodType")
+            
+            # Run the script and check output
+            if "$NHL_SCRIPT" "$today" --no-copy > /tmp/nhl_test_live_period.txt 2>&1; then
+                local clean_output=$(perl -pe 's/\e\[[0-9;]*m//g' /tmp/nhl_test_live_period.txt)
+                
+                # Check that live regular period shows ordinal suffix (e.g., "1st - 10:17", not "1 - 10:17")
+                if [ "$period_type" = "REG" ]; then
+                    if echo "$clean_output" | grep -qE "${period}(st|nd|rd|th) - [0-9]{1,2}:[0-9]{2}"; then
+                        print_result "Live period shows ordinal suffix" "PASS" ""
+                    else
+                        print_result "Live period shows ordinal suffix" "FAIL" "Should show '${period}st/nd/rd - TIME' not '${period} - TIME'"
+                    fi
+                else
+                    print_result "Live period shows ordinal suffix" "PASS" "Game in OT/SO (test skipped)"
+                fi
+                
+                rm -f /tmp/nhl_test_live_period.txt
+            else
+                print_result "Live period shows ordinal suffix" "FAIL" "Script failed"
+                rm -f /tmp/nhl_test_live_period.txt
+            fi
+        else
+            print_result "Live period shows ordinal suffix" "PASS" "No live games (test skipped)"
+        fi
+    else
+        print_result "Intermission shows period and time remaining" "FAIL" "Could not fetch API data"
+        print_result "Live period shows ordinal suffix" "FAIL" "Could not fetch API data"
+    fi
+}
+
 # Main execution
 main() {
     echo ""
@@ -407,6 +481,7 @@ main() {
     test_timezone_conversion
     test_unknown_option
     test_multiple_flags
+    test_intermission_display
     
     # Print summary
     echo ""
