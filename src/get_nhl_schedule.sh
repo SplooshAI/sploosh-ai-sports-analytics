@@ -101,7 +101,7 @@ format_game_status() {
                     3) ordinal_suffix="rd" ;;
                     *) ordinal_suffix="th" ;;
                 esac
-                echo "⏸️  ${period}${ordinal_suffix} INT - ${time_remaining}"
+                echo "⏸️  ${period}${ordinal_suffix} INT|${time_remaining}"
             else
                 local period_display=""
                 local icon=""
@@ -133,7 +133,7 @@ format_game_status() {
                         period_display="P${period}"
                         ;;
                 esac
-                echo "${icon}${period_display} - ${time_remaining}"
+                echo "${icon}${period_display}|${time_remaining}"
             fi
             ;;
         "FUT"|"PRE")
@@ -166,28 +166,37 @@ display_game_summary() {
     echo "$json_data" | jq -r '.games[] | 
         "\(.awayTeam.abbrev)|\(.awayTeam.score // "0")|\(.homeTeam.abbrev)|\(.homeTeam.score // "0")|\(.gameState)|\(.startTimeUTC)|\(.period // 0)|\(.periodDescriptor.periodType // "")|\(.clock.timeRemaining // "")|\(.clock.inIntermission // false)"' | 
     while IFS='|' read -r away_team away_score home_team home_score status start_time period period_type time_remaining in_intermission; do
-        local status_icon=$(format_game_status "$status" "$period" "$period_type" "$time_remaining" "$in_intermission")
+        local status_full=$(format_game_status "$status" "$period" "$period_type" "$time_remaining" "$in_intermission")
         local matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
         
         # Create matchup without formatting for alignment calculation
         local matchup_plain="${away_team} @ ${home_team}"
         
         if [ "$status" = "FUT" ] || [ "$status" = "PRE" ]; then
-            # Scheduled games: show status icon, matchup, then time
+            # Scheduled games: show status icon, empty time column, matchup, then time
             # Format time for scheduled games - convert from UTC to local time
             local epoch_time=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%SZ" "$start_time" "+%s" 2>/dev/null)
             if [ -n "$epoch_time" ]; then
                 local game_time=$(date -r "$epoch_time" "+%I:%M %p %Z" 2>/dev/null)
-                # Scheduled games use 21 char status column to align team names with active games
-                printf "  %-21s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${CYAN}${game_time}${RESET}"
+                # Format: status (14 chars), empty time column (10 chars), matchup (13 chars), game time (aligned with score)
+                printf "  %-14s%-10s%-13s%b\n" "${status_full}" "" "${matchup_plain}" "${CYAN}${game_time}${RESET}"
             else
-                printf "  %-21s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${CYAN}${start_time}${RESET}"
+                printf "  %-14s%-10s%-13s%b\n" "${status_full}" "" "${matchup_plain}" "${CYAN}${start_time}${RESET}"
             fi
         else
-            # Live/completed games: show status icon first, then matchup, then score
-            local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
-            # Active/completed games use 25 char status column
-            printf "  %-25s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${score_display}"
+            # Live/completed games: split status into period and time columns
+            if [[ "$status_full" == *"|"* ]]; then
+                # Active/intermission game with time - split into period and time
+                local status_period="${status_full%|*}"
+                local status_time="${status_full#*|}"
+                local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
+                # Format: period (18 chars), time (10 chars), matchup (13 chars), score (7 chars)
+                printf "  %-18s%-10s%-13s%b\n" "${status_period}" "${status_time}" "${matchup_plain}" "${score_display}"
+            else
+                # Completed game without time
+                local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
+                printf "  %-18s%-10s%-13s%b\n" "${status_full}" "" "${matchup_plain}" "${score_display}"
+            fi
         fi
     done
 }
