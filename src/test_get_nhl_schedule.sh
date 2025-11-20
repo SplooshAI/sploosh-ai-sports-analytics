@@ -405,8 +405,10 @@ test_intermission_display() {
     local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${today}")
     
     # First, test that legend is displayed
-    if "$NHL_SCRIPT" "$today" --no-copy > /tmp/nhl_test_legend.txt 2>&1; then
-        local clean_output=$(perl -pe 's/\e\[[0-9;]*m//g' /tmp/nhl_test_legend.txt)
+    # Run script and capture output directly to avoid file timing issues
+    local legend_output
+    if legend_output=$("$NHL_SCRIPT" "$today" --no-copy 2>&1); then
+        local clean_output=$(echo "$legend_output" | perl -pe 's/\e\[[0-9;]*m//g')
         
         # Check for legend line
         if echo "$clean_output" | grep -q "Legend:"; then
@@ -424,12 +426,9 @@ test_intermission_display() {
         else
             print_result "Legend contains all visual indicators" "FAIL" "Legend should show all 6 icons"
         fi
-        
-        rm -f /tmp/nhl_test_legend.txt
     else
         print_result "Legend is displayed" "FAIL" "Script failed"
         print_result "Legend contains all visual indicators" "FAIL" "Script failed"
-        rm -f /tmp/nhl_test_legend.txt
     fi
     
     if [ -n "$json_data" ]; then
