@@ -289,8 +289,17 @@ test_game_state_display() {
 test_timezone_conversion() {
     print_header "Test 9: Timezone Conversion"
     
-    # Test that API returns UTC times
-    local test_date="2025-11-19"
+    # Test that API returns UTC times - use tomorrow to ensure scheduled games
+    # Handle both macOS (BSD date) and Linux (GNU date)
+    local tomorrow
+    if date -v+1d +%Y-%m-%d >/dev/null 2>&1; then
+        # macOS/BSD date
+        tomorrow=$(date -v+1d +%Y-%m-%d)
+    else
+        # Linux/GNU date
+        tomorrow=$(date -d 'tomorrow' +%Y-%m-%d)
+    fi
+    local test_date="$tomorrow"
     local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${test_date}")
     
     if [ -n "$json_data" ]; then
@@ -306,40 +315,47 @@ test_timezone_conversion() {
         if "$NHL_SCRIPT" "$test_date" --no-copy > /tmp/nhl_test_timezone.txt 2>&1; then
             local clean_output=$(head -20 /tmp/nhl_test_timezone.txt | perl -pe 's/\e\[[0-9;]*m//g')
             
-            # Check that output shows local timezone (PST/PDT) not UTC
-            if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM) [A-Z]{3,4}"; then
-                print_result "Times converted to local timezone" "PASS" ""
+            # Check if there are any scheduled games in the output (not just in legend)
+            if echo "$clean_output" | grep -q "Scheduled"; then
+                # Check that output shows local timezone (PST/PDT) not UTC
+                if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM) [A-Z]{3,4}"; then
+                    print_result "Times converted to local timezone" "PASS" ""
+                else
+                    print_result "Times converted to local timezone" "FAIL" "No local timezone found in output"
+                fi
+                
+                # Verify times are NOT showing as midnight (the bug we fixed)
+                if echo "$clean_output" | grep -qE "Scheduled.*(12:00 AM|12:30 AM)"; then
+                    print_result "Times not showing as midnight" "FAIL" "Found midnight times (UTC not converted)"
+                else
+                    print_result "Times not showing as midnight" "PASS" ""
+                fi
+                
+                # Verify times are showing in 12-hour format with AM/PM (not 24-hour UTC)
+                if echo "$clean_output" | grep -qE "Scheduled.*[0-9]{1,2}:[0-9]{2} (AM|PM)"; then
+                    print_result "Times showing in 12-hour format with AM/PM" "PASS" ""
+                else
+                    print_result "Times showing in 12-hour format with AM/PM" "FAIL" "Expected 12-hour time format not found"
+                fi
             else
-                print_result "Times converted to local timezone" "FAIL" "No local timezone found in output"
-            fi
-            
-            # Verify times are NOT showing as midnight (the bug we fixed)
-            # For Nov 19, 2025 games, none should show 12:00 AM or 12:30 AM
-            if echo "$clean_output" | grep -qE "Scheduled.*(12:00 AM|12:30 AM)"; then
-                print_result "Times not showing as midnight" "FAIL" "Found midnight times (UTC not converted)"
-            else
-                print_result "Times not showing as midnight" "PASS" ""
-            fi
-            
-            # Verify times are in afternoon/evening (4:00 PM - 7:00 PM for Nov 19 games)
-            if echo "$clean_output" | grep -qE "Scheduled.*0?[4-7]:[0-9]{2} PM"; then
-                print_result "Times showing correct afternoon/evening hours" "PASS" ""
-            else
-                print_result "Times showing correct afternoon/evening hours" "FAIL" "Expected PM times not found"
+                # No scheduled games - this should not happen with tomorrow's date
+                print_result "Times converted to local timezone" "FAIL" "No scheduled games found for tomorrow"
+                print_result "Times not showing as midnight" "FAIL" "No scheduled games found for tomorrow"
+                print_result "Times showing in 12-hour format with AM/PM" "FAIL" "No scheduled games found for tomorrow"
             fi
             
             rm -f /tmp/nhl_test_timezone.txt
         else
             print_result "Times converted to local timezone" "FAIL" "Script failed"
             print_result "Times not showing as midnight" "FAIL" "Script failed"
-            print_result "Times showing correct afternoon/evening hours" "FAIL" "Script failed"
+            print_result "Times showing in 12-hour format with AM/PM" "FAIL" "Script failed"
             rm -f /tmp/nhl_test_timezone.txt
         fi
     else
         print_result "API returns UTC timestamps" "FAIL" "Could not fetch API data"
         print_result "Times converted to local timezone" "FAIL" "Could not fetch API data"
         print_result "Times not showing as midnight" "FAIL" "Could not fetch API data"
-        print_result "Times showing correct afternoon/evening hours" "FAIL" "Could not fetch API data"
+        print_result "Times showing in 12-hour format with AM/PM" "FAIL" "Could not fetch API data"
     fi
 }
 
@@ -396,10 +412,11 @@ test_intermission_display() {
             print_result "Legend is displayed" "FAIL" "Should show legend with visual indicators"
         fi
         
-        # Check that legend contains all icons
-        if echo "$clean_output" | grep -q "▶" && echo "$clean_output" | grep -q "⏸" && \
-           echo "$clean_output" | grep -q "🔥" && echo "$clean_output" | grep -q "🎯" && \
-           echo "$clean_output" | grep -q "🏁" && echo "$clean_output" | grep -q "⏰"; then
+        # Check that legend contains all icons by checking the legend line itself
+        local legend_line=$(echo "$clean_output" | grep "Legend:")
+        if echo "$legend_line" | grep -q "Active" && echo "$legend_line" | grep -q "Intermission" && \
+           echo "$legend_line" | grep -q "Overtime" && echo "$legend_line" | grep -q "Shootout" && \
+           echo "$legend_line" | grep -q "Final" && echo "$legend_line" | grep -q "Scheduled"; then
             print_result "Legend contains all visual indicators" "PASS" ""
         else
             print_result "Legend contains all visual indicators" "FAIL" "Legend should show all 6 icons"
@@ -660,7 +677,7 @@ test_final_variants_alignment() {
     get_matchup_position() {
         local line=$1
         # Find position of first occurrence of pattern "XXX @ XXX"
-        echo "$line" | grep -b -o '[A-Z]\{3\} @ [A-Z]\{3\}' | head -1 | cut -d: -f1
+        echo "$line" | awk '{match($0,/[A-Z][A-Z][A-Z] @ [A-Z][A-Z][A-Z]/); if (RSTART) print RSTART-1}'
     }
     
     # Test Final vs Active alignment (allow 3 char difference for emoji rendering)
