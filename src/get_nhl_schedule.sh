@@ -93,12 +93,28 @@ format_game_status() {
             ;;
         "LIVE"|"CRIT")
             if [ "$in_intermission" = "true" ]; then
-                echo "🔴 Intermission"
+                # Display period-specific intermission with time remaining (e.g., "1st INT - 09:37")
+                local ordinal_suffix=""
+                case "$period" in
+                    1) ordinal_suffix="st" ;;
+                    2) ordinal_suffix="nd" ;;
+                    3) ordinal_suffix="rd" ;;
+                    *) ordinal_suffix="th" ;;
+                esac
+                echo "🔴 ${period}${ordinal_suffix} INT - ${time_remaining}"
             else
                 local period_display=""
                 case "$period_type" in
                     "REG")
-                        period_display="${period}"
+                        # Add ordinal suffix for regular periods (1st, 2nd, 3rd)
+                        local ordinal_suffix=""
+                        case "$period" in
+                            1) ordinal_suffix="st" ;;
+                            2) ordinal_suffix="nd" ;;
+                            3) ordinal_suffix="rd" ;;
+                            *) ordinal_suffix="th" ;;
+                        esac
+                        period_display="${period}${ordinal_suffix}"
                         ;;
                     "OT")
                         period_display="OT"
