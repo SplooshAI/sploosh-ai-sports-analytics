@@ -93,7 +93,7 @@ format_game_status() {
             ;;
         "LIVE"|"CRIT")
             if [ "$in_intermission" = "true" ]; then
-                # Display period-specific intermission with time remaining (e.g., "1st INT - 09:37")
+                # Intermission - use pause icon with proper spacing
                 local ordinal_suffix=""
                 case "$period" in
                     1) ordinal_suffix="st" ;;
@@ -101,12 +101,14 @@ format_game_status() {
                     3) ordinal_suffix="rd" ;;
                     *) ordinal_suffix="th" ;;
                 esac
-                echo "🔴 ${period}${ordinal_suffix} INT - ${time_remaining}"
+                echo "⏸️  ${period}${ordinal_suffix} INT - ${time_remaining}"
             else
                 local period_display=""
+                local icon=""
                 case "$period_type" in
                     "REG")
-                        # Add ordinal suffix for regular periods (1st, 2nd, 3rd)
+                        # Active play - use play icon with proper spacing
+                        icon="▶️  "
                         local ordinal_suffix=""
                         case "$period" in
                             1) ordinal_suffix="st" ;;
@@ -117,16 +119,21 @@ format_game_status() {
                         period_display="${period}${ordinal_suffix}"
                         ;;
                     "OT")
+                        # Overtime - use fire icon for intensity
+                        icon="🔥 "
                         period_display="OT"
                         ;;
                     "SO")
+                        # Shootout - use target icon
+                        icon="🎯 "
                         period_display="SO"
                         ;;
                     *)
+                        icon="▶️  "
                         period_display="P${period}"
                         ;;
                 esac
-                echo "🔴 ${period_display} - ${time_remaining}"
+                echo "${icon}${period_display} - ${time_remaining}"
             fi
             ;;
         "FUT"|"PRE")
@@ -151,33 +158,37 @@ display_game_summary() {
     print_color "${GREEN}" "🏒 Found ${BOLD}${game_count}${RESET}${GREEN} game(s)"
     echo ""
     
+    # Display legend for visual indicators
+    print_color "${CYAN}" "Legend: ▶️  Active  ⏸️  Intermission  🔥 Overtime  🎯 Shootout  🏁 Final  ⏰ Scheduled"
+    echo ""
+    
     # Parse and display each game with period/clock info
     echo "$json_data" | jq -r '.games[] | 
         "\(.awayTeam.abbrev)|\(.awayTeam.score // "0")|\(.homeTeam.abbrev)|\(.homeTeam.score // "0")|\(.gameState)|\(.startTimeUTC)|\(.period // 0)|\(.periodDescriptor.periodType // "")|\(.clock.timeRemaining // "")|\(.clock.inIntermission // false)"' | 
     while IFS='|' read -r away_team away_score home_team home_score status start_time period period_type time_remaining in_intermission; do
         local status_icon=$(format_game_status "$status" "$period" "$period_type" "$time_remaining" "$in_intermission")
-        local score_display
-        local matchup_display
+        local matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
+        
+        # Create matchup without formatting for alignment calculation
+        local matchup_plain="${away_team} @ ${home_team}"
         
         if [ "$status" = "FUT" ] || [ "$status" = "PRE" ]; then
+            # Scheduled games: show status icon, matchup, then time
             # Format time for scheduled games - convert from UTC to local time
-            # First parse as UTC to get epoch seconds, then format in local timezone
             local epoch_time=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%SZ" "$start_time" "+%s" 2>/dev/null)
             if [ -n "$epoch_time" ]; then
                 local game_time=$(date -r "$epoch_time" "+%I:%M %p %Z" 2>/dev/null)
-                score_display="${CYAN}${game_time}${RESET}"
+                # Scheduled games use 21 char status column to align team names with active games
+                printf "  %-21s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${CYAN}${game_time}${RESET}"
             else
-                score_display="${CYAN}${start_time}${RESET}"
+                printf "  %-21s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${CYAN}${start_time}${RESET}"
             fi
-            matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
         else
-            # Show score for completed/live games
-            score_display="${BOLD}${away_score} - ${home_score}${RESET}"
-            matchup_display="${BOLD}${away_team}${RESET} @ ${BOLD}${home_team}${RESET}"
+            # Live/completed games: show status icon first, then matchup, then score
+            local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
+            # Active/completed games use 25 char status column
+            printf "  %-25s%-13s  %b\n" "${status_icon}" "${matchup_plain}" "${score_display}"
         fi
-        
-        # Use printf for consistent spacing: status (25 chars), matchup (13 chars), score
-        printf "  %-25b  %-13b  %b\n" "${status_icon}" "${matchup_display}" "${score_display}"
     done
 }
 
