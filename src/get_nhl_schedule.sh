@@ -121,12 +121,12 @@ format_game_status() {
                     "OT")
                         # Overtime - use fire icon for intensity
                         icon="🔥 "
-                        period_display="OT"
+                        period_display="OT   "
                         ;;
                     "SO")
                         # Shootout - use target icon
                         icon="🎯 "
-                        period_display="SO"
+                        period_display="SO   "
                         ;;
                     *)
                         icon="▶️  "
@@ -195,7 +195,7 @@ display_game_summary() {
             else
                 # Completed game without time
                 local score_display="${BOLD}${away_score} - ${home_score}${RESET}"
-                printf "  %-18s%-10s%-13s%b\n" "${status_full}" "" "${matchup_plain}" "${score_display}"
+                printf "  %-25s%-13s%b\n" "${status_full}" "${matchup_plain}" "${score_display}"
             fi
         fi
     done
