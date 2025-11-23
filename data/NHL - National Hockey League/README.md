@@ -132,3 +132,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #18: San Jose Sharks @ Seattle Kraken - Seattle wins 4-1](./2025-26/regular-season/20251115-SJS-vs-SEA-2025020295.json)
 - [GAME #19: Seattle Kraken @ Detroit Red Wings - Seattle loses 4-2](./2025-26/regular-season/20251118-SEA-vs-DET-2025020308.json)
 - [GAME #20: Seattle Kraken @ Chicago Blackhawks - Seattle wins 3-2](./2025-26/regular-season/20251120-SEA-vs-CHI-2025020325.json)
+- [GAME #21: Seattle Kraken @ Pittsburgh Penguins - Seattle wins 3-2 in OT](./2025-26/regular-season/20251122-SEA-vs-PIT-2025020340.json)
