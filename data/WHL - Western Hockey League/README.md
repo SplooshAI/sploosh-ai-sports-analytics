@@ -172,3 +172,4 @@ Play By Play:
 - [GAME #17: 2025.11.11 Seattle wins 4-1 against WEN](./2025-26/regular-season/20251111-WEN-vs-SEA-1022337-pxpverbose.json)
 - [GAME #18: 2025.11.14 Seattle loses 5-4 against PA in OT](./2025-26/regular-season/20251114-PA-vs-SEA-1022348-pxpverbose.json)
 - [GAME #19: 2025.11.21 Seattle wins 7-4 against VIC](./2025-26/regular-season/20251121-VIC-vs-SEA-1022378-pxpverbose.json)
+- [GAME #20: 2025.11.22 Seattle wins 5-3 against REG (Teddy Bear Toss)](./2025-26/regular-season/20251122-REG-vs-SEA-1022386-pxpverbose.json)
