@@ -120,20 +120,29 @@ chmod +x src/get_nhl_schedule.sh
 Available npm script:
 
 - `npm run nhl:schedule` - Fetches today's NHL schedule/results and copies to clipboard
+- `npm run nhl:schedule -- YYYY-MM-DD` - Fetches schedule for a specific date
 
 To fetch schedule for a specific date or use additional options:
 
 ```bash
 # Get today's schedule/results (copies to clipboard)
+npm run nhl:schedule
+# or
 ./src/get_nhl_schedule.sh
 
 # Get schedule/results for a specific date
+npm run nhl:schedule -- 2025-11-19
+# or
 ./src/get_nhl_schedule.sh 2025-11-19
 
 # Display without copying to clipboard
+npm run nhl:schedule -- --no-copy
+# or
 ./src/get_nhl_schedule.sh --no-copy
 
 # Get raw JSON output
+npm run nhl:schedule -- 2025-11-19 --raw
+# or
 ./src/get_nhl_schedule.sh 2025-11-19 --raw
 
 # Show help
