@@ -134,3 +134,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #20: Seattle Kraken @ Chicago Blackhawks - Seattle wins 3-2](./2025-26/regular-season/20251120-SEA-vs-CHI-2025020325.json)
 - [GAME #21: Seattle Kraken @ Pittsburgh Penguins - Seattle wins 3-2 in OT](./2025-26/regular-season/20251122-SEA-vs-PIT-2025020340.json)
 - [GAME #22: Seattle Kraken @ New York Islanders - Seattle loses 1-0 in SO](./2025-26/regular-season/20251123-SEA-vs-NYI-2025020349.json)
+- [GAME #23: Dallas Stars @ Seattle Kraken - Seattle loses 3-2](./2025-26/regular-season/20251126-DAL-vs-SEA-2025020375.json)
