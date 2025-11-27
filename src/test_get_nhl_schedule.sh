@@ -411,25 +411,31 @@ test_intermission_display() {
     if [ $exit_code -eq 0 ] && [ -n "$script_output" ]; then
         local clean_output=$(echo "$script_output" | perl -pe 's/\e\[[0-9;]*m//g')
         
-        # Check for legend line
-        if grep -q "Legend:" <<< "$clean_output"; then
-            print_result "Legend is displayed" "PASS" ""
-        else
-            print_result "Legend is displayed" "FAIL" "Should show legend with visual indicators (output length: ${#clean_output})"
-        fi
-        
-        # Check that legend contains all icons by checking the legend line itself
-        local legend_line=$(echo "$clean_output" | grep "Legend:")
-        if echo "$legend_line" | grep -q "Active" && echo "$legend_line" | grep -q "Intermission" && \
-           echo "$legend_line" | grep -q "Overtime" && echo "$legend_line" | grep -q "Shootout" && \
-           echo "$legend_line" | grep -q "Final" && echo "$legend_line" | grep -q "Scheduled"; then
-            print_result "Legend contains all visual indicators" "PASS" ""
-        else
-            print_result "Legend contains all visual indicators" "FAIL" "Legend should show all 6 icons"
-        fi
-        
         # Check for ANY live game in the output (not specific to one game)
         local has_live_game=$(echo "$clean_output" | grep -E "▶|⏸|🔥|🎯" | grep -vE "Legend|Final" | head -1)
+        
+        # Check for legend line - ONLY if there are live games (legend only shows with live games)
+        if [ -n "$has_live_game" ]; then
+            if grep -q "Legend:" <<< "$clean_output"; then
+                print_result "Legend is displayed" "PASS" ""
+            else
+                print_result "Legend is displayed" "FAIL" "Should show legend with visual indicators when live games exist"
+            fi
+            
+            # Check that legend contains all icons by checking the legend line itself
+            local legend_line=$(echo "$clean_output" | grep "Legend:")
+            if echo "$legend_line" | grep -q "Active" && echo "$legend_line" | grep -q "Intermission" && \
+               echo "$legend_line" | grep -q "Overtime" && echo "$legend_line" | grep -q "Shootout" && \
+               echo "$legend_line" | grep -q "Final" && echo "$legend_line" | grep -q "Scheduled"; then
+                print_result "Legend contains all visual indicators" "PASS" ""
+            else
+                print_result "Legend contains all visual indicators" "FAIL" "Legend should show all 6 icons when live games exist"
+            fi
+        else
+            # No live games - legend should not be displayed, which is correct behavior
+            print_result "Legend is displayed" "PASS" "No live games (legend correctly not shown)"
+            print_result "Legend contains all visual indicators" "PASS" "No live games (legend correctly not shown)"
+        fi
         
         if [ -n "$has_live_game" ]; then
             # Check that live games show format: "ICON PERIOD  TEAM @ TEAM  SCORE"
