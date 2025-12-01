@@ -175,3 +175,4 @@ Play By Play:
 - [GAME #20: 2025.11.22 Seattle wins 5-3 against REG (Teddy Bear Toss)](./2025-26/regular-season/20251122-REG-vs-SEA-1022386-pxpverbose.json)
 - [GAME #21: 2025.11.26 Seattle wins 8-5 against SC](./2025-26/regular-season/20251126-SC-vs-SEA-1022391-pxpverbose.json)
 - [GAME #22: 2025.11.28 Seattle loses 5-3 against VIC](./2025-26/regular-season/20251128-SEA-vs-VIC-1022403-pxpverbose.json)
+- [GAME #23: 2025.11.30 Seattle loses 5-3 against VIC](./2025-26/regular-season/20251130-SEA-vs-VIC-1022415-pxpverbose.json)
