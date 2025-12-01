@@ -502,7 +502,7 @@ test_intermission_display() {
         fi
         
         # Check scheduled games format
-        if echo "$clean_output" | grep -qE "⏰ Scheduled"; then
+        if echo "$clean_output" | grep -qE "🏒 Scheduled"; then
             if echo "$clean_output" | grep -qE "Scheduled.*[A-Z]{2,3} @ [A-Z]{2,3}.*[0-9]{1,2}:[0-9]{2} (AM|PM)"; then
                 print_result "Scheduled games show status, matchup, time" "PASS" ""
             else
