@@ -136,3 +136,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME #22: Seattle Kraken @ New York Islanders - Seattle loses 1-0 in SO](./2025-26/regular-season/20251123-SEA-vs-NYI-2025020349.json)
 - [GAME #23: Dallas Stars @ Seattle Kraken - Seattle loses 3-2](./2025-26/regular-season/20251126-DAL-vs-SEA-2025020375.json)
 - [GAME #24: Edmonton Oilers @ Seattle Kraken - Seattle loses 4-0](./2025-26/regular-season/20251129-EDM-vs-SEA-2025020393.json)
+- [GAME #25: Seattle Kraken @ Edmonton Oilers - Seattle loses 9-4](./2025-26/regular-season/20251204-SEA-vs-EDM-2025020434.json)
