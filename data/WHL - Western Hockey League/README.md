@@ -176,3 +176,4 @@ Play By Play:
 - [GAME #21: 2025.11.26 Seattle wins 8-5 against SC](./2025-26/regular-season/20251126-SC-vs-SEA-1022391-pxpverbose.json)
 - [GAME #22: 2025.11.28 Seattle loses 5-3 against VIC](./2025-26/regular-season/20251128-SEA-vs-VIC-1022403-pxpverbose.json)
 - [GAME #23: 2025.11.30 Seattle loses 5-3 against VIC](./2025-26/regular-season/20251130-SEA-vs-VIC-1022415-pxpverbose.json)
+- [GAME #24: 2025.12.05 Seattle loses 5-3 against KEL](./2025-26/regular-season/20251205-KEL-vs-SEA-1022429-pxpverbose.json)
