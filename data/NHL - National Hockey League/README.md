@@ -141,3 +141,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 27: Minnesota Wild @ Seattle Kraken - Seattle loses 4-1](./2025-26/regular-season/20251208-MIN-vs-SEA-2025020465.json)
 - [GAME 28: Los Angeles Kings @ Seattle Kraken (Chandler Stephenson Bobblehead Night) - Seattle wins 3-2](./2025-26/regular-season/20251210-LAK-vs-SEA-2025020479.json)
 - [GAME 29: Seattle Kraken @ Utah Mammoth - Seattle loses 5-3](./2025-26/regular-season/20251212-SEA-vs-UTA-2025020494.json)
+- [GAME 30: Buffalo Sabres @ Seattle Kraken - Seattle loses 3-1](./2025-26/regular-season/20251214-BUF-vs-SEA-2025020513.json)
