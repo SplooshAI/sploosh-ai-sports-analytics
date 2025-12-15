@@ -54,3 +54,4 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
   - [Week 12 - SEA vs TEN (30-24 SEA Win)](./2025-26/20251123-SEA-vs-TEN-401772886-week-12.json)
   - [Week 13 - MIN vs SEA (26-0 SEA Win)](./2025-26/20251130-MIN-vs-SEA-401772896-week-13.json)
   - [Week 14 - SEA vs ATL (37-9 SEA Win)](./2025-26/20251207-SEA-vs-ATL-401772900-week-14.json)
+  - [Week 15 - IND vs SEA (16-18 SEA Win)](./2025-26/20251214-IND-vs-SEA-401772799-week-15.json)
