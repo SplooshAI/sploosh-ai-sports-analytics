@@ -16,6 +16,7 @@ readonly NC='\033[0m' # No Color
 TESTS_RUN=0
 TESTS_PASSED=0
 TESTS_FAILED=0
+TESTS_SKIPPED=0
 
 # Script location
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -32,6 +33,12 @@ print_result() {
     if [ "$result" = "PASS" ]; then
         echo -e "${GREEN}✓ PASS${NC}: $test_name"
         TESTS_PASSED=$((TESTS_PASSED + 1))
+    elif [ "$result" = "SKIP" ]; then
+        echo -e "${YELLOW}⊘ SKIP${NC}: $test_name"
+        if [ -n "$message" ]; then
+            echo -e "  ${YELLOW}$message${NC}"
+        fi
+        TESTS_SKIPPED=$((TESTS_SKIPPED + 1))
     else
         echo -e "${RED}✗ FAIL${NC}: $test_name"
         echo -e "  ${YELLOW}$message${NC}"
@@ -308,7 +315,9 @@ test_timezone_conversion() {
     if [ -n "$json_data" ]; then
         # Check that API returns times in UTC format (ending with Z)
         local utc_time=$(echo "$json_data" | jq -r '.games[0].startTimeUTC' 2>/dev/null)
-        if echo "$utc_time" | grep -qE 'Z$'; then
+        if [ "$utc_time" = "null" ] || [ -z "$utc_time" ]; then
+            print_result "API returns UTC timestamps" "SKIP" "No games scheduled for tomorrow (expected during breaks)"
+        elif echo "$utc_time" | grep -qE 'Z$'; then
             print_result "API returns UTC timestamps" "PASS" ""
         else
             print_result "API returns UTC timestamps" "FAIL" "Timestamp doesn't end with Z: $utc_time"
@@ -341,10 +350,10 @@ test_timezone_conversion() {
                     print_result "Times showing in 12-hour format with AM/PM" "FAIL" "Expected 12-hour time format not found"
                 fi
             else
-                # No scheduled games - this should not happen with tomorrow's date
-                print_result "Times converted to local timezone" "FAIL" "No scheduled games found for tomorrow"
-                print_result "Times not showing as midnight" "FAIL" "No scheduled games found for tomorrow"
-                print_result "Times showing in 12-hour format with AM/PM" "FAIL" "No scheduled games found for tomorrow"
+                # No scheduled games - this is expected during breaks (e.g., Christmas)
+                print_result "Times converted to local timezone" "SKIP" "No scheduled games for tomorrow (expected during breaks)"
+                print_result "Times not showing as midnight" "SKIP" "No scheduled games for tomorrow (expected during breaks)"
+                print_result "Times showing in 12-hour format with AM/PM" "SKIP" "No scheduled games for tomorrow (expected during breaks)"
             fi
             
             rm -f /tmp/nhl_test_timezone.txt
@@ -834,6 +843,10 @@ main() {
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e "Total tests run: ${TESTS_RUN}"
     echo -e "${GREEN}Tests passed: ${TESTS_PASSED}${NC}"
+    
+    if [ $TESTS_SKIPPED -gt 0 ]; then
+        echo -e "${YELLOW}Tests skipped: ${TESTS_SKIPPED}${NC}"
+    fi
     
     if [ $TESTS_FAILED -gt 0 ]; then
         echo -e "${RED}Tests failed: ${TESTS_FAILED}${NC}"

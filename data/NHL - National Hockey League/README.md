@@ -145,3 +145,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 31: Colorado Avalanche @ Seattle Kraken - Seattle loses 5-3](./2025-26/regular-season/20251216-COL-vs-SEA-2025020528.json)
 - [GAME 32: Seattle Kraken @ Calgary Flames - Seattle loses 4-2](./2025-26/regular-season/20251218-SEA-vs-CGY-2025020542.json)
 - [GAME 33: Seattle Kraken @ San Jose Sharks - Seattle wins 4-2 (Evans & Lindgren clutch 3rd period goals)](./2025-26/regular-season/20251220-SEA-vs-SJS-2025020561.json)
+- [GAME 34: Seattle Kraken @ Anaheim Ducks - Seattle wins 3-1 (Eberle's 2 goals, Grubauer 40 saves)](./2025-26/regular-season/20251222-SEA-vs-ANA-2025020573.json)
