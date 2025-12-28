@@ -13,7 +13,7 @@ The Seattle Kraken closed out their 2025-26 preseason with a convincing **4-2 vi
 ### Key Statistics
 
 | Metric | Edmonton (Away) | Seattle (Home) |
-|--------|----------------|----------------|
+| ------ | -------------- | -------------- |
 | **Final Score** | 2 | **4** |
 | **Shots on Goal** | 34 | 17 |
 | **Shooting %** | 5.9% | **23.5%** |
@@ -116,7 +116,7 @@ The Seattle Kraken closed out their 2025-26 preseason with a convincing **4-2 vi
 ### Final Record: 3-2-1 (7 points in 6 games)
 
 | Game | Date | Opponent | Result | Score | Location |
-|------|------|----------|--------|-------|----------|
+| ---- | ---- | -------- | ------ | ----- | -------- |
 | 1 | Sept 21 | vs VAN | **W** | 5-3 | Home |
 | 2 | Sept 23 | @ CGY | L | 1-4 | Away |
 | 3 | Sept 24 | @ EDM | **W** | 4-1 | Away |
