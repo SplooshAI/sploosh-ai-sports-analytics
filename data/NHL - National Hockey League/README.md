@@ -148,3 +148,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 34: Seattle Kraken @ Anaheim Ducks - Seattle wins 3-1 (Eberle's 2 goals, Grubauer 40 saves)](./2025-26/regular-season/20251222-SEA-vs-ANA-2025020573.json)
 - [GAME 35: Seattle Kraken @ Los Angeles Kings - Seattle wins 3-2 (3-game winning streak)](./2025-26/regular-season/20251223-SEA-vs-LAK-2025020587.json)
 - [GAME 36: Philadelphia Flyers @ Seattle Kraken - Seattle wins 4-1 (4-game winning streak, Grubauer 31 saves)](./2025-26/regular-season/20251228-PHI-vs-SEA-2025020605.json)
+- [GAME 37: Vancouver Canucks @ Seattle Kraken - Seattle loses 3-2 in SO (4-game winning streak ends)](./2025-26/regular-season/20251229-VAN-vs-SEA-2025020616.json)
