@@ -185,3 +185,4 @@ Play By Play:
 - [GAME #30: 2025.12.19 Seattle wins 1-0 against KAM in SO (Sklenicka shutout)](./2025-26/regular-season/20251219-KAM-vs-SEA-1022494-pxpverbose.json)
 - [GAME #31: 2025.12.27 Seattle wins 5-3 against EVT](./2025-26/regular-season/20251227-EVT-vs-SEA-1022503-pxpverbose.json)
 - [GAME #32: 2025.12.28 Seattle loses 3-2 against EVT in SO](./2025-26/regular-season/20251228-SEA-vs-EVT-1022509-pxpverbose.json)
+- [GAME #33: 2025.12.31 Seattle loses 4-2 against WEN](./2025-26/regular-season/20251231-SEA-vs-WEN-1022527-pxpverbose.json)
