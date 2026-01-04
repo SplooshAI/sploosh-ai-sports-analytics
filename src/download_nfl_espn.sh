@@ -68,15 +68,26 @@ download_nfl_game() {
         echo "Error: Could not extract game date from API response. Using current date as fallback."
         game_date=$(date +%Y%m%d)
     else
-        # ESPN provides dates in UTC format (e.g., 2025-09-14T17:00Z)
-        # Extract just the date part (2025-09-14) and remove hyphens
-        if [[ "$game_datetime" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
-            local utc_date=${BASH_REMATCH[1]}
-            game_date=$(echo "$utc_date" | tr -d '-')
-            echo "Successfully extracted date: $game_date from $utc_date"
+        # ESPN provides dates in UTC format (e.g., 2026-01-04T01:00Z)
+        # Convert to local timezone for the filename
+        game_date=$(python3 -c "
+from datetime import datetime
+
+utc_time = datetime.fromisoformat('${game_datetime}'.replace('Z', '+00:00'))
+local_time = utc_time.astimezone()
+print(local_time.strftime('%Y%m%d'))
+" 2>/dev/null)
+        
+        if [ -z "$game_date" ]; then
+            echo "Error: Could not convert to local time. Falling back to UTC date extraction."
+            if [[ "$game_datetime" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+                local utc_date=${BASH_REMATCH[1]}
+                game_date=$(echo "$utc_date" | tr -d '-')
+            else
+                game_date=$(date +%Y%m%d)
+            fi
         else
-            echo "Error: Could not parse date from $game_datetime. Using current date."
-            game_date=$(date +%Y%m%d)
+            echo "Successfully converted to local time date: $game_date from $game_datetime"
         fi
     fi
     
