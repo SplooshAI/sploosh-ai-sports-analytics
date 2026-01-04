@@ -71,12 +71,17 @@ download_nfl_game() {
         # ESPN provides dates in UTC format (e.g., 2026-01-04T01:00Z)
         # Convert to local timezone for the filename
         game_date=$(python3 -c "
+import sys
 from datetime import datetime
 
-utc_time = datetime.fromisoformat('${game_datetime}'.replace('Z', '+00:00'))
+if len(sys.argv) < 2:
+    sys.exit(1)
+    
+game_datetime = sys.argv[1]
+utc_time = datetime.fromisoformat(game_datetime.replace('Z', '+00:00'))
 local_time = utc_time.astimezone()
 print(local_time.strftime('%Y%m%d'))
-" 2>/dev/null)
+" "${game_datetime}" 2>/dev/null)
         
         if [ -z "$game_date" ]; then
             echo "Error: Could not convert to local time. Falling back to UTC date extraction."
