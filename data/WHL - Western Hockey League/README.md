@@ -187,3 +187,4 @@ Play By Play:
 - [GAME #32: 2025.12.28 Seattle loses 3-2 against EVT in SO](./2025-26/regular-season/20251228-SEA-vs-EVT-1022509-pxpverbose.json)
 - [GAME #33: 2025.12.31 Seattle loses 4-2 against WEN](./2025-26/regular-season/20251231-SEA-vs-WEN-1022527-pxpverbose.json)
 - [GAME #34: 2026.01.03 Seattle loses 5-3 against RD](./2025-26/regular-season/20260103-SEA-vs-RD-1022543-pxpverbose.json)
+- [GAME #35: 2026.01.04 Seattle loses 5-3 against EDM](./2025-26/regular-season/20260104-SEA-vs-EDM-1022549-pxpverbose.json)
