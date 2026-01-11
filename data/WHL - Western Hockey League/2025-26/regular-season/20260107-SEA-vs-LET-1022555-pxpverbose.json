@@ -1,0 +1,3255 @@
+{
+    "GC": {
+        "Parameters": {
+            "feed": "gc",
+            "game_id": "1022555",
+            "key": "41b145a848f4bd67",
+            "client_code": "whl",
+            "lang_code": "en",
+            "fmt": "json",
+            "tab": "pxpverbose",
+            "lang_id": 1
+        },
+        "Pxpverbose": [
+            {
+                "event": "goalie_change",
+                "goalie_in_id": "29649",
+                "goalie_out_id": null,
+                "period_id": "1",
+                "time": "0:00",
+                "team_code": "LET",
+                "s": 0,
+                "team_id": "205",
+                "goalie_in_info": {
+                    "player_id": "29649",
+                    "jersey_number": "31",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Leif",
+                    "last_name": "Oaten"
+                }
+            },
+            {
+                "event": "goalie_change",
+                "goalie_in_id": "30303",
+                "goalie_out_id": null,
+                "period_id": "1",
+                "time": "0:00",
+                "team_code": "SEA",
+                "s": 0,
+                "team_id": "214",
+                "goalie_in_info": {
+                    "player_id": "30303",
+                    "jersey_number": "35",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Marek",
+                    "last_name": "Sklenicka"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:00:00",
+                "time_formatted": "0:00",
+                "home_player_id": "29160",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "5",
+                "s": 0,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "id": "214656",
+                "event": "goal",
+                "goal_type": "",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "28872",
+                "assist1_player_id": "29235",
+                "assist2_player_id": "28831",
+                "time": "0:12",
+                "time_formatted": "0:12",
+                "period": "1st",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "1",
+                "scorer_goal_num": "17",
+                "s": 12,
+                "plus": [
+                    {
+                        "player_id": "28831",
+                        "jersey_number": "3",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ashton",
+                        "last_name": "Cumby"
+                    },
+                    {
+                        "player_id": "28872",
+                        "jersey_number": "9",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Coster",
+                        "last_name": "Dunn"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    },
+                    {
+                        "player_id": "29235",
+                        "jersey_number": "27",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Cameron",
+                        "last_name": "Schmidt"
+                    },
+                    {
+                        "player_id": "29624",
+                        "jersey_number": "88",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matej",
+                        "last_name": "Pekar"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "29655",
+                        "jersey_number": "3",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Will",
+                        "last_name": "Scott"
+                    },
+                    {
+                        "player_id": "30290",
+                        "jersey_number": "11",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kyle",
+                        "last_name": "Heger"
+                    },
+                    {
+                        "player_id": "29153",
+                        "jersey_number": "19",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Oli",
+                        "last_name": "Chenier"
+                    },
+                    {
+                        "player_id": "29160",
+                        "jersey_number": "22",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Hudson",
+                        "last_name": "Kibblewhite"
+                    },
+                    {
+                        "player_id": "29197",
+                        "jersey_number": "26",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Andrew",
+                        "last_name": "Petruk"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                },
+                "assist1_player": {
+                    "player_id": "29235",
+                    "jersey_number": "27",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Cameron",
+                    "last_name": "Schmidt"
+                },
+                "assist2_player": {
+                    "player_id": "28831",
+                    "jersey_number": "3",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ashton",
+                    "last_name": "Cumby"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:00:12",
+                "time_formatted": "0:12",
+                "home_player_id": "28990",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 12,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:00:28",
+                "time_formatted": "0:28",
+                "home_player_id": "29231",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "8",
+                "s": 28,
+                "x_location": 457,
+                "y_location": 49,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468379",
+                "player_id": "29197",
+                "player_served": "29197",
+                "offence": "54",
+                "pp": "0",
+                "time_off_formatted": "2:33",
+                "period": "1st",
+                "bench": "0",
+                "home": "1",
+                "penalty_shot": "0",
+                "minutes": "5.00",
+                "minutes_formatted": "5:00",
+                "penalty_class_id": "3",
+                "penalty_class": "Major",
+                "lang_penalty_description": "Major-Fighting",
+                "period_id": "1",
+                "player_penalized_info": {
+                    "player_id": "29197",
+                    "jersey_number": "26",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Andrew",
+                    "last_name": "Petruk"
+                },
+                "player_served_info": {
+                    "player_id": "29197",
+                    "jersey_number": "26",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Andrew",
+                    "last_name": "Petruk"
+                },
+                "s": 153,
+                "team_id": "205"
+            },
+            {
+                "event": "penalty",
+                "id": "468380",
+                "player_id": "28831",
+                "player_served": "28831",
+                "offence": "54",
+                "pp": "0",
+                "time_off_formatted": "2:33",
+                "period": "1st",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "5.00",
+                "minutes_formatted": "5:00",
+                "penalty_class_id": "3",
+                "penalty_class": "Major",
+                "lang_penalty_description": "Major-Fighting",
+                "period_id": "1",
+                "player_penalized_info": {
+                    "player_id": "28831",
+                    "jersey_number": "3",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ashton",
+                    "last_name": "Cumby"
+                },
+                "player_served_info": {
+                    "player_id": "28831",
+                    "jersey_number": "3",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ashton",
+                    "last_name": "Cumby"
+                },
+                "s": 153,
+                "team_id": "214"
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:02:33",
+                "time_formatted": "2:33",
+                "home_player_id": "29160",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 153,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:02:56",
+                "time_formatted": "2:56",
+                "home_player_id": "28990",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "3",
+                "s": 176,
+                "x_location": 397,
+                "y_location": 273,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:04:14",
+                "time_formatted": "4:14",
+                "home_player_id": "29160",
+                "visitor_player_id": "29330",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 254,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "id": "214659",
+                "event": "goal",
+                "goal_type": "",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "29619",
+                "assist1_player_id": "",
+                "assist2_player_id": "",
+                "time": "7:37",
+                "time_formatted": "7:37",
+                "period": "1st",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "1",
+                "scorer_goal_num": "15",
+                "s": 457,
+                "plus": [
+                    {
+                        "player_id": "28831",
+                        "jersey_number": "3",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ashton",
+                        "last_name": "Cumby"
+                    },
+                    {
+                        "player_id": "29619",
+                        "jersey_number": "16",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Brock",
+                        "last_name": "England"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    },
+                    {
+                        "player_id": "29236",
+                        "jersey_number": "47",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matthew",
+                        "last_name": "Gard"
+                    },
+                    {
+                        "player_id": "29373",
+                        "jersey_number": "89",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Antonio",
+                        "last_name": "Martorana"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "29165",
+                        "jersey_number": "2",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Fraser",
+                        "last_name": "Leonard"
+                    },
+                    {
+                        "player_id": "29390",
+                        "jersey_number": "5",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Grady",
+                        "last_name": "Pichette"
+                    },
+                    {
+                        "player_id": "30020",
+                        "jersey_number": "9",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kade",
+                        "last_name": "Duell"
+                    },
+                    {
+                        "player_id": "29912",
+                        "jersey_number": "16",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Easton",
+                        "last_name": "Daneault"
+                    },
+                    {
+                        "player_id": "29587",
+                        "jersey_number": "27",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Gavin",
+                        "last_name": "Lesiuk"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:07:37",
+                "time_formatted": "7:37",
+                "home_player_id": "29160",
+                "visitor_player_id": "29330",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 457,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:08:33",
+                "time_formatted": "8:33",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "1",
+                "s": 513,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:08:53",
+                "time_formatted": "8:53",
+                "home_player_id": "29160",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 533,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:09:52",
+                "time_formatted": "9:52",
+                "home_player_id": "29657",
+                "visitor_player_id": "29944",
+                "home_win": "0",
+                "location_id": "3",
+                "s": 592,
+                "x_location": 397,
+                "y_location": 273,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:10:12",
+                "time_formatted": "10:12",
+                "home_player_id": "29912",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 612,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:11:01",
+                "time_formatted": "11:01",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "1",
+                "s": 661,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:11:14",
+                "time_formatted": "11:14",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "1",
+                "s": 674,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:11:42",
+                "time_formatted": "11:42",
+                "home_player_id": "29160",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 702,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:13:11",
+                "time_formatted": "13:11",
+                "home_player_id": "29657",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 791,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468384",
+                "player_id": "29301",
+                "player_served": "29301",
+                "offence": "30",
+                "pp": "0",
+                "time_off_formatted": "13:44",
+                "period": "1st",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Roughing",
+                "period_id": "1",
+                "player_penalized_info": {
+                    "player_id": "29301",
+                    "jersey_number": "11",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ethan",
+                    "last_name": "Bibeau"
+                },
+                "player_served_info": {
+                    "player_id": "29301",
+                    "jersey_number": "11",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ethan",
+                    "last_name": "Bibeau"
+                },
+                "s": 824,
+                "team_id": "214"
+            },
+            {
+                "event": "penalty",
+                "id": "468383",
+                "player_id": "29655",
+                "player_served": "29655",
+                "offence": "30",
+                "pp": "0",
+                "time_off_formatted": "13:44",
+                "period": "1st",
+                "bench": "0",
+                "home": "1",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Roughing",
+                "period_id": "1",
+                "player_penalized_info": {
+                    "player_id": "29655",
+                    "jersey_number": "3",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Will",
+                    "last_name": "Scott"
+                },
+                "player_served_info": {
+                    "player_id": "29655",
+                    "jersey_number": "3",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Will",
+                    "last_name": "Scott"
+                },
+                "s": 824,
+                "team_id": "205"
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:13:44",
+                "time_formatted": "13:44",
+                "home_player_id": "29160",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 824,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:16:18",
+                "time_formatted": "16:18",
+                "home_player_id": "29657",
+                "visitor_player_id": "29944",
+                "home_win": "0",
+                "location_id": "3",
+                "s": 978,
+                "x_location": 397,
+                "y_location": 273,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "id": "214663",
+                "event": "goal",
+                "goal_type": "",
+                "home": "1",
+                "team_id": "205",
+                "goal_player_id": "29653",
+                "assist1_player_id": "29212",
+                "assist2_player_id": "28990",
+                "time": "18:24",
+                "time_formatted": "18:24",
+                "period": "1st",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "1",
+                "scorer_goal_num": "4",
+                "s": 1104,
+                "plus": [
+                    {
+                        "player_id": "29212",
+                        "jersey_number": "4",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Carsen",
+                        "last_name": "Adair"
+                    },
+                    {
+                        "player_id": "30025",
+                        "jersey_number": "8",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Nathan",
+                        "last_name": "Maloney"
+                    },
+                    {
+                        "player_id": "29653",
+                        "jersey_number": "12",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Tyden",
+                        "last_name": "Lafournaise"
+                    },
+                    {
+                        "player_id": "28990",
+                        "jersey_number": "15",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kayden",
+                        "last_name": "Longley"
+                    },
+                    {
+                        "player_id": "29231",
+                        "jersey_number": "29",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Owen",
+                        "last_name": "Berge"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "30430",
+                        "jersey_number": "5",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Joe",
+                        "last_name": "Gramer"
+                    },
+                    {
+                        "player_id": "28872",
+                        "jersey_number": "9",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Coster",
+                        "last_name": "Dunn"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    },
+                    {
+                        "player_id": "29944",
+                        "jersey_number": "26",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Logan",
+                        "last_name": "Miller"
+                    },
+                    {
+                        "player_id": "29235",
+                        "jersey_number": "27",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Cameron",
+                        "last_name": "Schmidt"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29653",
+                    "jersey_number": "12",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Tyden",
+                    "last_name": "Lafournaise"
+                },
+                "assist1_player": {
+                    "player_id": "29212",
+                    "jersey_number": "4",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Carsen",
+                    "last_name": "Adair"
+                },
+                "assist2_player": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:18:24",
+                "time_formatted": "18:24",
+                "home_player_id": "28990",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 1104,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:18:47",
+                "time_formatted": "18:47",
+                "home_player_id": "29912",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "1",
+                "s": 1127,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468386",
+                "player_id": "30020",
+                "player_served": "30020",
+                "offence": "18",
+                "pp": "1",
+                "time_off_formatted": "19:06",
+                "period": "1st",
+                "bench": "0",
+                "home": "1",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Hooking",
+                "period_id": "1",
+                "player_penalized_info": {
+                    "player_id": "30020",
+                    "jersey_number": "9",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kade",
+                    "last_name": "Duell"
+                },
+                "player_served_info": {
+                    "player_id": "30020",
+                    "jersey_number": "9",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kade",
+                    "last_name": "Duell"
+                },
+                "s": 1146,
+                "team_id": "205"
+            },
+            {
+                "event": "faceoff",
+                "id": "1",
+                "period": "1",
+                "time": "00:19:06",
+                "time_formatted": "19:06",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "2",
+                "s": 1146,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:00:00",
+                "time_formatted": "0:00",
+                "home_player_id": "29160",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "5",
+                "s": 0,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:01:08",
+                "time_formatted": "1:08",
+                "home_player_id": "29912",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "1",
+                "s": 68,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468390",
+                "player_id": "29513",
+                "player_served": "29513",
+                "offence": "18",
+                "pp": "1",
+                "time_off_formatted": "1:46",
+                "period": "2nd",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Hooking",
+                "period_id": "2",
+                "player_penalized_info": {
+                    "player_id": "29513",
+                    "jersey_number": "24",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brayden",
+                    "last_name": "Holberton"
+                },
+                "player_served_info": {
+                    "player_id": "29513",
+                    "jersey_number": "24",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brayden",
+                    "last_name": "Holberton"
+                },
+                "s": 106,
+                "team_id": "214"
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:01:46",
+                "time_formatted": "1:46",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 106,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:03:19",
+                "time_formatted": "3:19",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 199,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:03:39",
+                "time_formatted": "3:39",
+                "home_player_id": "29160",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 219,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29160",
+                    "jersey_number": "22",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Hudson",
+                    "last_name": "Kibblewhite"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:05:58",
+                "time_formatted": "5:58",
+                "home_player_id": "28990",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "7",
+                "s": 358,
+                "x_location": 247,
+                "y_location": 73,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468393",
+                "player_id": "29618",
+                "player_served": "29618",
+                "offence": "101",
+                "pp": "1",
+                "time_off_formatted": "6:07",
+                "period": "2nd",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Checking to the Head",
+                "period_id": "2",
+                "player_penalized_info": {
+                    "player_id": "29618",
+                    "jersey_number": "25",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Tai",
+                    "last_name": "Riley"
+                },
+                "player_served_info": {
+                    "player_id": "29618",
+                    "jersey_number": "25",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Tai",
+                    "last_name": "Riley"
+                },
+                "s": 367,
+                "team_id": "214"
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:06:07",
+                "time_formatted": "6:07",
+                "home_player_id": "28990",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 367,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "id": "214668",
+                "event": "goal",
+                "goal_type": "SH",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "28872",
+                "assist1_player_id": "29301",
+                "assist2_player_id": "",
+                "time": "7:27",
+                "time_formatted": "7:27",
+                "period": "2nd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "1",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "2",
+                "scorer_goal_num": "18",
+                "s": 447,
+                "plus": [
+                    {
+                        "player_id": "30295",
+                        "jersey_number": "2",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Brennen",
+                        "last_name": "Hocher"
+                    },
+                    {
+                        "player_id": "29369",
+                        "jersey_number": "6",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Vanek",
+                        "last_name": "Popil"
+                    },
+                    {
+                        "player_id": "28872",
+                        "jersey_number": "9",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Coster",
+                        "last_name": "Dunn"
+                    },
+                    {
+                        "player_id": "29301",
+                        "jersey_number": "11",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ethan",
+                        "last_name": "Bibeau"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "30290",
+                        "jersey_number": "11",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kyle",
+                        "last_name": "Heger"
+                    },
+                    {
+                        "player_id": "28990",
+                        "jersey_number": "15",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kayden",
+                        "last_name": "Longley"
+                    },
+                    {
+                        "player_id": "29912",
+                        "jersey_number": "16",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Easton",
+                        "last_name": "Daneault"
+                    },
+                    {
+                        "player_id": "29160",
+                        "jersey_number": "22",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Hudson",
+                        "last_name": "Kibblewhite"
+                    },
+                    {
+                        "player_id": "29231",
+                        "jersey_number": "29",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Owen",
+                        "last_name": "Berge"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                },
+                "assist1_player": {
+                    "player_id": "29301",
+                    "jersey_number": "11",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ethan",
+                    "last_name": "Bibeau"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:07:27",
+                "time_formatted": "7:27",
+                "home_player_id": "29659",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 447,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29659",
+                    "jersey_number": "17",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kai",
+                    "last_name": "Anderson"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "id": "214669",
+                "event": "goal",
+                "goal_type": "",
+                "home": "1",
+                "team_id": "205",
+                "goal_player_id": "29212",
+                "assist1_player_id": "30025",
+                "assist2_player_id": "29653",
+                "time": "8:27",
+                "time_formatted": "8:27",
+                "period": "2nd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "2",
+                "scorer_goal_num": "4",
+                "s": 507,
+                "plus": [
+                    {
+                        "player_id": "29212",
+                        "jersey_number": "4",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Carsen",
+                        "last_name": "Adair"
+                    },
+                    {
+                        "player_id": "30025",
+                        "jersey_number": "8",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Nathan",
+                        "last_name": "Maloney"
+                    },
+                    {
+                        "player_id": "29653",
+                        "jersey_number": "12",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Tyden",
+                        "last_name": "Lafournaise"
+                    },
+                    {
+                        "player_id": "29657",
+                        "jersey_number": "14",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Jake",
+                        "last_name": "Evans"
+                    },
+                    {
+                        "player_id": "29197",
+                        "jersey_number": "26",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Andrew",
+                        "last_name": "Petruk"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "28831",
+                        "jersey_number": "3",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ashton",
+                        "last_name": "Cumby"
+                    },
+                    {
+                        "player_id": "30430",
+                        "jersey_number": "5",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Joe",
+                        "last_name": "Gramer"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    },
+                    {
+                        "player_id": "29236",
+                        "jersey_number": "47",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matthew",
+                        "last_name": "Gard"
+                    },
+                    {
+                        "player_id": "29624",
+                        "jersey_number": "88",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matej",
+                        "last_name": "Pekar"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29212",
+                    "jersey_number": "4",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Carsen",
+                    "last_name": "Adair"
+                },
+                "assist1_player": {
+                    "player_id": "30025",
+                    "jersey_number": "8",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Nathan",
+                    "last_name": "Maloney"
+                },
+                "assist2_player": {
+                    "player_id": "29653",
+                    "jersey_number": "12",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Tyden",
+                    "last_name": "Lafournaise"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:08:27",
+                "time_formatted": "8:27",
+                "home_player_id": "29657",
+                "visitor_player_id": "29944",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 507,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:10:31",
+                "time_formatted": "10:31",
+                "home_player_id": "28990",
+                "visitor_player_id": "29330",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 631,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:10:41",
+                "time_formatted": "10:41",
+                "home_player_id": "29231",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 641,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:13:36",
+                "time_formatted": "13:36",
+                "home_player_id": "29231",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "1",
+                "s": 816,
+                "x_location": 500,
+                "y_location": 251,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:13:45",
+                "time_formatted": "13:45",
+                "home_player_id": "29231",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "2",
+                "s": 825,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468405",
+                "player_id": "29619",
+                "player_served": "29619",
+                "offence": "35",
+                "pp": "1",
+                "time_off_formatted": "16:42",
+                "period": "2nd",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Tripping",
+                "period_id": "2",
+                "player_penalized_info": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                },
+                "player_served_info": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                },
+                "s": 1002,
+                "team_id": "214"
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:16:42",
+                "time_formatted": "16:42",
+                "home_player_id": "29231",
+                "visitor_player_id": "29301",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 1002,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "29301",
+                    "jersey_number": "11",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ethan",
+                    "last_name": "Bibeau"
+                }
+            },
+            {
+                "id": "214673",
+                "event": "goal",
+                "goal_type": "",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "29235",
+                "assist1_player_id": "",
+                "assist2_player_id": "",
+                "time": "19:33",
+                "time_formatted": "19:33",
+                "period": "2nd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "1",
+                "game_tieing": "0",
+                "period_id": "2",
+                "scorer_goal_num": "28",
+                "s": 1173,
+                "plus": [
+                    {
+                        "player_id": "30430",
+                        "jersey_number": "5",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Joe",
+                        "last_name": "Gramer"
+                    },
+                    {
+                        "player_id": "29235",
+                        "jersey_number": "27",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Cameron",
+                        "last_name": "Schmidt"
+                    },
+                    {
+                        "player_id": "29622",
+                        "jersey_number": "37",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Marcus",
+                        "last_name": "Laraque"
+                    },
+                    {
+                        "player_id": "29236",
+                        "jersey_number": "47",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matthew",
+                        "last_name": "Gard"
+                    },
+                    {
+                        "player_id": "29621",
+                        "jersey_number": "74",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Grayson",
+                        "last_name": "Tash"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "29165",
+                        "jersey_number": "2",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Fraser",
+                        "last_name": "Leonard"
+                    },
+                    {
+                        "player_id": "29212",
+                        "jersey_number": "4",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Carsen",
+                        "last_name": "Adair"
+                    },
+                    {
+                        "player_id": "29657",
+                        "jersey_number": "14",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Jake",
+                        "last_name": "Evans"
+                    },
+                    {
+                        "player_id": "29197",
+                        "jersey_number": "26",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Andrew",
+                        "last_name": "Petruk"
+                    },
+                    {
+                        "player_id": "29397",
+                        "jersey_number": "28",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Lukas",
+                        "last_name": "Lima"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29235",
+                    "jersey_number": "27",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Cameron",
+                    "last_name": "Schmidt"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "2",
+                "period": "2",
+                "time": "00:19:33",
+                "time_formatted": "19:33",
+                "home_player_id": "29231",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 1173,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:00:00",
+                "time_formatted": "0:00",
+                "home_player_id": "29912",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "5",
+                "s": 0,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468408",
+                "player_id": "29912",
+                "player_served": "29912",
+                "offence": "85",
+                "pp": "1",
+                "time_off_formatted": "0:36",
+                "period": "3rd",
+                "bench": "0",
+                "home": "1",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Closing Hand on Puck",
+                "period_id": "3",
+                "player_penalized_info": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_served_info": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "s": 36,
+                "team_id": "205"
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:00:36",
+                "time_formatted": "0:36",
+                "home_player_id": "28990",
+                "visitor_player_id": "28872",
+                "home_win": "1",
+                "location_id": "2",
+                "s": 36,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468409",
+                "player_id": "28872",
+                "player_served": "28872",
+                "offence": "122",
+                "pp": "2",
+                "time_off_formatted": "1:44",
+                "period": "3rd",
+                "bench": "0",
+                "home": "0",
+                "penalty_shot": "0",
+                "minutes": "4.00",
+                "minutes_formatted": "4:00",
+                "penalty_class_id": "2",
+                "penalty_class": "Double Minor",
+                "lang_penalty_description": "High-Sticking",
+                "period_id": "3",
+                "player_penalized_info": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                },
+                "player_served_info": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                },
+                "s": 104,
+                "team_id": "214"
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:01:44",
+                "time_formatted": "1:44",
+                "home_player_id": "30020",
+                "visitor_player_id": "29619",
+                "home_win": "1",
+                "location_id": "8",
+                "s": 104,
+                "x_location": 143,
+                "y_location": 251,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "30020",
+                    "jersey_number": "9",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kade",
+                    "last_name": "Duell"
+                },
+                "player_visitor": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:02:12",
+                "time_formatted": "2:12",
+                "home_player_id": "29659",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 132,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29659",
+                    "jersey_number": "17",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kai",
+                    "last_name": "Anderson"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "penalty",
+                "id": "468410",
+                "player_id": "29231",
+                "player_served": "29231",
+                "offence": "18",
+                "pp": "1",
+                "time_off_formatted": "3:53",
+                "period": "3rd",
+                "bench": "0",
+                "home": "1",
+                "penalty_shot": "0",
+                "minutes": "2.00",
+                "minutes_formatted": "2:00",
+                "penalty_class_id": "1",
+                "penalty_class": "Minor",
+                "lang_penalty_description": "Hooking",
+                "period_id": "3",
+                "player_penalized_info": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "player_served_info": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "s": 233,
+                "team_id": "205"
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:03:53",
+                "time_formatted": "3:53",
+                "home_player_id": "29659",
+                "visitor_player_id": "29619",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 233,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29659",
+                    "jersey_number": "17",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kai",
+                    "last_name": "Anderson"
+                },
+                "player_visitor": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:06:13",
+                "time_formatted": "6:13",
+                "home_player_id": "29657",
+                "visitor_player_id": "29330",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 373,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:06:20",
+                "time_formatted": "6:20",
+                "home_player_id": "29657",
+                "visitor_player_id": "29330",
+                "home_win": "0",
+                "location_id": "8",
+                "s": 380,
+                "x_location": 143,
+                "y_location": 251,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "id": "214677",
+                "event": "goal",
+                "goal_type": "",
+                "home": "1",
+                "team_id": "205",
+                "goal_player_id": "29653",
+                "assist1_player_id": "29231",
+                "assist2_player_id": "30025",
+                "time": "7:27",
+                "time_formatted": "7:27",
+                "period": "3rd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "3",
+                "scorer_goal_num": "5",
+                "s": 447,
+                "plus": [
+                    {
+                        "player_id": "29212",
+                        "jersey_number": "4",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Carsen",
+                        "last_name": "Adair"
+                    },
+                    {
+                        "player_id": "30025",
+                        "jersey_number": "8",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Nathan",
+                        "last_name": "Maloney"
+                    },
+                    {
+                        "player_id": "29653",
+                        "jersey_number": "12",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Tyden",
+                        "last_name": "Lafournaise"
+                    },
+                    {
+                        "player_id": "28990",
+                        "jersey_number": "15",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kayden",
+                        "last_name": "Longley"
+                    },
+                    {
+                        "player_id": "29231",
+                        "jersey_number": "29",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Owen",
+                        "last_name": "Berge"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "30430",
+                        "jersey_number": "5",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Joe",
+                        "last_name": "Gramer"
+                    },
+                    {
+                        "player_id": "28872",
+                        "jersey_number": "9",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Coster",
+                        "last_name": "Dunn"
+                    },
+                    {
+                        "player_id": "29235",
+                        "jersey_number": "27",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Cameron",
+                        "last_name": "Schmidt"
+                    },
+                    {
+                        "player_id": "29621",
+                        "jersey_number": "74",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Grayson",
+                        "last_name": "Tash"
+                    },
+                    {
+                        "player_id": "29624",
+                        "jersey_number": "88",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matej",
+                        "last_name": "Pekar"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29653",
+                    "jersey_number": "12",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Tyden",
+                    "last_name": "Lafournaise"
+                },
+                "assist1_player": {
+                    "player_id": "29231",
+                    "jersey_number": "29",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Owen",
+                    "last_name": "Berge"
+                },
+                "assist2_player": {
+                    "player_id": "30025",
+                    "jersey_number": "8",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Nathan",
+                    "last_name": "Maloney"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:07:27",
+                "time_formatted": "7:27",
+                "home_player_id": "29659",
+                "visitor_player_id": "29236",
+                "home_win": "1",
+                "location_id": "5",
+                "s": 447,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29659",
+                    "jersey_number": "17",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kai",
+                    "last_name": "Anderson"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:09:50",
+                "time_formatted": "9:50",
+                "home_player_id": "29912",
+                "visitor_player_id": "29944",
+                "home_win": "1",
+                "location_id": "9",
+                "s": 590,
+                "x_location": 143,
+                "y_location": 94,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:13:52",
+                "time_formatted": "13:52",
+                "home_player_id": "29912",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 832,
+                "x_location": 457,
+                "y_location": 206,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:13:57",
+                "time_formatted": "13:57",
+                "home_player_id": "29912",
+                "visitor_player_id": "29236",
+                "home_win": "0",
+                "location_id": "9",
+                "s": 837,
+                "x_location": 457,
+                "y_location": 206,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:15:23",
+                "time_formatted": "15:23",
+                "home_player_id": "28990",
+                "visitor_player_id": "29330",
+                "home_win": "1",
+                "location_id": "2",
+                "s": 923,
+                "x_location": 100,
+                "y_location": 206,
+                "win_team_id": "205",
+                "player_home": {
+                    "player_id": "28990",
+                    "jersey_number": "15",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Kayden",
+                    "last_name": "Longley"
+                },
+                "player_visitor": {
+                    "player_id": "29330",
+                    "jersey_number": "14",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Sawyer",
+                    "last_name": "Mayes"
+                }
+            },
+            {
+                "id": "214679",
+                "event": "goal",
+                "goal_type": "",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "29618",
+                "assist1_player_id": "29619",
+                "assist2_player_id": "29236",
+                "time": "16:35",
+                "time_formatted": "16:35",
+                "period": "3rd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "0",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "1",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "3",
+                "scorer_goal_num": "2",
+                "s": 995,
+                "plus": [
+                    {
+                        "player_id": "28831",
+                        "jersey_number": "3",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ashton",
+                        "last_name": "Cumby"
+                    },
+                    {
+                        "player_id": "29619",
+                        "jersey_number": "16",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Brock",
+                        "last_name": "England"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    },
+                    {
+                        "player_id": "29236",
+                        "jersey_number": "47",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Matthew",
+                        "last_name": "Gard"
+                    },
+                    {
+                        "player_id": "29373",
+                        "jersey_number": "89",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Antonio",
+                        "last_name": "Martorana"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "29165",
+                        "jersey_number": "2",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Fraser",
+                        "last_name": "Leonard"
+                    },
+                    {
+                        "player_id": "29390",
+                        "jersey_number": "5",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Grady",
+                        "last_name": "Pichette"
+                    },
+                    {
+                        "player_id": "29912",
+                        "jersey_number": "16",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Easton",
+                        "last_name": "Daneault"
+                    },
+                    {
+                        "player_id": "29153",
+                        "jersey_number": "19",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Oli",
+                        "last_name": "Chenier"
+                    },
+                    {
+                        "player_id": "29587",
+                        "jersey_number": "27",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Gavin",
+                        "last_name": "Lesiuk"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29618",
+                    "jersey_number": "25",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Tai",
+                    "last_name": "Riley"
+                },
+                "assist1_player": {
+                    "player_id": "29619",
+                    "jersey_number": "16",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Brock",
+                    "last_name": "England"
+                },
+                "assist2_player": {
+                    "player_id": "29236",
+                    "jersey_number": "47",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Matthew",
+                    "last_name": "Gard"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:16:35",
+                "time_formatted": "16:35",
+                "home_player_id": "29912",
+                "visitor_player_id": "28872",
+                "home_win": "0",
+                "location_id": "5",
+                "s": 995,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29912",
+                    "jersey_number": "16",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Easton",
+                    "last_name": "Daneault"
+                },
+                "player_visitor": {
+                    "player_id": "28872",
+                    "jersey_number": "9",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Coster",
+                    "last_name": "Dunn"
+                }
+            },
+            {
+                "event": "goalie_change",
+                "goalie_in_id": null,
+                "goalie_out_id": "29649",
+                "period_id": "3",
+                "time": "17:44",
+                "team_code": "LET",
+                "s": 1064,
+                "team_id": "205",
+                "goalie_in_info": {
+                    "player_id": null,
+                    "jersey_number": null,
+                    "team_id": null,
+                    "team_code": null,
+                    "first_name": null,
+                    "last_name": null
+                },
+                "goalie_out_info": {
+                    "player_id": "29649",
+                    "jersey_number": "31",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Leif",
+                    "last_name": "Oaten"
+                }
+            },
+            {
+                "id": "214680",
+                "event": "goal",
+                "goal_type": "EN",
+                "home": "0",
+                "team_id": "214",
+                "goal_player_id": "29301",
+                "assist1_player_id": "",
+                "assist2_player_id": "",
+                "time": "17:59",
+                "time_formatted": "17:59",
+                "period": "3rd",
+                "x_location": 0,
+                "y_location": 0,
+                "location_set": "0",
+                "power_play": "0",
+                "empty_net": "1",
+                "penalty_shot": "0",
+                "short_handed": "0",
+                "insurance_goal": "0",
+                "game_winning": "0",
+                "game_tieing": "0",
+                "period_id": "3",
+                "scorer_goal_num": "2",
+                "s": 1079,
+                "plus": [
+                    {
+                        "player_id": "28831",
+                        "jersey_number": "3",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ashton",
+                        "last_name": "Cumby"
+                    },
+                    {
+                        "player_id": "29301",
+                        "jersey_number": "11",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Ethan",
+                        "last_name": "Bibeau"
+                    },
+                    {
+                        "player_id": "29330",
+                        "jersey_number": "14",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Sawyer",
+                        "last_name": "Mayes"
+                    },
+                    {
+                        "player_id": "29513",
+                        "jersey_number": "24",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Brayden",
+                        "last_name": "Holberton"
+                    },
+                    {
+                        "player_id": "29618",
+                        "jersey_number": "25",
+                        "team_id": "214",
+                        "team_code": "SEA",
+                        "first_name": "Tai",
+                        "last_name": "Riley"
+                    }
+                ],
+                "minus": [
+                    {
+                        "player_id": "30025",
+                        "jersey_number": "8",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Nathan",
+                        "last_name": "Maloney"
+                    },
+                    {
+                        "player_id": "30290",
+                        "jersey_number": "11",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kyle",
+                        "last_name": "Heger"
+                    },
+                    {
+                        "player_id": "29653",
+                        "jersey_number": "12",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Tyden",
+                        "last_name": "Lafournaise"
+                    },
+                    {
+                        "player_id": "28990",
+                        "jersey_number": "15",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kayden",
+                        "last_name": "Longley"
+                    },
+                    {
+                        "player_id": "29659",
+                        "jersey_number": "17",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Kai",
+                        "last_name": "Anderson"
+                    },
+                    {
+                        "player_id": "29231",
+                        "jersey_number": "29",
+                        "team_id": "205",
+                        "team_code": "LET",
+                        "first_name": "Owen",
+                        "last_name": "Berge"
+                    }
+                ],
+                "goal_scorer": {
+                    "player_id": "29301",
+                    "jersey_number": "11",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Ethan",
+                    "last_name": "Bibeau"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:17:59",
+                "time_formatted": "17:59",
+                "home_player_id": "29657",
+                "visitor_player_id": "29944",
+                "home_win": "0",
+                "location_id": "5",
+                "s": 1079,
+                "x_location": 300,
+                "y_location": 150,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "event": "goalie_change",
+                "goalie_in_id": "29649",
+                "goalie_out_id": null,
+                "period_id": "3",
+                "time": "18:00",
+                "team_code": "LET",
+                "s": 1080,
+                "team_id": "205",
+                "goalie_in_info": {
+                    "player_id": "29649",
+                    "jersey_number": "31",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Leif",
+                    "last_name": "Oaten"
+                }
+            },
+            {
+                "event": "faceoff",
+                "id": "3",
+                "period": "3",
+                "time": "00:19:51",
+                "time_formatted": "19:51",
+                "home_player_id": "29657",
+                "visitor_player_id": "29944",
+                "home_win": "0",
+                "location_id": "2",
+                "s": 1191,
+                "x_location": 500,
+                "y_location": 94,
+                "win_team_id": "214",
+                "player_home": {
+                    "player_id": "29657",
+                    "jersey_number": "14",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Jake",
+                    "last_name": "Evans"
+                },
+                "player_visitor": {
+                    "player_id": "29944",
+                    "jersey_number": "26",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Logan",
+                    "last_name": "Miller"
+                }
+            },
+            {
+                "event": "goalie_change",
+                "goalie_in_id": null,
+                "goalie_out_id": "30303",
+                "period_id": "3",
+                "time": "20:00",
+                "team_code": "SEA",
+                "s": 1200,
+                "team_id": "214",
+                "goalie_in_info": {
+                    "player_id": null,
+                    "jersey_number": null,
+                    "team_id": null,
+                    "team_code": null,
+                    "first_name": null,
+                    "last_name": null
+                },
+                "goalie_out_info": {
+                    "player_id": "30303",
+                    "jersey_number": "35",
+                    "team_id": "214",
+                    "team_code": "SEA",
+                    "first_name": "Marek",
+                    "last_name": "Sklenicka"
+                }
+            },
+            {
+                "event": "goalie_change",
+                "goalie_in_id": null,
+                "goalie_out_id": "29649",
+                "period_id": "3",
+                "time": "20:00",
+                "team_code": "LET",
+                "s": 1200,
+                "team_id": "205",
+                "goalie_in_info": {
+                    "player_id": null,
+                    "jersey_number": null,
+                    "team_id": null,
+                    "team_code": null,
+                    "first_name": null,
+                    "last_name": null
+                },
+                "goalie_out_info": {
+                    "player_id": "29649",
+                    "jersey_number": "31",
+                    "team_id": "205",
+                    "team_code": "LET",
+                    "first_name": "Leif",
+                    "last_name": "Oaten"
+                }
+            }
+        ]
+    }
+}
