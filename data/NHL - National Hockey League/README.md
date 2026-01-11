@@ -151,3 +151,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 37: Vancouver Canucks @ Seattle Kraken - Seattle loses 3-2 in SO (4-game winning streak ends)](./2025-26/regular-season/20251229-VAN-vs-SEA-2025020616.json)
 - [GAME 38: Nashville Predators @ Seattle Kraken - Seattle wins 4-1 (Beniers 2G, Grubauer 24 saves)](./2025-26/regular-season/20260101-NSH-vs-SEA-2025020638.json)
 - [GAME 39: Seattle Kraken @ Vancouver Canucks - Seattle wins 4-3 in SO (Beniers SO winner, Daccord 20 saves)](./2025-26/regular-season/20260102-SEA-vs-VAN-2025020642.json)
+- [GAME 40: Seattle Kraken @ Calgary Flames - Seattle wins 5-1 (Dominant road performance, Grubauer 41 saves)](./2025-26/regular-season/20260105-SEA-vs-CGY-2025020665.json)
