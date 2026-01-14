@@ -154,3 +154,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 40: Seattle Kraken @ Calgary Flames - Seattle wins 5-1 (Dominant road performance, Grubauer 41 saves)](./2025-26/regular-season/20260105-SEA-vs-CGY-2025020665.json)
 - [GAME 41: Boston Bruins @ Seattle Kraken - Seattle wins 7-4 (Offensive explosion, Catton 2G, Kakko 2G, Eberle PPG)](./2025-26/regular-season/20260106-BOS-vs-SEA-2025020676.json)
 - [GAME 42: Seattle Kraken @ Carolina Hurricanes - Seattle loses 3-2 (Catton scores, Beniers scores, outshot 34-12)](./2025-26/regular-season/20260110-SEA-vs-CAR-2025020706.json)
+- [GAME 43: Seattle Kraken @ New York Rangers - Seattle wins 4-2 (Tolvanen, Eberle, Catton, McCann EN)](./2025-26/regular-season/20260112-SEA-vs-NYR-2025020718.json)
