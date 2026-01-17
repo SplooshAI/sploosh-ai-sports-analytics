@@ -191,3 +191,4 @@ Play By Play:
 - [GAME #36: 2026.01.07 Seattle wins 6-3 against LET (Dunn 2G, Schmidt GWG)](./2025-26/regular-season/20260107-SEA-vs-LET-1022555-pxpverbose.json)
 - [GAME #37: 2026.01.09 Seattle loses 8-3 against MH (Pickford hat trick, Tigers dominate, late-game brawl)](./2025-26/regular-season/20260109-SEA-vs-MH-1022559-pxpverbose.json)
 - [GAME #38: 2026.01.10 Seattle loses 5-3 against CGY (Maze 2G for Calgary, Schmidt PPG)](./2025-26/regular-season/20260110-SEA-vs-CGY-1022569-pxpverbose.json)
+- [GAME #39: 2026.01.16 Seattle loses 3-2 against MJ in OT (McKenzie OT winner at 0:22, Gard & Schmidt goals)](./2025-26/regular-season/20260116-MJ-vs-SEA-1022597-pxpverbose.json)
