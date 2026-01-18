@@ -58,3 +58,6 @@ Example data is contained in files matching the pattern `YYYYMMDD-visiting-vs-ho
   - [Week 16 - LAR vs SEA (37-38 SEA Win OT)](./2025-26/20251219-LAR-vs-SEA-401772949-week-16.json)
   - [Week 17 - SEA vs CAR (27-10 SEA Win)](./2025-26/20251228-SEA-vs-CAR-401772952-week-17.json)
   - [Week 18 - SEA vs SF (13-3 SEA Win)](./2025-26/20260103-SEA-vs-SF-401772961-week-18.json)
+
+- Playoffs
+  - [NFC Divisional Round - SF @ SEA (41-6 SEA Win - Walker III 3 TDs, Shaheed 95-yd KR TD)](./2025-26/20260117-SF-vs-SEA-401772984-playoffs-divisional.json)
