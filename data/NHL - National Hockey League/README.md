@@ -159,3 +159,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 45: Seattle Kraken @ Boston Bruins - Seattle loses 4-2 (Stephenson PPG, Tolvanen PPG, Pastrnak late PPG)](./2025-26/regular-season/20260115-SEA-vs-BOS-2025020739.json)
 - [GAME 46: Seattle Kraken @ Utah Mammoth - Seattle loses 6-3 (Schmidt 2G+2A, Keller 2A, Stenlund SHG)](./2025-26/regular-season/20260117-SEA-vs-UTA-2025020757.json)
 - [GAME 47: Pittsburgh Penguins @ Seattle Kraken - Seattle loses 6-3 (Dewar 2G including SHG, Crosby 2A, Tolvanen PPG)](./2025-26/regular-season/20260119-PIT-vs-SEA-2025020772.json)
+- [GAME 48: New York Islanders @ Seattle Kraken - Seattle wins 4-1 (Beniers PPG, Dunn, Kakko, McCann EN)](./2025-26/regular-season/20260121-NYI-vs-SEA-2025020793.json)
