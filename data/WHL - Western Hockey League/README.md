@@ -193,3 +193,4 @@ Play By Play:
 - [GAME #38: 2026.01.10 Seattle loses 5-3 against CGY (Maze 2G for Calgary, Schmidt PPG)](./2025-26/regular-season/20260110-SEA-vs-CGY-1022569-pxpverbose.json)
 - [GAME #39: 2026.01.16 Seattle loses 3-2 against MJ in OT (McKenzie OT winner at 0:22, Gard & Schmidt goals)](./2025-26/regular-season/20260116-MJ-vs-SEA-1022597-pxpverbose.json)
 - [GAME #40: 2026.01.17 Seattle wins 5-3 against POR (Kosick 1G+3A, Gard 2G PPG, 4/9 PP, Mayes EN-SHG)](./2025-26/regular-season/20260117-POR-vs-SEA-1022608-pxpverbose.json)
+- [GAME #41: 2026.01.18 Seattle wins 3-2 against WEN in SO (Schmidt ties it 6 sec into 3rd, SO winner, Malinoski 3 SO saves)](./2025-26/regular-season/20260118-SEA-vs-WEN-1022612-pxpverbose.json)
