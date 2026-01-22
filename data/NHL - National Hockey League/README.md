@@ -158,3 +158,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 44: Seattle Kraken @ New Jersey Devils - Seattle loses 3-2 in OT (Hischier OT winner, Larsson & McCann PPG)](./2025-26/regular-season/20260114-SEA-vs-NJD-2025020735.json)
 - [GAME 45: Seattle Kraken @ Boston Bruins - Seattle loses 4-2 (Stephenson PPG, Tolvanen PPG, Pastrnak late PPG)](./2025-26/regular-season/20260115-SEA-vs-BOS-2025020739.json)
 - [GAME 46: Seattle Kraken @ Utah Mammoth - Seattle loses 6-3 (Schmidt 2G+2A, Keller 2A, Stenlund SHG)](./2025-26/regular-season/20260117-SEA-vs-UTA-2025020757.json)
+- [GAME 47: Pittsburgh Penguins @ Seattle Kraken - Seattle loses 6-3 (Dewar 2G including SHG, Crosby 2A, Tolvanen PPG)](./2025-26/regular-season/20260119-PIT-vs-SEA-2025020772.json)
