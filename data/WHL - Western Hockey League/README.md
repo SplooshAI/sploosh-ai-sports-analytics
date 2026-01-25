@@ -195,3 +195,4 @@ Play By Play:
 - [GAME #40: 2026.01.17 Seattle wins 5-3 against POR (Kosick 1G+3A, Gard 2G PPG, 4/9 PP, Mayes EN-SHG)](./2025-26/regular-season/20260117-POR-vs-SEA-1022608-pxpverbose.json)
 - [GAME #41: 2026.01.18 Seattle wins 3-2 against WEN in SO (Schmidt ties it 6 sec into 3rd, SO winner, Malinoski 3 SO saves)](./2025-26/regular-season/20260118-SEA-vs-WEN-1022612-pxpverbose.json)
 - [GAME #42: 2026.01.23 Seattle loses 6-3 against KEL (England 2G, Iginla 2G+1A including SHG & PPG, Wetsch 1G+2A)](./2025-26/regular-season/20260123-KEL-vs-SEA-1022629-pxpverbose.json)
+- [GAME #43: 2026.01.24 Seattle loses 3-2 against EVT (Mayes 2G, Heslop GWG, Gard 3 penalties, Schmidt game misconduct)](./2025-26/regular-season/20260124-SEA-vs-EVT-1022634-pxpverbose.json)
