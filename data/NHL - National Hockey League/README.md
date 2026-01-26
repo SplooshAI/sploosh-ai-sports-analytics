@@ -161,3 +161,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 47: Pittsburgh Penguins @ Seattle Kraken - Seattle loses 6-3 (Dewar 2G including SHG, Crosby 2A, Tolvanen PPG)](./2025-26/regular-season/20260119-PIT-vs-SEA-2025020772.json)
 - [GAME 48: New York Islanders @ Seattle Kraken - Seattle wins 4-1 (Beniers PPG, Dunn, Kakko, McCann EN)](./2025-26/regular-season/20260121-NYI-vs-SEA-2025020793.json)
 - [GAME 49: Anaheim Ducks @ Seattle Kraken - Seattle loses 4-2 (Gauthier, Poehling SHG, Kreider PPG, Mintyukov EN)](./2025-26/regular-season/20260123-ANA-vs-SEA-2025020809.json)
+- [GAME 50: New Jersey Devils @ Seattle Kraken - Seattle wins 4-2 (Evans, Beniers, Catton, Eberle EN; Hamilton & Hughes PPGs)](./2025-26/regular-season/20260125-NJD-vs-SEA-2025020820.json)
