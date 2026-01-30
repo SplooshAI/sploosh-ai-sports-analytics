@@ -163,3 +163,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 49: Anaheim Ducks @ Seattle Kraken - Seattle loses 4-2 (Gauthier, Poehling SHG, Kreider PPG, Mintyukov EN)](./2025-26/regular-season/20260123-ANA-vs-SEA-2025020809.json)
 - [GAME 50: New Jersey Devils @ Seattle Kraken - Seattle wins 4-2 (Evans, Beniers, Catton, Eberle EN; Hamilton & Hughes PPGs)](./2025-26/regular-season/20260125-NJD-vs-SEA-2025020820.json)
 - [GAME 51: Washington Capitals @ Seattle Kraken (DJ Montour Bobblehead Night) - Seattle wins 5-1 (McCann 2G+1A, Eberle 1G+1A, Ovechkin PPG)](./2025-26/regular-season/20260127-WSH-vs-SEA-2025020839.json)
+- [GAME 52: Toronto Maple Leafs @ Seattle Kraken - Seattle wins 5-2 (Wright 2G, Beniers, Montour, McCann EN; Rielly PPG)](./2025-26/regular-season/20260129-TOR-vs-SEA-2025020857.json)
