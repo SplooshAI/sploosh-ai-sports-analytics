@@ -166,3 +166,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 52: Toronto Maple Leafs @ Seattle Kraken - Seattle wins 5-2 (Wright 2G, Beniers, Montour, McCann EN; Rielly PPG)](./2025-26/regular-season/20260129-TOR-vs-SEA-2025020857.json)
 - [GAME 53: Seattle Kraken @ Vegas Golden Knights - Seattle wins 3-2 (Tolvanen (Winterton, Stephenson), McCann PPG (Dunn, Stephenson), Kakko GWG (Larsson); Barbashev, Marner PPG)](./2025-26/regular-season/20260131-SEA-vs-VGK-2025020872.json)
 - [GAME 54: Seattle Kraken @ Anaheim Ducks - Seattle loses 4-2 (Gauthier, Trouba PPG, Killorn SHG, Johnston; Eberle, Kartye PPG)](./2025-26/regular-season/20260203-SEA-vs-ANA-2025020892.json)
+- [GAME 55: Seattle Kraken @ Los Angeles Kings - Seattle wins 4-2 (Wright 2G including PPG, Larsson, Dunn PPG; Kuzmenko 2 PPGs, Fiala)](./2025-26/regular-season/20260204-SEA-vs-LAK-2025020902.json)
