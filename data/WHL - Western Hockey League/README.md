@@ -199,3 +199,4 @@ Play By Play:
 - [GAME #44: 2026.01.27 Seattle wins 7-3 against BDN (Gard 2G+1A including SHG & GWG, Mrtka 5A, Mayes 2G+1A including EN, Dunn & Bibeau PPG)](./2025-26/regular-season/20260127-BDN-vs-SEA-1022648-pxpverbose.json)
 - [GAME #45: 2026.01.31 Seattle loses 5-1 against EVT (Battle of the Sound - Gard goal, Bear 2G+1A PPGs, Vanhanen GWG, 7,074 fans)](./2025-26/regular-season/20260131-EVT-vs-SEA-1022666-pxpverbose.json)
 - [GAME #46: 2026.02.01 Seattle loses 5-4 against PEN in SO (Johnson 2G for Penticton, Schmidt & Martorana 2G each for Seattle, Alstead SO winner, 4,293 fans)](./2025-26/regular-season/20260201-PEN-vs-SEA-1022674-pxpverbose.json)
+- [GAME #47: 2026.02.06 Seattle loses 7-3 against POR (Wilfley, Groulx, Kresslich 2G, Sawchenko PPG, Groulx SHG, Bouchard; Schmidt, Martorana, Mrtka, 5,089 fans)](./2025-26/regular-season/20260206-POR-vs-SEA-1022692-pxpverbose.json)
