@@ -202,3 +202,4 @@ Play By Play:
 - [GAME #47: 2026.02.06 Seattle loses 7-3 against POR (Wilfley, Groulx, Kresslich 2G, Sawchenko PPG, Groulx SHG, Bouchard; Schmidt, Martorana, Mrtka, 5,089 fans)](./2025-26/regular-season/20260206-POR-vs-SEA-1022692-pxpverbose.json)
 - [GAME #48: 2026.02.07 Seattle loses 3-2 against POR in OT (Gard 13th, England 18th, Weiermair PP GWG; Duguay, Miller, 6,865 fans)](./2025-26/regular-season/20260207-SEA-vs-POR-1022698-pxpverbose.json)
 - [GAME #49: 2026.02.10 Seattle wins 3-1 against SPO (Schmidt 2G+1A including EN, England GWG PPG, Malinoski 27 saves, 4,633 fans)](./2025-26/regular-season/20260210-SEA-vs-SPO-1022710-pxpverbose.json)
+- [GAME #50: 2026.02.13 Seattle wins 4-1 against TC (Martorana 2G, Schmidt 2G+2A including GWG, Malinoski 21 saves, 36-22 shots)](./2025-26/regular-season/20260213-TC-vs-SEA-1022724-pxpverbose.json)
