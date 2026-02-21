@@ -205,3 +205,4 @@ Play By Play:
 - [GAME #50: 2026.02.13 Seattle wins 4-1 against TC (Martorana 2G, Schmidt 2G+2A including GWG, Malinoski 21 saves, 36-22 shots)](./2025-26/regular-season/20260213-TC-vs-SEA-1022724-pxpverbose.json)
 - [GAME #51: 2026.02.14 Seattle wins 2-1 against TC (Martorana SHG, Pekar GWG, Sklenicka 24 saves, 27-25 shots)](./2025-26/regular-season/20260214-SEA-vs-TC-1022736-pxpverbose.json)
 - [GAME #52: 2026.02.16 Seattle wins 3-1 against VAN (Lovsin 2G including GWG PPG, Mayes 1G+1A, Malinoski 24 saves, 36-25 shots)](./2025-26/regular-season/20260216-SEA-vs-VAN-1022748-pxpverbose.json)
+- [GAME #53: 2026.02.20 Seattle wins 3-2 against POR in OT (Schmidt 2G including GWG, Gard 1G+1A, Malinoski 23 saves, 33-25 shots)](./2025-26/regular-season/20260220-POR-vs-SEA-1022755-pxpverbose.json)
