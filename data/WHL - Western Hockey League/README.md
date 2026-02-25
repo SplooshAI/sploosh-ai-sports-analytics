@@ -207,3 +207,4 @@ Play By Play:
 - [GAME #52: 2026.02.16 Seattle wins 3-1 against VAN (Lovsin 2G including GWG PPG, Mayes 1G+1A, Malinoski 24 saves, 36-25 shots)](./2025-26/regular-season/20260216-SEA-vs-VAN-1022748-pxpverbose.json)
 - [GAME #53: 2026.02.20 Seattle wins 3-2 against POR in OT (Schmidt 2G including GWG, Gard 1G+1A, Malinoski 23 saves, 33-25 shots)](./2025-26/regular-season/20260220-POR-vs-SEA-1022755-pxpverbose.json)
 - [GAME #54: 2026.02.21 Seattle loses 9-0 against EVT (Bear hat trick, Vanhanen 1G+2A, Kaplan 2G, Malinoski 33 saves, 53-20 shots)](./2025-26/regular-season/20260221-SEA-vs-EVT-1022761-pxpverbose.json)
+- [GAME #55: 2026.02.22 Seattle loses 4-3 against POR (Weiermair 2G+1A including SH GWG, England 1G+2A, Kosick PPG, Sklenicka 27 saves, 29-31 shots)](./2025-26/regular-season/20260222-SEA-vs-POR-1022772-pxpverbose.json)
