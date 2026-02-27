@@ -168,3 +168,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 54: Seattle Kraken @ Anaheim Ducks - Seattle loses 4-2 (Gauthier, Trouba PPG, Killorn SHG, Johnston; Eberle, Kartye PPG)](./2025-26/regular-season/20260203-SEA-vs-ANA-2025020892.json)
 - [GAME 55: Seattle Kraken @ Los Angeles Kings - Seattle wins 4-2 (Wright 2G including PPG, Larsson, Dunn PPG; Kuzmenko 2 PPGs, Fiala)](./2025-26/regular-season/20260204-SEA-vs-LAK-2025020902.json)
 - [GAME 56: Seattle Kraken @ Dallas Stars - Seattle loses 4-1 (Evans goal, Daccord 28 saves, Johnston 2G for DAL)](./2025-26/regular-season/20260225-SEA-vs-DAL-2025020913.json)
+- [GAME 57: Seattle Kraken @ St. Louis Blues - Seattle loses 5-1 (Holloway hat trick for STL, Kakko goal for SEA)](./2025-26/regular-season/20260226-SEA-vs-STL-2025020925.json)
