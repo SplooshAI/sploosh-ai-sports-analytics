@@ -171,3 +171,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 57: Seattle Kraken @ St. Louis Blues - Seattle loses 5-1 (Holloway hat trick for STL, Kakko goal for SEA)](./2025-26/regular-season/20260226-SEA-vs-STL-2025020925.json)
 - [GAME 58: Vancouver Canucks @ Seattle Kraken - Seattle wins 5-1 (Dunn 1G+1A, Stephenson 1G+2A, Eberle 2G, Beniers PPG, Ohgren for VAN; Daccord 27 saves)](./2025-26/regular-season/20260228-VAN-vs-SEA-2025020946.json)
 - [GAME 59: Carolina Hurricanes @ Seattle Kraken - Seattle wins 2-1 (Kakko, Meyers; Ehlers for CAR; Daccord 35 saves)](./2025-26/regular-season/20260302-CAR-vs-SEA-2025020957.json)
+- [GAME 60: St. Louis Blues @ Seattle Kraken - Seattle loses 3-2 (Schwartz, Dunn; Mailloux, Holloway, Thomas for STL)](./2025-26/regular-season/20260304-STL-vs-SEA-2025020974.json)
