@@ -212,3 +212,4 @@ Play By Play:
 - [GAME #57: 2026.02.27 Seattle wins 4-1 against VAN](./2025-26/regular-season/20260227-SEA-vs-VAN-1022792-pxpverbose.json)
 - [GAME #58: 2026.02.28 Seattle loses 3-2 against EVT in OT (Kosick 1G+1A, Pekar 1G, Miettinen 2G including OT winner, Sklenicka 41 saves, 44-26 shots)](./2025-26/regular-season/20260228-EVT-vs-SEA-1022801-pxpverbose.json)
 - [GAME #59: 2026.03.03 Seattle wins 4-1 against KAM (Schmidt 2G including EN, Lovsin GWG, Mayes EN, Dunn 1A, Malinoski 27 saves, Edmonstone 33 saves, 36-25 shots)](./2025-26/regular-season/20260303-SEA-vs-KAM-1022807-pxpverbose.json)
+- [GAME #60: 2026.03.06 Seattle loses 5-4 against TC in SO (Gard PPG, Schmidt 1G+2A, Pekar 1G, Dunn PPG, Virk 2G+1A PPG for TC, Gudelj 1G+2A, Laing PPG, Wendt 32 saves, shootout 2-0 TC)](./2025-26/regular-season/20260306-SEA-vs-TC-1022826-pxpverbose.json)
