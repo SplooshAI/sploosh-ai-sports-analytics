@@ -216,3 +216,4 @@ Play By Play:
 - [GAME #61: 2026.03.07 Seattle wins 5-1 against TC (Pekar 1G, Kosick PPG GWG, Dale 1G for TC, Holberton 1G+1A, Mayes 1G+1A, Pekar EN-SHG, Sklenicka 27 saves, Grout 35 saves, 39-28 shots)](./2025-26/regular-season/20260307-TC-vs-SEA-1022835-pxpverbose.json)
 - [GAME #62: 2026.03.10 Seattle wins 2-0 against VIC (Coster Dunn PP, Gard; Sklenicka shutout 22 saves, Eskit 24 saves, 22-26 shots)](./2025-26/regular-season/20260310-VIC-vs-SEA-1022844-pxpverbose.json)
 - [GAME #63: 2026.03.13 Seattle loses 4-0 against SPO (Esler shutout 21 saves, Martin 2G+1A PPG, Sparks 2A, Armstrong GWG, Burcar; Malinoski 36 saves)](./2025-26/regular-season/20260313-SEA-vs-SPO-1022860-pxpverbose.json)
+- [GAME #64: 2026.03.14 Seattle wins 3-2 against POR in OT (Martorana GWG, Gard PPG, Dunn PPG; Sklenicka 30 saves, Štěbeták 28 saves)](./2025-26/regular-season/20260314-POR-vs-SEA-1022869-pxpverbose.json)
