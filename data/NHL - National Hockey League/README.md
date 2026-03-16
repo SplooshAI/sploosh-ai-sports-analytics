@@ -174,3 +174,4 @@ Play-by-play data can be accessed via [https://api-web.nhle.com/v1/gamecenter/20
 - [GAME 60: St. Louis Blues @ Seattle Kraken - Seattle loses 3-2 (Schwartz, Dunn; Mailloux, Holloway, Thomas for STL)](./2025-26/regular-season/20260304-STL-vs-SEA-2025020974.json)
 - [GAME 61: Ottawa Senators @ Seattle Kraken - Seattle loses 7-4 (Beniers 1G+1A, Montour 1G+1A, Melanson, Tolvanen; Stützle 1G+1A, Tkachuk 1G+1A, Cozens, Pinto 1G+2A, Foegele, Kleven, Amadio)](./2025-26/regular-season/20260307-OTT-vs-SEA-2025021000.json)
 - [GAME 62: Nashville Predators @ Seattle Kraken - Seattle loses 4-2 (Kakko, Beniers; Jost, Schaefer, Ufko, Stamkos EN; Daccord 23 saves, Saros 27 saves)](./2025-26/regular-season/20260310-NSH-vs-SEA-2025021024.json)
+- [GAME 63: Colorado Avalanche @ Seattle Kraken - Seattle loses 5-1 (Necas, MacKinnon, Roy PPG, Kadri, Kiviranta; Evans SHG; Daccord 24 saves, Wedgewood 21 saves)](./2025-26/regular-season/20260312-COL-vs-SEA-2025021040.json)
