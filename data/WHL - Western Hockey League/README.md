@@ -218,3 +218,4 @@ Play By Play:
 - [GAME #63: 2026.03.13 Seattle loses 4-0 against SPO (Esler shutout 21 saves, Martin 2G+1A PPG, Sparks 2A, Armstrong GWG, Burcar; Malinoski 36 saves)](./2025-26/regular-season/20260313-SEA-vs-SPO-1022860-pxpverbose.json)
 - [GAME #64: 2026.03.14 Seattle wins 3-2 against POR in OT (Martorana GWG, Gard PPG, Dunn PPG; Sklenicka 30 saves, Štěbeták 28 saves)](./2025-26/regular-season/20260314-POR-vs-SEA-1022869-pxpverbose.json)
 - [GAME #65: 2026.03.15 Seattle loses 3-2 in OT against VAN (Lin GWG, Chorney, Volotovskii; Cumby, Schmidt; Hood 27 saves, Sklenicka 20 saves, 29-23 shots)](./2025-26/regular-season/20260315-VAN-vs-SEA-1022876-pxpverbose.json)
+- [GAME #66: 2026.03.20 Seattle wins 4-3 against SPO in OT (Schmidt GWG at 4:38 of OT, Bibeau, Pekar, Lovsin; Harrington PPG, Armstrong PPG, Hughes; Sklenicka 26 saves, Esler 29 saves, 42-29 shots)](./2025-26/regular-season/20260320-SPO-vs-SEA-1022890-pxpverbose.json)
