@@ -10,26 +10,26 @@
 
 The Thunderbirds and Vees played 4 games during the 2025-26 regular season:
 
-| Date | Location | Result | Score |
-|------|----------|--------|-------|
-| October 4th, 2025 | Penticton | PEN wins | 10-4 |
-| November 7th, 2025 | Penticton | PEN wins | 4-2 |
-| December 12th, 2025 | Kent | PEN wins | 5-1 |
-| February 1st, 2026 | Kent | PEN wins (SO) | 5-4 |
+| Date | Location | Result | Score | Series Lead |
+| ---- | -------- | ------ | ----- | ------------- |
+| October 4th, 2025 | Penticton | PEN wins | 10-4 | PEN leads 1-0 |
+| November 7th, 2025 | Penticton | PEN wins | 4-2 | PEN leads 2-0 |
+| December 12th, 2025 | Kent | PEN wins | 5-1 | PEN leads 3-0 |
+| February 1st, 2026 | Kent | PEN wins (SO) | 5-4 | PEN wins 4-0 |
 
-**Regular Season Series:** Penticton 4-0-0 (4 wins, 0 losses, 0 overtime losses)
+**Regular Season Series:** Penticton 4-0-0 (4 wins, 0 losses, 0 overtime losses; 24-11 goals)
 
 ### Playoff Series Games
 
-| Game | Date | Location | Time (PT) | Result |
-|------|------|----------|-----------|--------|
-| Game 1 | March 27th, 2026 | Penticton | 7:00 PM | TBD |
-| Game 2 | March 28th, 2026 | Penticton | 6:00 PM | TBD |
-| Game 3 | March 31st, 2026 | Kent | 7:05 PM | TBD |
-| Game 4 | April 2nd, 2026 | Kent | 7:05 PM | TBD |
-| Game 5* | April 4th, 2026 | Penticton | 6:00 PM | TBD |
-| Game 6* | April 6th, 2026 | Kent | 7:05 PM | TBD |
-| Game 7* | April 7th, 2026 | Penticton | 7:00 PM | TBD |
+| Game | Date | Location | Time (PT) | Result | Series Lead |
+| ---- | ---- | -------- | --------- | ------ | ------------- |
+| Game 1 | March 27th, 2026 | Penticton | 7:00 PM | TBD | TBD |
+| Game 2 | March 28th, 2026 | Penticton | 6:00 PM | TBD | TBD |
+| Game 3 | March 31st, 2026 | Kent | 7:05 PM | TBD | TBD |
+| Game 4 | April 2nd, 2026 | Kent | 7:05 PM | TBD | TBD |
+| Game 5* | April 4th, 2026 | Penticton | 6:00 PM | TBD | TBD |
+| Game 6* | April 6th, 2026 | Kent | 7:05 PM | TBD | TBD |
+| Game 7* | April 7th, 2026 | Penticton | 7:00 PM | TBD | TBD |
 
 *If necessary
 
