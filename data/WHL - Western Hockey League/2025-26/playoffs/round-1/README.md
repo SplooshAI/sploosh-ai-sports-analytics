@@ -10,12 +10,12 @@
 
 The Thunderbirds and Vees played 4 games during the 2025-26 regular season:
 
-| Date | Location | Result | Score | Series Lead |
-| ---- | -------- | ------ | ----- | ------------- |
-| October 4th, 2025 | Penticton | PEN wins | 10-4 | PEN leads 1-0 |
-| November 7th, 2025 | Penticton | PEN wins | 4-2 | PEN leads 2-0 |
-| December 12th, 2025 | Kent | PEN wins | 5-1 | PEN leads 3-0 |
-| February 1st, 2026 | Kent | PEN wins (SO) | 5-4 | PEN wins 4-0 |
+| Date | Location | Result | Score |
+| ---- | -------- | ------ | ----- |
+| October 4th, 2025 | Penticton | PEN wins | 10-4 |
+| November 7th, 2025 | Penticton | PEN wins | 4-2 |
+| December 12th, 2025 | Kent | PEN wins | 5-1 |
+| February 1st, 2026 | Kent | PEN wins (SO) | 5-4 |
 
 **Regular Season Series:** Penticton 4-0-0 (4 wins, 0 losses, 0 overtime losses; 24-11 goals)
 
