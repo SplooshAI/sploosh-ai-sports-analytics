@@ -221,3 +221,7 @@ Play By Play:
 - [GAME #66: 2026.03.20 Seattle wins 4-3 against SPO in OT (Schmidt GWG at 4:38 of OT, Bibeau, Pekar, Lovsin; Harrington PPG, Armstrong PPG, Hughes; Sklenicka 26 saves, Esler 29 saves, 42-29 shots)](./2025-26/regular-season/20260320-SPO-vs-SEA-1022890-pxpverbose.json)
 - [GAME #67: 2026.03.21 Seattle wins 5-4 against POR in OT (Dunn GWG at 1:46 of OT, Schmidt hat trick, Bibeau; Miller 2G+1A, Ben Miller, Pšenička; Malinoski 25 saves, Štěbeták 20 saves, 8,588 fans)](./2025-26/regular-season/20260321-SEA-vs-POR-1022901-pxpverbose.json)
 - [GAME #68: 2026.03.22 Seattle wins 4-0 against SPO (Schmidt 2G+1A PPG, England, Laraque; Sklenicka shutout 39 saves, Vieillard 16 saves, 8,518 fans)](./2025-26/regular-season/20260322-SEA-vs-SPO-1022907-pxpverbose.json)
+
+### 2025-26 Playoffs
+
+- [ROUND 1 GAME #1: 2026.03.27 Seattle loses 3-2 in OT against Penticton Vees (Kosick, Martorana; Birnie PPG, Kvasnicka, Michaud GWG at 6:48 of OT; Sklenicka 42 saves, Reyelts 25 saves, 45-27 shots, 3,917 fans)](./2025-26/playoffs/round-1/README.md)
