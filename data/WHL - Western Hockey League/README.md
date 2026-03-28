@@ -224,4 +224,4 @@ Play By Play:
 
 ### 2025-26 Playoffs
 
-- [ROUND 1 GAME #1: 2026.03.27 Seattle Thunderbirds @ Penticton Vees - First round best-of-7 series](./2025-26/playoffs/round-1/)
+- [ROUND 1 GAME #1: 2026.03.27 Seattle Thunderbirds @ Penticton Vees - First round best-of-7 series](./2025-26/playoffs/round-1/README.md)

@@ -22,7 +22,7 @@ The Thunderbirds and Vees played 4 games during the 2025-26 regular season:
 ### Playoff Series Games
 
 | Game | Date | Location | Time (PT) | Result |
-|------|------|----------|-------------|--------|
+|------|------|----------|-----------|--------|
 | Game 1 | March 27th, 2026 | Penticton | 7:00 PM | TBD |
 | Game 2 | March 28th, 2026 | Penticton | 6:00 PM | TBD |
 | Game 3 | March 31st, 2026 | Kent | 7:05 PM | TBD |
