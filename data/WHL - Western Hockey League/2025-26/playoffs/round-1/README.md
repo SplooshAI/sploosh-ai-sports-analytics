@@ -26,7 +26,7 @@ The Thunderbirds and Vees played 4 games during the 2025-26 regular season:
 | Game 1 | March 27th, 2026 | Penticton | 7:00 PM | PEN wins 3-2 in OT | PEN leads 1-0 |
 | Game 2 | March 28th, 2026 | Penticton | 7:05 PM | PEN wins 4-1 | PEN leads 2-0 |
 | Game 3 | March 31st, 2026 | Kent | 7:05 PM | PEN wins 4-3 | PEN leads 3-0 |
-| Game 4 | April 2nd, 2026 | Kent | 7:05 PM | TBD | TBD |
+| Game 4 | April 1st, 2026 | Kent | 7:05 PM | SEA wins 4-3 | PEN leads 3-1 |
 | Game 5* | April 4th, 2026 | Penticton | 6:00 PM | TBD | TBD |
 | Game 6* | April 6th, 2026 | Kent | 7:05 PM | TBD | TBD |
 | Game 7* | April 7th, 2026 | Penticton | 7:00 PM | TBD | TBD |
