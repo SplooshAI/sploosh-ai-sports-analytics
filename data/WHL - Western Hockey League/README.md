@@ -228,3 +228,4 @@ Play By Play:
 - [ROUND 1 GAME #2: 2026.03.28 Seattle loses 4-1 against Penticton Vees (Dunn; Wehmann, Petersen PPG, Kvasnicka PPG, Evers; Sklenicka 37 saves, Reyelts 29 saves, 41-30 shots, 3,747 fans)](./2025-26/playoffs/round-1/README.md)
 - [ROUND 1 GAME #3: 2026.03.31 Seattle loses 4-3 against Penticton Vees (Schmidt 2G, Gramer; Birnie, Kvasnicka, Evers, Weber GWG; Malinoski 36 saves, Reyelts 29 saves, 40-32 shots, 3,009 fans)](./2025-26/playoffs/round-1/README.md)
 - [ROUND 1 GAME #4: 2026.04.01 Seattle wins 4-3 against Penticton Vees (Gramer, Gard, England, Dunn GWG; Alstead PPG, Evers, Drancak; Sklenicka 50 saves, McCallum 16 saves, 20-53 shots, 2,087 fans)](./2025-26/playoffs/round-1/README.md)
+- [ROUND 1 GAME #5: 2026.04.03 Seattle loses 6-3 against Penticton Vees (Schmidt PPG, Riley, Dunn; Evers, Wehmann 2G [1 PPG, 1 GWG], Stevenson, Kvasnicka PS+EN; Sklenicka 29 saves, Reyelts 28 saves, 31-35 shots, 4,238 fans)](./2025-26/playoffs/round-1/README.md)
