@@ -5,7 +5,7 @@ Thank you for your interest in contributing to this project! This document provi
 ## Getting Started
 
 1. **Fork the repository** and clone it locally
-2. **Install Node.js 24 LTS** (see [README.md](README.md) for details)
+2. **Install Node.js 26 LTS** (see [README.md](README.md) for details)
 3. **Review the project structure** and existing code
 
 ## Development Workflow
