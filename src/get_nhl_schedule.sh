@@ -18,8 +18,11 @@ readonly CYAN='\033[0;36m'
 readonly BOLD='\033[1m'
 readonly RESET='\033[0m'
 
-# API endpoint
-readonly API_URL="https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores"
+# API endpoint, the hockey analytics app's scores route. The old Vercel deployment
+# (sploosh-ai-hockey-analytics.vercel.app) is disabled and answers 402, the app now runs at
+# hockey-preview.sploosh.ai. Override with NHL_API_URL, for example a local app on
+# http://localhost:3000/api/nhl/scores.
+readonly API_URL="${NHL_API_URL:-https://hockey-preview.sploosh.ai/api/nhl/scores}"
 
 # Function to print colored output
 print_color() {

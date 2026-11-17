@@ -250,7 +250,7 @@ test_game_state_display() {
     # Test for shootout games by checking the raw JSON data
     # We'll use the API directly to verify SO game detection works
     local test_date="2025-11-18"
-    local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${test_date}")
+    local json_data=$(curl -sf "${NHL_API_URL:-https://hockey-preview.sploosh.ai/api/nhl/scores}?date=${test_date}")
     
     if [ -n "$json_data" ]; then
         # Check if any game has SO (shootout) in periodType
@@ -310,7 +310,7 @@ test_timezone_conversion() {
         tomorrow=$(date -d 'tomorrow' +%Y-%m-%d)
     fi
     local test_date="$tomorrow"
-    local json_data=$(curl -sf "https://sploosh-ai-hockey-analytics.vercel.app/api/nhl/scores?date=${test_date}")
+    local json_data=$(curl -sf "${NHL_API_URL:-https://hockey-preview.sploosh.ai/api/nhl/scores}?date=${test_date}")
     
     if [ -n "$json_data" ]; then
         # Check that API returns times in UTC format (ending with Z)
